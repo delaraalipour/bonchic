@@ -1,0 +1,26 @@
+app.site_title: Foojan Shop
+app.homepage: Home
+app.welcome.message: Welcome to Foojan Shop
+app.form.registration.gender: gender
+security.login.username: user
+app.product.image: image
+app.product.name: name
+app.product.price: price
+app.product.description: description
+app.product.category: category
+app.product.edit: edit
+app.product.delete: delete
+app.product.operations: operations
+app.newproduct: new product
+app.newcategory: new category
+app.productlist: products
+app.categorylist: categories
+app.dashboard: dashboard
+app.saveproduct: save product
+app.cancel: cancel
+app.savecategory: save category
+app.category.title: title
+app.delete.product: delete product
+app.delete.category: delete category
+app.controlpanel: control panel
+app.product: product

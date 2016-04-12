@@ -1,0 +1,17 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.controlpanel' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name"><span><i class="glyphicon glyphicon-home"></i>{{ 'app.homepage' | trans }}</span></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="welcome-logo">
+        <div class="welcome-message">
+            <span>{{ 'app.welcome.message' | trans }}</span>
+        </div>
+    </div>
+{% endblock %}

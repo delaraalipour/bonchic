@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" type="text/css" />
+</head>
+<body>
+    {% block content %}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    {% endblock content %}
+</body>

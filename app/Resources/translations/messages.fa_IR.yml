@@ -1,0 +1,26 @@
+app.site_title: فوژان
+app.homepage: صفحه اصلی
+app.welcome.message: به فروشگاه فوژان خوش آمدید.
+app.form.registration.gender: جنسیت
+security.login.username: نام کاربری
+app.product.image: تصویر
+app.product.name: نام محصول
+app.product.price: قیمت
+app.product.description: توضیحات
+app.product.category: دسته محصول
+app.product.edit: ویرایش
+app.product.delete: حذف
+app.product.operations: عملیات
+app.newproduct: محصول جدید
+app.newcategory: دسته محصول جدید
+app.productlist: محصولات
+app.categorylist: دسته محصولات
+app.dashboard: داشبورد
+app.saveproduct: ذخیره محصول
+app.cancel: لغو کردن
+app.savecategory: ذخیره دسته محصول
+app.category.title: نام دسته محصول
+app.delete.product: حذف محصول
+app.delete.category: حذف دسته محصول
+app.controlpanel: پانل مدیریت
+app.product: محصول

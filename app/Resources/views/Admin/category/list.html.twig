@@ -1,0 +1,30 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.categorylist' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name"><span><i class="glyphicon glyphicon-pencil"></i>{{ 'app.categorylist' | trans }}</span></div>
+        <div class="header-link"><a href="{{ path('admin_category_new') }}"> {{ 'app.newcategory' | trans }} </a></div>
+    </div>
+{% endblock %}
+
+
+{%  block content %}
+    <table>
+        <tr class="table-header">
+            <td>id</td>
+            <td>{{ 'app.category.title' | trans }}</td>
+            <td>{{ 'app.product.operations' | trans }}</td>
+        </tr>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.title }}</td>
+                <td>
+                    <a href="{{ path('admin_category_delete', {id: category.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

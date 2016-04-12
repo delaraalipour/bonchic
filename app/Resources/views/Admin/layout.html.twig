@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" type="text/css" />
+</head>
+<body>
+
+    <div class="admin-header">
+        <p>{{ 'app.site_title'|trans ({}, 'messages') }}</p>
+            <ul class="admin-menu">
+                <li><a href="{{ path('admin_homepage')}}"><i class="glyphicon glyphicon-home"></i>{{ 'app.homepage' | trans }}</a></li>
+                <li><a href="{{ path('admin_product_list')}}"><i class="glyphicon glyphicon-tags"></i> {{ 'app.productlist' | trans }} </a></li>
+                <li><a href="{{ path('admin_category_list')}}"><i class="glyphicon glyphicon-pencil"></i>{{ 'app.categorylist' | trans }}</a></li>
+            </ul>
+        <div class="login">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as' | trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_login') }}">
+                    {{ 'layout.logout' | trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login' | trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+
+        {% for type in ['success', 'error', 'notice'] %}
+            {% for flash in app.session.flashbag.get(type) %}
+                <div id="FlashMessageBox" class="ui message
+                 {{ type == 'error' ? 'negative' : type == 'notice' ? 'info' : type }}">
+                    <div class="flash-message">
+                        {{ flash | trans }}
+                    </div>
+                    <div class="flash-icon">
+                        <i class="icon close"></i>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="content">
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        {% block footer %}{% endblock %}
+    </div>
+</body>
+</html>

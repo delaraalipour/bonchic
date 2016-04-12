@@ -1,0 +1,396 @@
+@font-face {
+    font-family: IranianSans;
+    src: url('../fonts/IranianSans.eot');
+    src: url('../fonts/IranianSans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IranianSans.woff') format('woff'),
+    url('../fonts/IranianSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.wrapper {
+    width: 970px;
+    margin: 0 auto;
+}
+.clearfix {
+    clear: both;
+    content: "";
+    display: block;
+}
+body {
+    font-family: IranianSans ,Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    background-color: #ebeef0;
+    direction: rtl;
+}
+.admin-header {
+    float: right;
+    width: 250px;
+    position: fixed;
+}
+.admin-header p {
+    background-color: #272c30;
+    margin: 0;
+    height: 56px;
+    line-height: 56px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+.admin-header .admin-menu {
+    background-color: #31373d;
+    height: 560px;
+}
+.admin-header .admin-menu {
+    padding: 0;
+    margin: 0;
+    padding-right: 15px;
+    list-style: none;
+}
+.admin-header .admin-menu li {
+    padding: 0 10px 0 20px;
+    height: 45px;
+    line-height: 50px;
+}
+.admin-header .admin-menu li a {
+    color: #c3cfd8;
+    text-decoration: none;
+    font-size: 14px;
+}
+.admin-header .admin-menu li a:hover {
+    color: white
+}
+.storefront-header {
+    background-color: #000;
+    height: 70px;
+    margin-bottom: 20px;
+}
+.storefront-header p {
+    float: right;
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    line-height: 70px;
+}
+.storefront-header a {
+    float: left;
+    text-decoration: none;
+    padding: 6px 19px;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #8EC023;
+    color: #fff;
+    border-top: #DBFF8E;
+    border-right: 1px solid #65A32E;
+    border-bottom: 1px solid #6B9A20;
+    border-left: 1px solid #65A32E;
+    margin-top: 20px;
+    padding-top: 11px;
+}
+.login {
+    background-color: #31373d;
+    color: #c3cfd8;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+.login a {
+    text-decoration: none;
+    color: #c3cfd8;
+    font-size: 15px;
+}
+.login a:hover {
+    color: white;
+}
+.header .admin-menu a {
+    margin-left: 10px;
+    color: #c3cfd8;
+}
+.header .admin-menu i {
+    margin-left: 10px;
+}
+.top-header i {
+    color: #798c9c;
+    margin: 0 0 0 10px;
+}
+.top-header {
+    height: 56px;
+    line-height: 56px;
+    color: black;
+    position: fixed;
+    right: 250px;
+    background-color: white;
+    width: 81%;
+    padding: 0 20px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+}
+#top-header {
+    z-index: 1;
+}
+.top-header .header-name {
+    float: right;
+}
+.top-header .header-name span {
+    font-size: 17px;
+}
+.top-header .header-name a {
+    font-size: 17px;
+    color: #798c9c;
+}
+.top-header .header-name #slash {
+    color: #798c9c;
+    margin-left: 5px;
+}
+.top-header .header-link {
+    float: left;
+}
+.top-header .header-link a {
+    background-color: #479ccf;
+    color: white;
+    border: 1px solid #479ccf;
+    padding: 7px 19px;
+    border-radius: 4px;
+    text-decoration: none;
+    padding-top: 11px;
+}
+.top-header .header-link a:hover {
+    background-color: #4293c2;
+}
+.buttons{
+    position: fixed;
+    left: 15px;
+    top: 10px;
+}
+.buttons .product-submit {
+    background-color: #479ccf;
+    color: white;
+    border: 1px solid #479ccf;
+    padding: 5px 19px;
+    border-radius: 4px;
+    font-size:13px;
+    padding-top: 11px;
+}
+.buttons a {
+    padding: 6px 19px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #479ccf;
+    border: 1px solid #d3dbe2;
+    font-size:13px;
+    padding-top: 11px;
+    text-decoration: none;
+}
+.buttons .product-submit:hover {
+    border: 1px solid #4293c2;
+    background-color: #4293c2;
+}
+.buttons a:hover {
+    border: 1px solid #d3dbe2;
+    background-color: #f5f6f7;
+}
+.username {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 90px;
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+}
+.login-input {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.login-form input {
+    width: 340px;
+    padding: 23px 18px;
+    font-size: 18px;
+    background-color: white;
+    outline: none;
+    border: 1px solid #E5E5E5;
+}
+.login-form #username {
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+}
+.login-input #_submit {
+    padding: 23px 18px;
+    border: none;
+    color: white;
+    background-color: #479ccf;
+    border-radius: 0 0 8px 8px;
+    width: 340px;
+    font-size: 17px;
+}
+ .login-form #_submit:hover {
+    background-color: #4293c2;
+ }
+.checkbox {
+    text-align: center;
+    color: #95A7B7;
+    font-size: 17px;
+    margin-top: 20px;
+}
+.form-group label {
+    color: #31373d;
+    font-weight: normal;
+    font-size: 13px;
+}
+.form-control:focus {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+}
+.products {
+    float: right;
+    width: 230px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 12px;
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
+}
+.products img {
+    width: 120px;
+    height: 197px;
+    margin: 10px 0;
+}
+.products .title {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.products .price {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.category li {
+    font-size: 17px;
+}
+.data-info {
+    background-color: white;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border-radius: 3px;
+    height: 335px;
+}
+.data-info img {
+    height: 270px;
+    width: 165px;
+    float: right;
+    margin-left: 15px;
+}
+.data-info .title {
+    padding: 15px 30px;
+    color: #479ccf;
+}
+.data-info .description {
+    display: block;
+    padding-left: 25px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: #555;
+}
+.data-info .price {
+    float: right;
+}
+.data-info a {
+    float: left;
+    margin-left: 15px;
+}
+table {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+table, th, td {
+    padding: 15px 53px;
+    margin: 78px 274px 20px 0;
+    background-color: white;
+    border-radius: 3px;
+}
+table img {
+    height: 60px;
+    width: 40px;
+}
+table tr {
+    border-bottom: 1px solid #ebeef0;
+}
+table td:hover {
+    background-color: #eff9fd;
+}
+table .table-header {
+    height: 70px;
+}
+#FlashMessageBox {
+    padding: 20px;
+    border: 1px solid green;
+    background-color: #94FF94;
+    color: black;
+    margin: 10px;
+    border-radius: 5px;
+}
+table .edit {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #479ccf;
+}
+table .delete {
+    text-decoration: none;
+    background-color: #36b7ff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: white;
+    padding-top: 9px;
+}
+.welcome-logo {
+    background-image: url(//cdn.shopify.com/s/assets/admin/home/headers/home-header-2x-b41f115c6492b56e70ef5f1e124825b3857a794d12a5a70176a570019f6f8cd4.png);
+    background-size: cover;
+    height: 200px;
+    width: 1050px;
+    margin: 57px 250px 20px 0;
+}
+.welcome-logo .welcome-message span {
+    font-size: 25px;
+    line-height: 190px;
+}
+.welcome-logo .welcome-message {
+    width: 336px;
+    margin: 0 auto;
+}
+.content {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #d3dbe2;
+    margin-bottom: 20px;
+}
+.product-form {
+    margin: 80px 276px 20px 0;
+    width: 720px;
+}
+.product-form .product-description {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product-form .product-image {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product-form .product-price {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product-form .product-category {
+    background-color: white;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product_category option:hover {
+    background-color: red !important;
+}

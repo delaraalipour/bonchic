@@ -1,0 +1,13 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block header %}{{ 'app.product' | trans }}{% endblock %}
+
+{% block content %}
+    <div class="data-info">
+        <div class="title">{{ product.name }}</div>
+        <div><img src="{{ product.image }}" /></div>
+        <div class="description">{{ product.description }}</div>
+        <div class="price">{{ product.price }}  تومان </div>
+        <a href="{{ path('storefront_product_list') }}"><i class="glyphicon glyphicon-backward"></i></a>
+    </div>
+{% endblock %}

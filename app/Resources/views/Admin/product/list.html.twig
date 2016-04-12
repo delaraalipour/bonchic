@@ -1,0 +1,33 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.productlist' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name"><span><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }}</span></div>
+        <div class="header-link"><a href="{{ path('admin_product_new') }}"> {{ 'app.newproduct' | trans }} </a></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr class="table-header">
+            <td>id</td>
+            <td> {{ 'app.product.image' | trans }}</td>
+            <td>{{ 'app.product.name' | trans }}</td>
+            <td>{{ 'app.product.price' | trans }}</td>
+            <td>{{ 'app.product.operations' | trans }}</td>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td><img src="{{ product.image}}" /></td>
+                <td><a href="{{ path('admin_product_update', {id: product.id}) }}" class="edit">{{ product.name }}</a></td>
+                <td>{{ product.price |number_format(0, '.', ',') }}</td>
+                <td>
+                    <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

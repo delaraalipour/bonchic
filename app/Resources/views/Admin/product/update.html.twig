@@ -1,0 +1,43 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.product.edit' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name">
+            <a href="{{ path('admin_product_list') }}"><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }} </a>
+            <span id="slash">/</span>
+            <span> {{ 'app.product.edit' | trans }}</span>
+        </div>
+    </div>
+{% endblock %}
+
+{%  block content %}
+    <div class="product-form">
+        {{ form_start(form) }}
+
+        <div class="product-description">
+            {{ form_row(form.name) }}
+            {{ form_row(form.description) }}
+        </div>
+
+        <div class="product-image">
+            {{ form_row(form.image) }}
+        </div>
+
+        <div class="product-price">
+            {{ form_row(form.price) }}
+        </div>
+
+        <div class="product-category">
+            {{ form_row(form.category) }}
+        </div>
+        {{ form_widget(form) }}
+
+        <div class="buttons">
+            <a href=" {{ path('admin_product_list') }} ">{{ 'app.cancel' | trans}}</a>
+            <input type="submit" value="{{ 'app.saveproduct' | trans}}" class="product-submit" />
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

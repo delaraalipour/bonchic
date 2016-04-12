@@ -1,0 +1,47 @@
+homepage:
+    path:       /
+    defaults:  { _controller: AppBundle:Admin:homepage}
+
+admin_homepage:
+    path:      /admin
+    defaults:   { _controller: AppBundle:Admin:homepage}
+
+admin_product_new:
+    path:       /admin/product/new
+    defaults:  { _controller: AppBundle:AdminProduct:new}
+
+admin_category_new:
+    path:      /Admin/category/new
+    defaults:  { _controller: AppBundle:AdminCategory:new}
+
+admin_product_list:
+      path:      /admin/product/list
+      defaults:  { _controller: AppBundle:AdminProduct:list}
+
+admin_product_update:
+      path:      /admin/product/update/{id}
+      defaults:  { _controller: AppBundle:AdminProduct:update}
+
+admin_product_delete:
+      path:      /admin/product/delete/{id}
+      defaults:  { _controller: AppBundle:AdminProduct:delete}
+
+admin_category_list:
+    path:       /admin/category/list
+    defaults:   { _controller: AppBundle:AdminCategory:list}
+
+admin_category_delete:
+      path:      /admin/category/delete/{id}
+      defaults:  { _controller: AppBundle:AdminCategory:delete}
+
+storefront_product_list:
+    path:      /storefront/product/list
+    defaults:  { _controller: AppBundle:StorefrontProduct:list}
+
+storefront_product_show:
+    path:      /storefront/product/{id}
+    defaults:  { _controller: AppBundle:StorefrontProduct:show}
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

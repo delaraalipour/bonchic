@@ -1,0 +1,13 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block title %}{{ 'app.homepage' | trans }}{% endblock %}
+
+{% block content %}
+            {% for product in products %}
+                <div class="products">
+                    <div><img src="{{ product.image}}" /></div>
+                    <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
+                    <div class="price">{{ product.price }} تومان</div>
+                </div>
+            {% endfor %}
+{% endblock %}
