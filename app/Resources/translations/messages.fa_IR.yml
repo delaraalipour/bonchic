@@ -24,3 +24,4 @@ app.delete.product: حذف محصول
 app.delete.category: حذف دسته محصول
 app.controlpanel: پانل مدیریت
 app.product: محصول
+app.sign up: ثبت نام

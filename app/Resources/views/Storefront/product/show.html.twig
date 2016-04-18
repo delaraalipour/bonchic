@@ -5,9 +5,9 @@
 {% block content %}
     <div class="data-info">
         <div class="title">{{ product.name }}</div>
-        <div><img src="{{ product.image }}" /></div>
+        <div><img src="{{ asset('uploads/' ~ product.image) }}" /></div>
         <div class="description">{{ product.description }}</div>
-        <div class="price">{{ product.price }}  تومان </div>
+        <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>
         <a href="{{ path('storefront_product_list') }}"><i class="glyphicon glyphicon-backward"></i></a>
     </div>
 {% endblock %}

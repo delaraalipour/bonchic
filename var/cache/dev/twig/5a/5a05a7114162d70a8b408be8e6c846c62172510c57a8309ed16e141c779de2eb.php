@@ -22,32 +22,32 @@ class __TwigTemplate_85bd173d4cb26bf6f2ffafe202316ffcb6c923a9f0ec6aa0cf6531eeb2f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f8b79c43f7db189df8c1e3237fa7a12583d3ef078b213492aae47f0879ae2d3d = $this->env->getExtension("native_profiler");
-        $__internal_f8b79c43f7db189df8c1e3237fa7a12583d3ef078b213492aae47f0879ae2d3d->enter($__internal_f8b79c43f7db189df8c1e3237fa7a12583d3ef078b213492aae47f0879ae2d3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/list.html.twig"));
+        $__internal_f2b44d723432c66af3f1dbad5bcec368a31bed9b7e115c669b23a0789fe9c762 = $this->env->getExtension("native_profiler");
+        $__internal_f2b44d723432c66af3f1dbad5bcec368a31bed9b7e115c669b23a0789fe9c762->enter($__internal_f2b44d723432c66af3f1dbad5bcec368a31bed9b7e115c669b23a0789fe9c762_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f8b79c43f7db189df8c1e3237fa7a12583d3ef078b213492aae47f0879ae2d3d->leave($__internal_f8b79c43f7db189df8c1e3237fa7a12583d3ef078b213492aae47f0879ae2d3d_prof);
+        $__internal_f2b44d723432c66af3f1dbad5bcec368a31bed9b7e115c669b23a0789fe9c762->leave($__internal_f2b44d723432c66af3f1dbad5bcec368a31bed9b7e115c669b23a0789fe9c762_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_df7454e556fed61ed772407ab85fe7017afe0cb9e49b14fd8db14a5826346a97 = $this->env->getExtension("native_profiler");
-        $__internal_df7454e556fed61ed772407ab85fe7017afe0cb9e49b14fd8db14a5826346a97->enter($__internal_df7454e556fed61ed772407ab85fe7017afe0cb9e49b14fd8db14a5826346a97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3a4a3463c54fa44f43e791d0e63e4fbe0dddeca15475b09dcd0d97b34a63cb43 = $this->env->getExtension("native_profiler");
+        $__internal_3a4a3463c54fa44f43e791d0e63e4fbe0dddeca15475b09dcd0d97b34a63cb43->enter($__internal_3a4a3463c54fa44f43e791d0e63e4fbe0dddeca15475b09dcd0d97b34a63cb43_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         
-        $__internal_df7454e556fed61ed772407ab85fe7017afe0cb9e49b14fd8db14a5826346a97->leave($__internal_df7454e556fed61ed772407ab85fe7017afe0cb9e49b14fd8db14a5826346a97_prof);
+        $__internal_3a4a3463c54fa44f43e791d0e63e4fbe0dddeca15475b09dcd0d97b34a63cb43->leave($__internal_3a4a3463c54fa44f43e791d0e63e4fbe0dddeca15475b09dcd0d97b34a63cb43_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_67ba7c2adacb2ec695d4a2322fb3a9467b25baa6fbecbd139499a1621a63e15e = $this->env->getExtension("native_profiler");
-        $__internal_67ba7c2adacb2ec695d4a2322fb3a9467b25baa6fbecbd139499a1621a63e15e->enter($__internal_67ba7c2adacb2ec695d4a2322fb3a9467b25baa6fbecbd139499a1621a63e15e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e5ab75e7faa0b2892d32952563ae2a8fa95fde313864927f1e543561f0e74cc0 = $this->env->getExtension("native_profiler");
+        $__internal_e5ab75e7faa0b2892d32952563ae2a8fa95fde313864927f1e543561f0e74cc0->enter($__internal_e5ab75e7faa0b2892d32952563ae2a8fa95fde313864927f1e543561f0e74cc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "            ";
@@ -58,7 +58,7 @@ class __TwigTemplate_85bd173d4cb26bf6f2ffafe202316ffcb6c923a9f0ec6aa0cf6531eeb2f
             echo "                <div class=\"products\">
                     <div><img src=\"";
             // line 8
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "image", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute($context["product"], "image", array()))), "html", null, true);
             echo "\" /></div>
                     <div class=\"title\"><a href=\"";
             // line 9
@@ -68,7 +68,7 @@ class __TwigTemplate_85bd173d4cb26bf6f2ffafe202316ffcb6c923a9f0ec6aa0cf6531eeb2f
             echo "</a></div>
                     <div class=\"price\">";
             // line 10
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute($context["product"], "price", array()), 0, ".", ","), "html", null, true);
             echo " تومان</div>
                 </div>
             ";
@@ -77,7 +77,7 @@ class __TwigTemplate_85bd173d4cb26bf6f2ffafe202316ffcb6c923a9f0ec6aa0cf6531eeb2f
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_67ba7c2adacb2ec695d4a2322fb3a9467b25baa6fbecbd139499a1621a63e15e->leave($__internal_67ba7c2adacb2ec695d4a2322fb3a9467b25baa6fbecbd139499a1621a63e15e_prof);
+        $__internal_e5ab75e7faa0b2892d32952563ae2a8fa95fde313864927f1e543561f0e74cc0->leave($__internal_e5ab75e7faa0b2892d32952563ae2a8fa95fde313864927f1e543561f0e74cc0_prof);
 
     }
 
@@ -103,9 +103,9 @@ class __TwigTemplate_85bd173d4cb26bf6f2ffafe202316ffcb6c923a9f0ec6aa0cf6531eeb2f
 /* {% block content %}*/
 /*             {% for product in products %}*/
 /*                 <div class="products">*/
-/*                     <div><img src="{{ product.image}}" /></div>*/
+/*                     <div><img src="{{ asset('uploads/' ~ product.image) }}" /></div>*/
 /*                     <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>*/
-/*                     <div class="price">{{ product.price }} تومان</div>*/
+/*                     <div class="price">{{ product.price | number_format(0, '.', ',') }} تومان</div>*/
 /*                 </div>*/
 /*             {% endfor %}*/
 /* {% endblock %}*/

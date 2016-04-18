@@ -117,8 +117,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // admin_product_new
             if ($pathinfo === '/admin/product/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_admin_product_new;
+                }
+
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::newAction',  '_route' => 'admin_product_new',);
             }
+            not_admin_product_new:
 
         }
 

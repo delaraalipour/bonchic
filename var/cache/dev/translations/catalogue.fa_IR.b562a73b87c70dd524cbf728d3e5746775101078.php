@@ -31,6 +31,7 @@ $catalogue = new MessageCatalogue('fa_IR', array (
     'app.delete.category' => 'حذف دسته محصول',
     'app.controlpanel' => 'پانل مدیریت',
     'app.product' => 'محصول',
+    'app.sign up' => 'ثبت نام',
   ),
 ));
 

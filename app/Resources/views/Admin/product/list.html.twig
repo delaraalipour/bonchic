@@ -21,9 +21,9 @@
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
-                <td><img src="{{ product.image}}" /></td>
+                <td><img src="{{ asset('uploads/' ~ product.image) }}" /></td>
                 <td><a href="{{ path('admin_product_update', {id: product.id}) }}" class="edit">{{ product.name }}</a></td>
-                <td>{{ product.price |number_format(0, '.', ',') }}</td>
+                <td>{{ product.price | number_format(0, '.', ',') }}</td>
                 <td>
                     <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>
                 </td>

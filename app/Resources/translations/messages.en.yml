@@ -24,3 +24,4 @@ app.delete.product: delete product
 app.delete.category: delete category
 app.controlpanel: control panel
 app.product: product
+app.sign up: sign up

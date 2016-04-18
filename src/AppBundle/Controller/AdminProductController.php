@@ -17,6 +17,12 @@ class AdminProductController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $product->getImage();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $Dir = $this->getParameter('kernel.root_dir').'/../web/uploads';
+            $file->move($Dir, $fileName);
+            $product->setImage($fileName);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($product);
             $em->flush();
@@ -49,7 +55,9 @@ class AdminProductController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+            $product->upload();
             $em->persist($product);
             $em->flush();
 
@@ -73,7 +81,9 @@ class AdminProductController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+            $product->upload();
             $em->remove($product);
             $em->flush();
 
