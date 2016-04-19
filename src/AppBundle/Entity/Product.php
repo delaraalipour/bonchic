@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Product
 {
@@ -27,12 +29,17 @@ class Product
     protected $description;
 
     /**
+     * @var File
+     */
+    protected $file;
+
+    /**
      * @var string
      */
     protected $image;
 
     /**
-     * @var string
+     * @var Category
      */
     protected $category;
 
@@ -93,6 +100,22 @@ class Product
     }
 
     /**
+     * @return File
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param File $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
      * @return mixed
      */
     public function getImage()
@@ -122,35 +145,5 @@ class Product
     public function setCategory($category)
     {
         $this->category = $category;
-    }
-
-    public $path;
-
-    public function getAbsolutePath()
-    {
-        return null === $this->path
-            ? null
-            : $this->getUploadRootDir().'/'.$this->path;
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->path
-            ? null
-            : $this->getUploadDir().'/'.$this->path;
-    }
-
-    protected function getUploadRootDir()
-    {
-        // the absolute directory path where uploaded
-        // documents should be saved
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
-    protected function getUploadDir()
-    {
-        // get rid of the __DIR__ so it doesn't screw up
-        // when displaying uploaded doc/image in the view.
-        return 'uploads/documents';
     }
 }

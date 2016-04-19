@@ -15,21 +15,22 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'app.product.name'
+                'label' => 'app.product.name',
             ])
             ->add('price', NumberType::class, [
-                'label' => 'app.product.price'
+                'label' => 'app.product.price',
             ])
             ->add('description', TextType::class, [
-                'label' => 'app.product.description'
+                'label' => 'app.product.description',
             ])
-            ->add('image', FileType::class, [
-                'label' => 'app.product.image'
+            ->add('file', FileType::class, [
+                'label' => 'app.image',
+                'required' => false
             ])
             ->add('category', EntityType::class, [
                 'label' => 'app.product.category',
                 'class' => 'AppBundle\Entity\Category',
-                'choice_label' => 'title'
+                'choice_label' => 'title',
             ])
         ;
     }

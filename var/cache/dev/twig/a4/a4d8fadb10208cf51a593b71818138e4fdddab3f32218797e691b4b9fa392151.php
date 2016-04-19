@@ -23,32 +23,32 @@ class __TwigTemplate_c7f174f7257e89cf43502f4e87c1718a10faabfdd01aa941ed8a5e24881
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0f3e5197925351369e044040604ada9d0894b4727f25fdf7a97fee4c71f6c52c = $this->env->getExtension("native_profiler");
-        $__internal_0f3e5197925351369e044040604ada9d0894b4727f25fdf7a97fee4c71f6c52c->enter($__internal_0f3e5197925351369e044040604ada9d0894b4727f25fdf7a97fee4c71f6c52c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/category/new.html.twig"));
+        $__internal_1e69b36a496a3809eed35d6e30856fff8dd31076df39b2fb6c0ed60ae46f6717 = $this->env->getExtension("native_profiler");
+        $__internal_1e69b36a496a3809eed35d6e30856fff8dd31076df39b2fb6c0ed60ae46f6717->enter($__internal_1e69b36a496a3809eed35d6e30856fff8dd31076df39b2fb6c0ed60ae46f6717_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/category/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0f3e5197925351369e044040604ada9d0894b4727f25fdf7a97fee4c71f6c52c->leave($__internal_0f3e5197925351369e044040604ada9d0894b4727f25fdf7a97fee4c71f6c52c_prof);
+        $__internal_1e69b36a496a3809eed35d6e30856fff8dd31076df39b2fb6c0ed60ae46f6717->leave($__internal_1e69b36a496a3809eed35d6e30856fff8dd31076df39b2fb6c0ed60ae46f6717_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_23cf8fb5819b8885c7073ede24ffcd91aacec85689038d0b70c9ffb8a5324603 = $this->env->getExtension("native_profiler");
-        $__internal_23cf8fb5819b8885c7073ede24ffcd91aacec85689038d0b70c9ffb8a5324603->enter($__internal_23cf8fb5819b8885c7073ede24ffcd91aacec85689038d0b70c9ffb8a5324603_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c3af93857e052e4164e63cc4638ff862fb984d0325c3fd9307ce541217ea53d3 = $this->env->getExtension("native_profiler");
+        $__internal_c3af93857e052e4164e63cc4638ff862fb984d0325c3fd9307ce541217ea53d3->enter($__internal_c3af93857e052e4164e63cc4638ff862fb984d0325c3fd9307ce541217ea53d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "دسته محصول جدید";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.newcategory"), "html", null, true);
         
-        $__internal_23cf8fb5819b8885c7073ede24ffcd91aacec85689038d0b70c9ffb8a5324603->leave($__internal_23cf8fb5819b8885c7073ede24ffcd91aacec85689038d0b70c9ffb8a5324603_prof);
+        $__internal_c3af93857e052e4164e63cc4638ff862fb984d0325c3fd9307ce541217ea53d3->leave($__internal_c3af93857e052e4164e63cc4638ff862fb984d0325c3fd9307ce541217ea53d3_prof);
 
     }
 
     // line 5
     public function block_header($context, array $blocks = array())
     {
-        $__internal_89648372bc6cec83ccd92f4b36df2dcd36f50897e48e413f0ac5abd24faa939f = $this->env->getExtension("native_profiler");
-        $__internal_89648372bc6cec83ccd92f4b36df2dcd36f50897e48e413f0ac5abd24faa939f->enter($__internal_89648372bc6cec83ccd92f4b36df2dcd36f50897e48e413f0ac5abd24faa939f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_de15357beae180775699bb6f64b493975c8ddf86212b4f1dba0a5c9e3dbc4aa8 = $this->env->getExtension("native_profiler");
+        $__internal_de15357beae180775699bb6f64b493975c8ddf86212b4f1dba0a5c9e3dbc4aa8->enter($__internal_de15357beae180775699bb6f64b493975c8ddf86212b4f1dba0a5c9e3dbc4aa8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 6
         echo "    <div class=\"top-header\">
@@ -68,15 +68,15 @@ class __TwigTemplate_c7f174f7257e89cf43502f4e87c1718a10faabfdd01aa941ed8a5e24881
     </div>
 ";
         
-        $__internal_89648372bc6cec83ccd92f4b36df2dcd36f50897e48e413f0ac5abd24faa939f->leave($__internal_89648372bc6cec83ccd92f4b36df2dcd36f50897e48e413f0ac5abd24faa939f_prof);
+        $__internal_de15357beae180775699bb6f64b493975c8ddf86212b4f1dba0a5c9e3dbc4aa8->leave($__internal_de15357beae180775699bb6f64b493975c8ddf86212b4f1dba0a5c9e3dbc4aa8_prof);
 
     }
 
     // line 15
     public function block_content($context, array $blocks = array())
     {
-        $__internal_8125f54b7176370d9de9d85375dc543c2f01fd636fb06e059f6bcf84cd86b314 = $this->env->getExtension("native_profiler");
-        $__internal_8125f54b7176370d9de9d85375dc543c2f01fd636fb06e059f6bcf84cd86b314->enter($__internal_8125f54b7176370d9de9d85375dc543c2f01fd636fb06e059f6bcf84cd86b314_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_a9d4527c9e34c0a6816d4a28401d222840f913bde40e86d6227429d5c92d71e6 = $this->env->getExtension("native_profiler");
+        $__internal_a9d4527c9e34c0a6816d4a28401d222840f913bde40e86d6227429d5c92d71e6->enter($__internal_a9d4527c9e34c0a6816d4a28401d222840f913bde40e86d6227429d5c92d71e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 16
         echo "    <div class=\"product-form\">
@@ -91,30 +91,37 @@ class __TwigTemplate_c7f174f7257e89cf43502f4e87c1718a10faabfdd01aa941ed8a5e24881
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "title", array()), 'row');
         echo "
     </div>
+    <div class=\"product-category-image\">
         ";
-        // line 22
+        // line 23
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "file", array()), 'row');
+        echo "
+    </div>
+
+        ";
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
         <div class=\"buttons\">
             <a href=\" ";
-        // line 24
+        // line 28
         echo $this->env->getExtension('routing')->getPath("admin_category_list");
         echo " \">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.cancel"), "html", null, true);
         echo "</a>
             <input type=\"submit\" value=\"";
-        // line 25
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.savecategory"), "html", null, true);
         echo "\" class=\"product-submit\" />
         </div>
         ";
-        // line 27
+        // line 31
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
     </div>
 ";
         
-        $__internal_8125f54b7176370d9de9d85375dc543c2f01fd636fb06e059f6bcf84cd86b314->leave($__internal_8125f54b7176370d9de9d85375dc543c2f01fd636fb06e059f6bcf84cd86b314_prof);
+        $__internal_a9d4527c9e34c0a6816d4a28401d222840f913bde40e86d6227429d5c92d71e6->leave($__internal_a9d4527c9e34c0a6816d4a28401d222840f913bde40e86d6227429d5c92d71e6_prof);
 
     }
 
@@ -130,12 +137,12 @@ class __TwigTemplate_c7f174f7257e89cf43502f4e87c1718a10faabfdd01aa941ed8a5e24881
 
     public function getDebugInfo()
     {
-        return array (  112 => 27,  107 => 25,  101 => 24,  96 => 22,  91 => 20,  86 => 18,  82 => 16,  76 => 15,  65 => 10,  58 => 8,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  119 => 31,  114 => 29,  108 => 28,  103 => 26,  97 => 23,  91 => 20,  86 => 18,  82 => 16,  76 => 15,  65 => 10,  58 => 8,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends ":Admin:layout.html.twig" %}*/
 /* */
-/* {% block title %}دسته محصول جدید{% endblock %}*/
+/* {% block title %}{{ 'app.newcategory' | trans }}{% endblock %}*/
 /* */
 /* {% block header %}*/
 /*     <div class="top-header">*/
@@ -154,6 +161,10 @@ class __TwigTemplate_c7f174f7257e89cf43502f4e87c1718a10faabfdd01aa941ed8a5e24881
 /*     <div class="product-category">*/
 /*         {{ form_row(form.title) }}*/
 /*     </div>*/
+/*     <div class="product-category-image">*/
+/*         {{ form_row(form.file) }}*/
+/*     </div>*/
+/* */
 /*         {{ form_widget(form) }}*/
 /*         <div class="buttons">*/
 /*             <a href=" {{ path('admin_category_list') }} ">{{ 'app.cancel' | trans}}</a>*/

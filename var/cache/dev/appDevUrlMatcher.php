@@ -158,6 +158,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::listAction',  '_route' => 'admin_category_list',);
                 }
 
+                // admin_category_update
+                if ($pathinfo === '/admin/category/update') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::updateAction',  '_route' => 'admin_category_update',);
+                }
+
                 // admin_category_delete
                 if (0 === strpos($pathinfo, '/admin/category/delete') && preg_match('#^/admin/category/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_category_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::deleteAction',));

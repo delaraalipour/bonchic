@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" type="text/css" />
 </head>
 <body>
-
     <div class="admin-header">
         <p>{{ 'app.site_title'|trans ({}, 'messages') }}</p>
             <ul class="admin-menu">
@@ -25,6 +24,10 @@
                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login' | trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </div>
+    </div>
+
+    <div class="content">
+        {% block header %}{% endblock %}
 
         {% for type in ['success', 'error', 'notice'] %}
             {% for flash in app.session.flashbag.get(type) %}
@@ -39,10 +42,7 @@
                 </div>
             {% endfor %}
         {% endfor %}
-    </div>
 
-    <div class="content">
-        {% block header %}{% endblock %}
         {% block content %}{% endblock %}
     </div>
     <div class="footer">

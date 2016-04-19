@@ -109,6 +109,7 @@ body {
     width: 81%;
     padding: 0 20px;
     box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+    top: 0;
 }
 #top-header {
     z-index: 1;
@@ -208,7 +209,7 @@ body {
     padding-top: 11px;
 }
 .buttons a {
-    padding: 6px 19px;
+    padding: 5px 19px;
     border-radius: 4px;
     background-color: #ffffff;
     color: #479ccf;
@@ -302,8 +303,7 @@ table {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 table, th, td {
-    padding: 15px 50px;
-    margin: 78px 274px 20px 0;
+    padding: 15px 54px;
     background-color: white;
     border-radius: 3px;
 }
@@ -323,6 +323,7 @@ table .edit {
     padding: 5px 10px;
     border-radius: 5px;
     color: #479ccf;
+    font-size: 13px;
 }
 table .delete {
     text-decoration: none;
@@ -334,18 +335,19 @@ table .delete {
 }
 #FlashMessageBox {
     padding: 20px;
-    border: 1px solid green;
-    background-color: #94FF94;
+    background-color: #96bf48;
+    border-top: #DBFF8E;
+    border-right: 1px solid #65A32E;
+    border-bottom: 1px solid #6B9A20;
+    border-left: 1px solid #65A32E;
     color: black;
-    margin: 10px;
+    margin-bottom: 20px;
     border-radius: 5px;
 }
 .welcome-logo {
     background-image: url(//cdn.shopify.com/s/assets/admin/home/headers/home-header-2x-b41f115c6492b56e70ef5f1e124825b3857a794d12a5a70176a570019f6f8cd4.png);
     background-size: cover;
     height: 200px;
-    width: 1050px;
-    margin: 57px 250px 20px 0;
 }
 .welcome-logo .welcome-message span {
     font-size: 25px;
@@ -360,10 +362,12 @@ table .delete {
     width: 100%;
     border-bottom: 1px solid #d3dbe2;
     margin-bottom: 20px;
+    padding-top: 78px;
+    padding-right: 270px;
+    padding-left: 18px;
+    padding-bottom: 20px;
 }
 .product-form {
-    margin: 80px 276px 20px 0;
-    width: 720px;
 }
 .product-form .product-description {
     background-color: white;
@@ -379,6 +383,37 @@ table .delete {
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.product-form .product-image img {
+    width: 200px;
+    float: right;
+}
+.product-form .product-image button {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    background-color: #96bf48;
+    border: 1px solid #96bf48;
+    border-radius: 3px;
+    top: 145px;
+    margin-right: 10px;
+}
+.product-form .product-image button:hover {
+    border: 1px solid #7ba232;
+    background-color: #7ba232;
+    color: #ffffff;
+}
+.product-form .product-image button span {
+    font-size: 13px;
+    color: #ffffff;
+}
+.product-form .product-image button #product_file {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
 .product-form .product-price {
     background-color: white;
     padding: 30px;
@@ -391,9 +426,58 @@ table .delete {
     padding: 30px;
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
-.product_category option:hover {
-    background-color: red !important;
+.product-form .product-category-image {
+    background-color: white;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.category-form .category-title {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.category-form .category-image {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.category-form .category-image img {
+    width: 200px;
+    float: right;
+}
+.category-form .category-image button {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    background-color: #96bf48;
+    border: 1px solid #96bf48;
+    border-radius: 3px;
+    top: 106px;
+    margin-right: 10px;
+}
+.category-form .category-image button:hover {
+    border: 1px solid #7ba232;
+    background-color: #7ba232;
+    color: #ffffff;
+}
+.category-form .category-image button span {
+    font-size: 13px;
+    color: #ffffff;
+}
+.category-form .category-image button #category_file {
+    position: absolute;
+    width: 110px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 #product_image {
     float: left;

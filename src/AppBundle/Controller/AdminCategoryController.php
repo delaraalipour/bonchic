@@ -11,15 +11,14 @@ class AdminCategoryController extends Controller
 {
     public function newAction(Request $request)
     {
-        $Category = new category();
+        $category = new category();
 
-        $form = $this->createForm(CategoryType::class, $Category);
+        $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($Category);
-            $em->flush();
+            $this->persistProduct($category);
+            $this->addFlash('success', 'Category Created');
 
             return $this->redirectToRoute('admin_category_list');
         }
@@ -38,24 +37,64 @@ class AdminCategoryController extends Controller
         ]);
     }
 
+
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function updateAction(Request $request)
+    {
+        $id = $request->get('id');
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
+        $category = $repository->find($id);
+
+        $form = $this->createForm(CategoryType::class, $category);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->persistCategory($category);
+            $this->addFlash('success', 'Product Saved');
+
+            return $this->redirectToRoute('admin_category_list');
+        }
+
+        return $this->render(':Admin/category/update.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
     public function deleteAction(Request $request)
     {
         $id = $request->get('id');
         $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
         $product = $repository->find($id);
 
-        $form = $this->createForm(CategoryType::class, $product);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($product);
+        $em->flush();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($product);
-            $em->flush();
+        $this->addFlash('success', 'Category Deleted');
 
-            return $this->redirectToRoute('admin_category_list');
+        return $this->redirectToRoute('admin_category_list');
+    }
+
+    /**
+     * @param Category $category
+     */
+    protected function persistCategory(Category $category)
+    {
+        $file = $category->getFile();
+
+        if (null !== $file) {
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $dir = $this->getParameter('kernel.root_dir') . '/../web/uploads';
+            $file->move($dir, $fileName);
+            $category->setImage($fileName);
         }
-        return $this->render(':Admin/category/delete.html.twig', [
-            'form' => $form->createView()
-        ]);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($category);
+        $em->flush();
     }
 }
