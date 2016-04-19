@@ -6,9 +6,15 @@ use AppBundle\Entity\Category;
 use AppBundle\Form\Type\CategoryType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminCategoryController extends Controller
 {
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function newAction(Request $request)
     {
         $category = new category();
@@ -27,6 +33,11 @@ class AdminCategoryController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function listAction(Request $request)
     {
         $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
@@ -64,6 +75,11 @@ class AdminCategoryController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function deleteAction(Request $request)
     {
         $id = $request->get('id');

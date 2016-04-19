@@ -4,9 +4,9 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Form\Type\ProductType;
 use AppBundle\Entity\Product;
-use Symfony\Component\HttpFoundation\Response;
 
 class AdminProductController extends Controller
 {
