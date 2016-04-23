@@ -13,6 +13,11 @@ class User extends BaseUser
     protected $gender;
 
     /**
+     * @var string
+     */
+    protected $mobile;
+
+    /**
      * @return string
      */
     public function getGender()
@@ -26,5 +31,21 @@ class User extends BaseUser
     public function setGender($gender)
     {
         $this->gender = $gender;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMobile()
+    {
+        return $this->mobile;
+    }
+
+    /**
+     * @param string $mobile
+     */
+    public function setMobile($mobile)
+    {
+        $this->mobile = $mobile;
     }
 }

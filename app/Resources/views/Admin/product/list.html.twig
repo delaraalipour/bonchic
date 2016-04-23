@@ -25,7 +25,7 @@
                 <td><a href="{{ path('admin_product_update', {id: product.id}) }}" class="edit">{{ product.name }}</a></td>
                 <td>{{ product.price | number_format(0, '.', ',') }}</td>
                 <td>
-                    <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>
+                    <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>
                 </td>
             </tr>
         {% endfor %}

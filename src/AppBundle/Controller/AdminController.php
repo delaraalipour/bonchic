@@ -6,9 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AdminController extends Controller
 {
-    public function homepageAction()
+    public function indexAction()
     {
-        return $this->render(':Admin/admin.html.twig', [
-        ]);
+        return $this->render(':Admin/index.html.twig');
     }
 }

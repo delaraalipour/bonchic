@@ -106,70 +106,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'homepage');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\AdminController::homepageAction',  '_route' => 'homepage',);
-        }
-
-        if (0 === strpos($pathinfo, '/admin')) {
-            // admin_homepage
-            if ($pathinfo === '/admin') {
-                return array (  '_controller' => 'AppBundle\\Controller\\AdminController::homepageAction',  '_route' => 'admin_homepage',);
-            }
-
-            // admin_product_new
-            if ($pathinfo === '/admin/product/new') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_admin_product_new;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::newAction',  '_route' => 'admin_product_new',);
-            }
-            not_admin_product_new:
-
-        }
-
-        // admin_category_new
-        if ($pathinfo === '/Admin/category/new') {
-            return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::newAction',  '_route' => 'admin_category_new',);
-        }
-
-        if (0 === strpos($pathinfo, '/admin')) {
-            if (0 === strpos($pathinfo, '/admin/product')) {
-                // admin_product_list
-                if ($pathinfo === '/admin/product/list') {
-                    return array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::listAction',  '_route' => 'admin_product_list',);
-                }
-
-                // admin_product_update
-                if (0 === strpos($pathinfo, '/admin/product/update') && preg_match('#^/admin/product/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_product_update')), array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::updateAction',));
-                }
-
-                // admin_product_delete
-                if (0 === strpos($pathinfo, '/admin/product/delete') && preg_match('#^/admin/product/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_product_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::deleteAction',));
-                }
-
-            }
-
-            if (0 === strpos($pathinfo, '/admin/category')) {
-                // admin_category_list
-                if ($pathinfo === '/admin/category/list') {
-                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::listAction',  '_route' => 'admin_category_list',);
-                }
-
-                // admin_category_update
-                if ($pathinfo === '/admin/category/update') {
-                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::updateAction',  '_route' => 'admin_category_update',);
-                }
-
-                // admin_category_delete
-                if (0 === strpos($pathinfo, '/admin/category/delete') && preg_match('#^/admin/category/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_category_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::deleteAction',));
-                }
-
-            }
-
+            return array (  '_controller' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController::redirectAction',  'route' => 'storefront_product_list',  '_route' => 'homepage',);
         }
 
         if (0 === strpos($pathinfo, '/storefront/product')) {
@@ -181,6 +118,76 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // storefront_product_show
             if (preg_match('#^/storefront/product/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_product_show')), array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::showAction',));
+            }
+
+        }
+
+        // cart_add
+        if (0 === strpos($pathinfo, '/add-to-cart') && preg_match('#^/add\\-to\\-cart/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_add')), array (  '_controller' => 'AppBundle\\Controller\\CartController::addAction',));
+        }
+
+        // cart_list
+        if ($pathinfo === '/cart') {
+            return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin')) {
+            // admin_index
+            if ($pathinfo === '/admin') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin_index',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/product')) {
+                // admin_product_new
+                if ($pathinfo === '/admin/product/new') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_admin_product_new;
+                    }
+
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::newAction',  '_route' => 'admin_product_new',);
+                }
+                not_admin_product_new:
+
+                // admin_product_update
+                if (0 === strpos($pathinfo, '/admin/product/update') && preg_match('#^/admin/product/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_product_update')), array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::updateAction',));
+                }
+
+                // admin_product_delete
+                if (0 === strpos($pathinfo, '/admin/product/delete') && preg_match('#^/admin/product/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_product_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::deleteAction',));
+                }
+
+                // admin_product_list
+                if ($pathinfo === '/admin/product/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminProductController::listAction',  '_route' => 'admin_product_list',);
+                }
+
+            }
+
+        }
+
+        // admin_category_new
+        if ($pathinfo === '/Admin/category/new') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::newAction',  '_route' => 'admin_category_new',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin/category')) {
+            // admin_category_update
+            if ($pathinfo === '/admin/category/update') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::updateAction',  '_route' => 'admin_category_update',);
+            }
+
+            // admin_category_delete
+            if (0 === strpos($pathinfo, '/admin/category/delete') && preg_match('#^/admin/category/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_category_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::deleteAction',));
+            }
+
+            // admin_category_list
+            if ($pathinfo === '/admin/category/list') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::listAction',  '_route' => 'admin_category_list',);
             }
 
         }

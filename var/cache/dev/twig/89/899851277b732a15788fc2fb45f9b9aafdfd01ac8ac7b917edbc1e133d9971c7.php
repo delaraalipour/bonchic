@@ -22,59 +22,64 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ebb613a7790798288ef547e490b4fd6fffb693074411cb076fe3f27086139f7e = $this->env->getExtension("native_profiler");
-        $__internal_ebb613a7790798288ef547e490b4fd6fffb693074411cb076fe3f27086139f7e->enter($__internal_ebb613a7790798288ef547e490b4fd6fffb693074411cb076fe3f27086139f7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/show.html.twig"));
+        $__internal_a0254b31447d2e76f20f913678086f7289c81eb25ff068ed9332412dbd788f39 = $this->env->getExtension("native_profiler");
+        $__internal_a0254b31447d2e76f20f913678086f7289c81eb25ff068ed9332412dbd788f39->enter($__internal_a0254b31447d2e76f20f913678086f7289c81eb25ff068ed9332412dbd788f39_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ebb613a7790798288ef547e490b4fd6fffb693074411cb076fe3f27086139f7e->leave($__internal_ebb613a7790798288ef547e490b4fd6fffb693074411cb076fe3f27086139f7e_prof);
+        $__internal_a0254b31447d2e76f20f913678086f7289c81eb25ff068ed9332412dbd788f39->leave($__internal_a0254b31447d2e76f20f913678086f7289c81eb25ff068ed9332412dbd788f39_prof);
 
     }
 
     // line 3
     public function block_header($context, array $blocks = array())
     {
-        $__internal_15dd219892555e5df16cbead397f39ca437d159ddbc0948f61a51ed100a89010 = $this->env->getExtension("native_profiler");
-        $__internal_15dd219892555e5df16cbead397f39ca437d159ddbc0948f61a51ed100a89010->enter($__internal_15dd219892555e5df16cbead397f39ca437d159ddbc0948f61a51ed100a89010_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_b55c102d8db702321e546db7fc366c64cb0e2f2f42feb200c7115ab880fb718c = $this->env->getExtension("native_profiler");
+        $__internal_b55c102d8db702321e546db7fc366c64cb0e2f2f42feb200c7115ab880fb718c->enter($__internal_b55c102d8db702321e546db7fc366c64cb0e2f2f42feb200c7115ab880fb718c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product"), "html", null, true);
         
-        $__internal_15dd219892555e5df16cbead397f39ca437d159ddbc0948f61a51ed100a89010->leave($__internal_15dd219892555e5df16cbead397f39ca437d159ddbc0948f61a51ed100a89010_prof);
+        $__internal_b55c102d8db702321e546db7fc366c64cb0e2f2f42feb200c7115ab880fb718c->leave($__internal_b55c102d8db702321e546db7fc366c64cb0e2f2f42feb200c7115ab880fb718c_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_baadb446a4acd4ead247b6a83fb4372a949d494c824f42e79013846fe80c3424 = $this->env->getExtension("native_profiler");
-        $__internal_baadb446a4acd4ead247b6a83fb4372a949d494c824f42e79013846fe80c3424->enter($__internal_baadb446a4acd4ead247b6a83fb4372a949d494c824f42e79013846fe80c3424_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2a38442405b893d141e724346d2ca42df6a647c86995fad2cceb409d6036ceaf = $this->env->getExtension("native_profiler");
+        $__internal_2a38442405b893d141e724346d2ca42df6a647c86995fad2cceb409d6036ceaf->enter($__internal_2a38442405b893d141e724346d2ca42df6a647c86995fad2cceb409d6036ceaf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"data-info\">
         <div class=\"title\">";
         // line 7
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "name", array()), "html", null, true);
-        echo "</div>
-        <div><img src=\"";
+        echo "
+            <a href=\"";
         // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cart_add", array("id" => $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "id", array()))), "html", null, true);
+        echo "\">اضافه به سبد خرید</a>
+        </div>
+        <div><img src=\"";
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "image", array()))), "html", null, true);
         echo "\" /></div>
         <div class=\"description\">";
-        // line 9
+        // line 11
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "description", array()), "html", null, true);
         echo "</div>
         <div class=\"price\">";
-        // line 10
+        // line 12
         echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "price", array()), 0, ".", ","), "html", null, true);
         echo "  تومان </div>
         <a href=\"";
-        // line 11
+        // line 13
         echo $this->env->getExtension('routing')->getPath("storefront_product_list");
         echo "\"><i class=\"glyphicon glyphicon-backward\"></i></a>
     </div>
 ";
         
-        $__internal_baadb446a4acd4ead247b6a83fb4372a949d494c824f42e79013846fe80c3424->leave($__internal_baadb446a4acd4ead247b6a83fb4372a949d494c824f42e79013846fe80c3424_prof);
+        $__internal_2a38442405b893d141e724346d2ca42df6a647c86995fad2cceb409d6036ceaf->leave($__internal_2a38442405b893d141e724346d2ca42df6a647c86995fad2cceb409d6036ceaf_prof);
 
     }
 
@@ -90,7 +95,7 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
 
     public function getDebugInfo()
     {
-        return array (  72 => 11,  68 => 10,  64 => 9,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  77 => 13,  73 => 12,  69 => 11,  65 => 10,  60 => 8,  56 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends ":Storefront:layout.html.twig" %}*/
@@ -99,7 +104,9 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
 /* */
 /* {% block content %}*/
 /*     <div class="data-info">*/
-/*         <div class="title">{{ product.name }}</div>*/
+/*         <div class="title">{{ product.name }}*/
+/*             <a href="{{ path('cart_add', {id: product.id}) }}">اضافه به سبد خرید</a>*/
+/*         </div>*/
 /*         <div><img src="{{ asset('uploads/' ~ product.image) }}" /></div>*/
 /*         <div class="description">{{ product.description }}</div>*/
 /*         <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>*/

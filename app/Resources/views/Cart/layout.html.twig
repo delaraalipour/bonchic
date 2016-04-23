@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" type="text/css" />
+</head>
+<body>
+<div class="storefront-header">
+    <div class="wrapper">
+        <p>{{ 'app.site_title'|trans ({}, 'messages') }}</p>
+        <a href="{{ path('fos_user_security_login') }}">{{ 'app.controlpanel' | trans }}</a>
+    </div>
+</div>
+
+<div class="wrapper">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

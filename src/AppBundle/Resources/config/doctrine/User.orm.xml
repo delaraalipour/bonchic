@@ -9,5 +9,6 @@
             <generator strategy="AUTO" />
         </id>
         <field name="gender" column="gender" type="string" length="6" />
+        <field name="mobile" column="mobile" type="string" length="15" />
     </entity>
 </doctrine-mapping>

@@ -64,8 +64,9 @@ class AdminProductController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
             $this->persistProduct($product);
-            $this->addFlash('success', 'Product Saved');
+            $em->flush();
 
             return $this->redirectToRoute('admin_product_list');
         }

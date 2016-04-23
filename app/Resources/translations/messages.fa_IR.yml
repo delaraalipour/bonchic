@@ -9,7 +9,7 @@ app.product.price: قیمت
 app.product.description: توضیحات
 app.product.category: دسته محصول
 app.edit: ویرایش
-app.product.delete: حذف
+app.delete: حذف
 app.operations: عملیات
 app.newproduct: محصول جدید
 app.newcategory: دسته محصول جدید
@@ -20,8 +20,6 @@ app.saveproduct: ذخیره محصول
 app.cancel: لغو کردن
 app.savecategory: ذخیره دسته محصول
 app.category.title: نام دسته محصول
-app.delete.product: حذف محصول
-app.delete.category: حذف دسته محصول
 app.controlpanel: پانل مدیریت
 app.product: محصول
 app.sign up: ثبت نام

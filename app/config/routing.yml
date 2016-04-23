@@ -1,50 +1,70 @@
+#
+# Storefront
+#
 homepage:
-     path:      /
-     defaults:  { _controller: AppBundle:Admin:homepage}
+     path: /
+     defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: storefront_product_list
 
-admin_homepage:
+storefront_product_list:
+     path:      /storefront/product/list
+     defaults:  { _controller: AppBundle:StorefrontProduct:list }
+
+storefront_product_show:
+     path:      /storefront/product/{id}
+     defaults:  { _controller: AppBundle:StorefrontProduct:show }
+
+cart_add:
+     path:      /add-to-cart/{id}
+     defaults:  { _controller: AppBundle:Cart:add }
+
+cart_list:
+     path:      /cart
+     defaults:  { _controller: AppBundle:Cart:list }
+
+#
+# Admin
+#
+admin_index:
      path:      /admin
-     defaults:  { _controller: AppBundle:Admin:homepage}
+     defaults:  { _controller: AppBundle:Admin:index }
 
 admin_product_new:
      path:      /admin/product/new
-     defaults:  { _controller: AppBundle:AdminProduct:new}
      methods:   [GET, POST]
-
-admin_category_new:
-     path:      /Admin/category/new
-     defaults:  { _controller: AppBundle:AdminCategory:new}
-
-admin_product_list:
-     path:      /admin/product/list
-     defaults:  { _controller: AppBundle:AdminProduct:list}
+     defaults:  { _controller: AppBundle:AdminProduct:new }
 
 admin_product_update:
      path:      /admin/product/update/{id}
-     defaults:  { _controller: AppBundle:AdminProduct:update}
+     defaults:  { _controller: AppBundle:AdminProduct:update }
 
 admin_product_delete:
      path:      /admin/product/delete/{id}
-     defaults:  { _controller: AppBundle:AdminProduct:delete}
+     defaults:  { _controller: AppBundle:AdminProduct:delete }
+
+admin_product_list:
+     path:      /admin/product/list
+     defaults:  { _controller: AppBundle:AdminProduct:list }
+
+admin_category_new:
+     path:      /Admin/category/new
+     defaults:  { _controller: AppBundle:AdminCategory:new }
+
+admin_category_update:
+      path:      /admin/category/update
+      defaults:  { _controller: AppBundle:AdminCategory:update }
+
+admin_category_delete:
+     path:      /admin/category/delete/{id}
+     defaults:  { _controller: AppBundle:AdminCategory:delete }
 
 admin_category_list:
      path:      /admin/category/list
      defaults:  { _controller: AppBundle:AdminCategory:list}
 
-admin_category_update:
-      path:      /admin/category/update
-      defaults:  { _controller: AppBundle:AdminCategory:update}
-admin_category_delete:
-     path:      /admin/category/delete/{id}
-     defaults:  { _controller: AppBundle:AdminCategory:delete}
-
-storefront_product_list:
-     path:      /storefront/product/list
-     defaults:  { _controller: AppBundle:StorefrontProduct:list}
-
-storefront_product_show:
-     path:      /storefront/product/{id}
-     defaults:  { _controller: AppBundle:StorefrontProduct:show}
-
+#
+# 3rd-party
+#
 fos_user:
      resource: "@FOSUserBundle/Resources/config/routing/all.xml"

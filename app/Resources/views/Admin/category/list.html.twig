@@ -14,7 +14,7 @@
     <table>
         <tr class="table-header">
             <td>id</td>
-            <td>{{ 'app.image' }}</td>
+            <td>{{ 'app.image' | trans }}</td>
             <td>{{ 'app.category.title' | trans }}</td>
             <td>{{ 'app.operations' | trans }}</td>
         </tr>
@@ -24,7 +24,7 @@
                 <td><img src="{{ asset('uploads/' ~ category.image) }}" /></td>
                 <td><a href="{{ path('admin_category_update', {id: category.id}) }}" class="edit">{{ category.title }}</a></td>
                 <td>
-                    <a href="{{ path('admin_category_delete', {id: category.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>
+                    <a href="{{ path('admin_category_delete', {id: category.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>
                 </td>
             </tr>
         {% endfor %}

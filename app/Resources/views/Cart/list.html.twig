@@ -1,0 +1,13 @@
+{% extends ":Cart:layout.html.twig" %}
+
+{% block content %}
+    <a href="{{ path('storefront_product_list') }}">home</a>
+    {% if products|length == 0 %}
+        cart is empty.
+    {% else %}
+        {% for product in products %}
+            <div class="title">{{ product.name }}</div>
+            <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -23,32 +23,32 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3e03ee75779335f4ae9af3c9c05ab9fccccbb3b9c17542bde3108c6e97f5e40f = $this->env->getExtension("native_profiler");
-        $__internal_3e03ee75779335f4ae9af3c9c05ab9fccccbb3b9c17542bde3108c6e97f5e40f->enter($__internal_3e03ee75779335f4ae9af3c9c05ab9fccccbb3b9c17542bde3108c6e97f5e40f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/product/list.html.twig"));
+        $__internal_e6b1ffaaf049b1752cb7a8f20c7908a114f0ac9057d60b010fa157cfb536b01a = $this->env->getExtension("native_profiler");
+        $__internal_e6b1ffaaf049b1752cb7a8f20c7908a114f0ac9057d60b010fa157cfb536b01a->enter($__internal_e6b1ffaaf049b1752cb7a8f20c7908a114f0ac9057d60b010fa157cfb536b01a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/product/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3e03ee75779335f4ae9af3c9c05ab9fccccbb3b9c17542bde3108c6e97f5e40f->leave($__internal_3e03ee75779335f4ae9af3c9c05ab9fccccbb3b9c17542bde3108c6e97f5e40f_prof);
+        $__internal_e6b1ffaaf049b1752cb7a8f20c7908a114f0ac9057d60b010fa157cfb536b01a->leave($__internal_e6b1ffaaf049b1752cb7a8f20c7908a114f0ac9057d60b010fa157cfb536b01a_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_43a06a6492e4f1dd509522f2e1a32c0eeecf452f30e5bbdef2cde69384d85160 = $this->env->getExtension("native_profiler");
-        $__internal_43a06a6492e4f1dd509522f2e1a32c0eeecf452f30e5bbdef2cde69384d85160->enter($__internal_43a06a6492e4f1dd509522f2e1a32c0eeecf452f30e5bbdef2cde69384d85160_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_93a25bf2fc4fc98b558af5a76a5659393fa38b9ecfd690ac7ec6b9f3c4ce1e4e = $this->env->getExtension("native_profiler");
+        $__internal_93a25bf2fc4fc98b558af5a76a5659393fa38b9ecfd690ac7ec6b9f3c4ce1e4e->enter($__internal_93a25bf2fc4fc98b558af5a76a5659393fa38b9ecfd690ac7ec6b9f3c4ce1e4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
         
-        $__internal_43a06a6492e4f1dd509522f2e1a32c0eeecf452f30e5bbdef2cde69384d85160->leave($__internal_43a06a6492e4f1dd509522f2e1a32c0eeecf452f30e5bbdef2cde69384d85160_prof);
+        $__internal_93a25bf2fc4fc98b558af5a76a5659393fa38b9ecfd690ac7ec6b9f3c4ce1e4e->leave($__internal_93a25bf2fc4fc98b558af5a76a5659393fa38b9ecfd690ac7ec6b9f3c4ce1e4e_prof);
 
     }
 
     // line 5
     public function block_header($context, array $blocks = array())
     {
-        $__internal_444c7de56eab7f818f65caba944f83831ad3e756456ac224c2b517a65f276d0a = $this->env->getExtension("native_profiler");
-        $__internal_444c7de56eab7f818f65caba944f83831ad3e756456ac224c2b517a65f276d0a->enter($__internal_444c7de56eab7f818f65caba944f83831ad3e756456ac224c2b517a65f276d0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_4f63178b9533488bcac2d8d1067b7c8d1ab38f7c43b63927c97877c39bb7477b = $this->env->getExtension("native_profiler");
+        $__internal_4f63178b9533488bcac2d8d1067b7c8d1ab38f7c43b63927c97877c39bb7477b->enter($__internal_4f63178b9533488bcac2d8d1067b7c8d1ab38f7c43b63927c97877c39bb7477b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 6
         echo "    <div class=\"top-header\">
@@ -65,15 +65,15 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
     </div>
 ";
         
-        $__internal_444c7de56eab7f818f65caba944f83831ad3e756456ac224c2b517a65f276d0a->leave($__internal_444c7de56eab7f818f65caba944f83831ad3e756456ac224c2b517a65f276d0a_prof);
+        $__internal_4f63178b9533488bcac2d8d1067b7c8d1ab38f7c43b63927c97877c39bb7477b->leave($__internal_4f63178b9533488bcac2d8d1067b7c8d1ab38f7c43b63927c97877c39bb7477b_prof);
 
     }
 
     // line 12
     public function block_content($context, array $blocks = array())
     {
-        $__internal_ca9373d36d1cbe068b170975b59cc8737edf9788fbf12b52371bc2cc2f5e6baa = $this->env->getExtension("native_profiler");
-        $__internal_ca9373d36d1cbe068b170975b59cc8737edf9788fbf12b52371bc2cc2f5e6baa->enter($__internal_ca9373d36d1cbe068b170975b59cc8737edf9788fbf12b52371bc2cc2f5e6baa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_7e020bd1ee2686c5817d1586fd5d38cd189dd31588b47bca00089587fc66943b = $this->env->getExtension("native_profiler");
+        $__internal_7e020bd1ee2686c5817d1586fd5d38cd189dd31588b47bca00089587fc66943b->enter($__internal_7e020bd1ee2686c5817d1586fd5d38cd189dd31588b47bca00089587fc66943b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 13
         echo "    <table>
@@ -126,7 +126,7 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
             // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_product_delete", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\" class=\"delete\"> ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product.delete"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.delete"), "html", null, true);
             echo " </a>
                 </td>
             </tr>
@@ -139,7 +139,7 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
         echo "    </table>
 ";
         
-        $__internal_ca9373d36d1cbe068b170975b59cc8737edf9788fbf12b52371bc2cc2f5e6baa->leave($__internal_ca9373d36d1cbe068b170975b59cc8737edf9788fbf12b52371bc2cc2f5e6baa_prof);
+        $__internal_7e020bd1ee2686c5817d1586fd5d38cd189dd31588b47bca00089587fc66943b->leave($__internal_7e020bd1ee2686c5817d1586fd5d38cd189dd31588b47bca00089587fc66943b_prof);
 
     }
 
@@ -185,7 +185,7 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
 /*                 <td><a href="{{ path('admin_product_update', {id: product.id}) }}" class="edit">{{ product.name }}</a></td>*/
 /*                 <td>{{ product.price | number_format(0, '.', ',') }}</td>*/
 /*                 <td>*/
-/*                     <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.product.delete' | trans }} </a>*/
+/*                     <a href="{{ path('admin_product_delete', {id: product.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>*/
 /*                 </td>*/
 /*             </tr>*/
 /*         {% endfor %}*/

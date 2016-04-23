@@ -110,6 +110,7 @@ body {
     padding: 0 20px;
     box-shadow: 0 1px 0 rgba(0,0,0,0.07);
     top: 0;
+    z-index: 10;
 }
 #top-header {
     z-index: 1;
@@ -198,6 +199,7 @@ body {
     position: fixed;
     left: 15px;
     top: 10px;
+    z-index: 20;
 }
 .buttons .product-submit {
     background-color: #479ccf;
@@ -244,7 +246,6 @@ body {
 }
 .products {
     float: right;
-    width: 230px;
     margin-bottom: 20px;
     text-align: center;
     background-color: white;
