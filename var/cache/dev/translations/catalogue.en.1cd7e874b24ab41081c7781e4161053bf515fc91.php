@@ -211,6 +211,10 @@ the Team.
     'app.product' => 'Product',
     'app.sign up' => 'sign up',
     'app.add.image' => 'Add image',
+    'app.cart' => 'cart',
+    'app.logout' => 'logout',
+    'app.login' => 'login',
+    'app.or' => 'or',
   ),
 ));
 

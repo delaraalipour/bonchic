@@ -8,16 +8,76 @@
 </head>
 <body>
 <div class="storefront-header">
-    <div class="wrapper">
-        <p>{{ 'app.site_title'|trans ({}, 'messages') }}</p>
-        <a href="{{ path('fos_user_security_login') }}">{{ 'app.controlpanel' | trans }}</a>
-        <a href="{{ path('cart_list') }}">{{ 'app.cart' | trans }}</a>
+    <div class="wrapper clearfix">
+        <div class="cell">
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin_index') }}">
+                        {{ 'app.controlpanel' |trans }}
+                    </a>
+                    <span class="divider">{{ 'app.or' | trans }}</span>
+                {% endif %}
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'app.logout'|trans }}
+                </a>
+            {% else %}
+                <a class="signup" href="{{ path('fos_user_registration_register') }}">
+                    {{ 'app.sign up'|trans }}
+                </a>
+                <span class="divider">{{ 'app.or' | trans }}</span>
+                <a href="{{ path('fos_user_security_login') }}">
+                    {{ 'app.login'|trans }}
+                </a>
+            {% endif %}
+            <span class="divider">/</span>
+            <a href="{{ path('cart_list') }}" >
+                <span>{{ 'app.cart' | trans }}</span>
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="storefront-site-header">
+    <div class="wrapper clearfix">
+        <div class="top-menu">
+            <ul class="clearfix">
+                <li><a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a></li>
+                <li><a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a></li>
+            </ul>
+        </div>
+        <div class="shop-logo">
+            <a href="{{ path('homepage') }}">{{ 'app.site_title' | trans }}</a>
+        </div>
     </div>
 </div>
 
-<div class="wrapper">
-    {% block content %}
-    {% endblock %}
+<div class="storefront-content">
+    <div class="wrapper clearfix">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="footer-widgets-top"></div>
+    <div class="footer">
+        <div class="footer-menu wrapper">
+            <span>{{ 'app.links' | trans }}</span>
+            <ul class="clearfix">
+                <li><a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a></li>
+                <li><a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a></li>
+                <li><a href="{{ path('cart_list') }}" >{{ 'app.cart' | trans }}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="site-footer">
+        <div class="footer-menu wrapper">
+            <ul class="clearfix">
+                <li><a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a></li>
+                <li id="slash">/</li>
+                <li><a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a></li>
+                <li id="slash">/</li>
+                <li><a href="{{ path('cart_list') }}" >{{ 'app.cart' | trans }}</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 </body>
 </html>

@@ -1,13 +1,30 @@
 {% extends ":Storefront:layout.html.twig" %}
 
-{% block title %}{{ 'app.homepage' | trans }}{% endblock %}
+{% block title %}{{ 'app.productlist' | trans }}{% endblock %}
 
 {% block content %}
-            {% for product in products %}
-                <div class="products">
-                    <div><img src="{{ asset('uploads/' ~ product.image) }}" /></div>
+    <div class="products-header">
+        <div class="cell">
+            <div class="title">{{ 'app.productlist' | trans }}</div>
+            <div class="header-title">
+                <a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a>
+                <span>/</span>
+                <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="products-item clearfix">
+        {% for product in products %}
+            <div class="products">
+                <div class="image"><a href="{{ path('storefront_product_show', {id: product.id}) }}"><img src="{{ asset('uploads/' ~ product.image) }}" /></a></div>
+                <div class="details">
                     <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
-                    <div class="price">{{ product.price | number_format(0, '.', ',') }} تومان</div>
+                    <div class="price">{{ product.price | number_format(0, '.', ',') }} $</div>
+                    <div class="action">
+                        <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+                    </div>
                 </div>
-            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

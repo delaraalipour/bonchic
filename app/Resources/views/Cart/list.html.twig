@@ -1,13 +1,30 @@
-{% extends ":Cart:layout.html.twig" %}
+{% extends ":Storefront:layout.html.twig" %}
 
 {% block content %}
-    <a href="{{ path('storefront_product_list') }}">home</a>
+    <div class="products-header">
+        <div class="cell">
+            <div class="title">{{ 'app.cart' | trans }}</div>
+            <div class="header-title">
+                <span>{{ 'app.cart' | trans }}</span>
+                <span>/</span>
+                <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+            </div>
+        </div>
+    </div>
     {% if products|length == 0 %}
-        cart is empty.
+        <div class="empty-cart-message">{{ 'app.emptycart.message' | trans }}</div>
     {% else %}
         {% for product in products %}
-            <div class="title">{{ product.name }}</div>
-            <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>
+            <div class="cart-info clearfix">
+                <div class="image">
+                    <img src="{{ asset('uploads/' ~ product.image) }}" />
+                </div>
+                <div class="details">
+                    <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
+                    <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>
+                </div>
+            </div>
         {% endfor %}
+        <div class=continue-shopping><a href="{{ path('homepage') }}">{{ 'app.continue.shopping' | trans }}</a></div>
     {% endif %}
 {% endblock %}

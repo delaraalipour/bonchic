@@ -8,6 +8,16 @@ use Symfony\Component\HttpFoundation\Request;
 
 class StorefrontProductController extends Controller
 {
+    public function HomePageAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Product');
+        $products = $repository->findAll();
+
+        return $this->render(':Storefront:HomePage.html.twig', [
+            'products' => $products
+        ]);
+
+    }
 
     public function listAction(Request $request)
     {

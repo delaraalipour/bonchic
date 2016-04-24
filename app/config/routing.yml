@@ -2,10 +2,8 @@
 # Storefront
 #
 homepage:
-     path: /
-     defaults:
-        _controller: FrameworkBundle:Redirect:redirect
-        route: storefront_product_list
+    path:      /
+    defaults:  { _controller: AppBundle:StorefrontProduct:HomePage }
 
 storefront_product_list:
      path:      /storefront/product/list
@@ -22,7 +20,6 @@ cart_add:
 cart_list:
      path:      /cart
      defaults:  { _controller: AppBundle:Cart:list }
-
 #
 # Admin
 #

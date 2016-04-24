@@ -24,3 +24,11 @@ app.controlpanel: Control Panel
 app.product: Product
 app.sign up: sign up
 app.add.image: Add image
+app.cart: Cart
+app.add-to-cart: Add to Cart
+app.logout: Logout
+app.login: Login
+app.or: or
+app.links: links
+app.emptycart.message: Your shopping cart is empty.
+app.continue.shopping: continue shopping

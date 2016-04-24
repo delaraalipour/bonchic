@@ -24,3 +24,11 @@ app.controlpanel: پانل مدیریت
 app.product: محصول
 app.sign up: ثبت نام
 app.add.image: انتخاب عکس
+app.cart: سبد خرید
+app.add-to-cart: اضافه به سبد خرید
+app.logout: خروج
+app.login: ورود
+app.or: یا
+app.links: لینکستان
+app.emptycart.message: سبد خرید شما خالی است.
+app.continue.shopping: ادامه خرید

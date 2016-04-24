@@ -1,0 +1,27 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block title %}{{ 'app.homepage' | trans }}{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img src="//cdn.shopify.com/s/files/1/0170/3006/t/12/assets/index-slide-01.jpg?14841551000607424170" />
+    </div>
+    <div class="products-item clearfix">
+        {% for product in products %}
+            <div class="products">
+                <div class="image"><a href="{{ path('storefront_product_show', {id: product.id}) }}"><img src="{{ asset('uploads/' ~ product.image) }}" /></a></div>
+                <div class="details">
+                    <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
+                    <div class="price">{{ product.price | number_format(0, '.', ',') }} تومان</div>
+                    <div class="action">
+                        <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block footer %}
+    <div class="footer-widgets-top"></div>
+    <div class="footer"></div>
+{% endblock %}

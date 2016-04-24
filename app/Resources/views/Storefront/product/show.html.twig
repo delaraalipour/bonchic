@@ -3,13 +3,30 @@
 {% block header %}{{ 'app.product' | trans }}{% endblock %}
 
 {% block content %}
-    <div class="data-info">
-        <div class="title">{{ product.name }}
-            <a href="{{ path('cart_add', {id: product.id}) }}">اضافه به سبد خرید</a>
+    <div class="products-header">
+        <div class="cell">
+            <div class="title">{{ product.name }}</div>
+            <div class="header-title">
+                <a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a>
+                <span>/</span>
+                <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+            </div>
         </div>
-        <div><img src="{{ asset('uploads/' ~ product.image) }}" /></div>
-        <div class="description">{{ product.description }}</div>
-        <div class="price">{{ product.price | number_format(0, '.', ',') }}  تومان </div>
-        <a href="{{ path('storefront_product_list') }}"><i class="glyphicon glyphicon-backward"></i></a>
+    </div>
+    <div class="data-info clearfix">
+        <div class="product-image">
+            <img src="{{ asset('uploads/' ~ product.image) }}" />
+        </div>
+        <div class="product-details">
+            <div class="product-price">
+                <span>{{ product.price | number_format(0, '.', ',') }} تومان</span>
+            </div>
+            <div class="cart">
+                <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+            </div>
+            <div class="product-description">
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -65,7 +65,7 @@ class AdminCategoryController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistCategory($category);
-            $this->addFlash('success', 'Product Saved');
+            $this->addFlash('success', 'category Saved');
 
             return $this->redirectToRoute('admin_category_list');
         }
