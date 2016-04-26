@@ -127,9 +127,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_add')), array (  '_controller' => 'AppBundle\\Controller\\CartController::addAction',));
         }
 
-        // cart_list
-        if ($pathinfo === '/cart') {
-            return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
+        if (0 === strpos($pathinfo, '/cart')) {
+            // cart_list
+            if ($pathinfo === '/cart') {
+                return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
+            }
+
+            // cart_delete
+            if (0 === strpos($pathinfo, '/cart/delete') && preg_match('#^/cart/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_delete')), array (  '_controller' => 'AppBundle\\Controller\\CartController::deleteAction',));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/admin')) {
@@ -167,27 +175,50 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-        }
+            if (0 === strpos($pathinfo, '/admin/category')) {
+                // admin_category_new
+                if ($pathinfo === '/admin/category/new') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::newAction',  '_route' => 'admin_category_new',);
+                }
 
-        // admin_category_new
-        if ($pathinfo === '/Admin/category/new') {
-            return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::newAction',  '_route' => 'admin_category_new',);
-        }
+                // admin_category_update
+                if ($pathinfo === '/admin/category/update') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::updateAction',  '_route' => 'admin_category_update',);
+                }
 
-        if (0 === strpos($pathinfo, '/admin/category')) {
-            // admin_category_update
-            if ($pathinfo === '/admin/category/update') {
-                return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::updateAction',  '_route' => 'admin_category_update',);
+                // admin_category_delete
+                if (0 === strpos($pathinfo, '/admin/category/delete') && preg_match('#^/admin/category/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_category_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::deleteAction',));
+                }
+
+                // admin_category_list
+                if ($pathinfo === '/admin/category/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::listAction',  '_route' => 'admin_category_list',);
+                }
+
             }
 
-            // admin_category_delete
-            if (0 === strpos($pathinfo, '/admin/category/delete') && preg_match('#^/admin/category/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_category_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::deleteAction',));
-            }
+            if (0 === strpos($pathinfo, '/admin/slide')) {
+                // admin_slide_new
+                if ($pathinfo === '/admin/slide/new') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminSlideController::newAction',  '_route' => 'admin_slide_new',);
+                }
 
-            // admin_category_list
-            if ($pathinfo === '/admin/category/list') {
-                return array (  '_controller' => 'AppBundle\\Controller\\AdminCategoryController::listAction',  '_route' => 'admin_category_list',);
+                // admin_slide_update
+                if ($pathinfo === '/admin/slide/update') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminSlideController::updateAction',  '_route' => 'admin_slide_update',);
+                }
+
+                // admin_slide_delete
+                if (0 === strpos($pathinfo, '/admin/slide/delete') && preg_match('#^/admin/slide/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_slide_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminSlideController::deleteAction',));
+                }
+
+                // admin_slide_list
+                if ($pathinfo === '/admin/slide/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminSlideController::listAction',  '_route' => 'admin_slide_list',);
+                }
+
             }
 
         }

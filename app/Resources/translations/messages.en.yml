@@ -32,3 +32,8 @@ app.or: or
 app.links: links
 app.emptycart.message: Your shopping cart is empty.
 app.continue.shopping: continue shopping
+app.total.price: Total price
+app.slide.title: title
+app.saveslide: Save Slide
+app.slidelist: Slides
+app.newslide: New Slide

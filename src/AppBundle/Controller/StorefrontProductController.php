@@ -5,20 +5,32 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class StorefrontProductController extends Controller
 {
+    /**
+     * @return Response
+     */
     public function HomePageAction()
     {
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Product');
-        $products = $repository->findAll();
+        $productRepository = $this->getDoctrine()->getRepository('AppBundle:Product');
+        $products = $productRepository->findAll();
+
+        $slideRepository = $this->getDoctrine()->getRepository('AppBundle:Slide');
+        $slides = $slideRepository->findAll();
 
         return $this->render(':Storefront:HomePage.html.twig', [
-            'products' => $products
+            'products' => $products,
+            'slides' => $slides
         ]);
-
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function listAction(Request $request)
     {
         $repository = $this->getDoctrine()->getRepository('AppBundle:Product');
@@ -29,6 +41,11 @@ class StorefrontProductController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     *
+     * @return Response
+     */
     public function showAction(Request $request)
     {
         $id = $request->get('id');

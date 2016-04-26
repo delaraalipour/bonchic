@@ -23,65 +23,103 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_397c00651cfced15115b6f51550ddf5d802363ccfaaeb4eb33c261c00c5202ae = $this->env->getExtension("native_profiler");
-        $__internal_397c00651cfced15115b6f51550ddf5d802363ccfaaeb4eb33c261c00c5202ae->enter($__internal_397c00651cfced15115b6f51550ddf5d802363ccfaaeb4eb33c261c00c5202ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:HomePage.html.twig"));
+        $__internal_1e8fb3f7cd71ef2ed093ceefef54b33f5f0ab1c45f522413ca209d9b2d3e5791 = $this->env->getExtension("native_profiler");
+        $__internal_1e8fb3f7cd71ef2ed093ceefef54b33f5f0ab1c45f522413ca209d9b2d3e5791->enter($__internal_1e8fb3f7cd71ef2ed093ceefef54b33f5f0ab1c45f522413ca209d9b2d3e5791_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:HomePage.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_397c00651cfced15115b6f51550ddf5d802363ccfaaeb4eb33c261c00c5202ae->leave($__internal_397c00651cfced15115b6f51550ddf5d802363ccfaaeb4eb33c261c00c5202ae_prof);
+        $__internal_1e8fb3f7cd71ef2ed093ceefef54b33f5f0ab1c45f522413ca209d9b2d3e5791->leave($__internal_1e8fb3f7cd71ef2ed093ceefef54b33f5f0ab1c45f522413ca209d9b2d3e5791_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5cb6885f2a61441954138a98cbdbc2d7e9982730108a6ad3db157a23d8830a62 = $this->env->getExtension("native_profiler");
-        $__internal_5cb6885f2a61441954138a98cbdbc2d7e9982730108a6ad3db157a23d8830a62->enter($__internal_5cb6885f2a61441954138a98cbdbc2d7e9982730108a6ad3db157a23d8830a62_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_f406ab1737c38d830f9223ef035c3deefbd1f61f0cf18674fba4aa873adee0a2 = $this->env->getExtension("native_profiler");
+        $__internal_f406ab1737c38d830f9223ef035c3deefbd1f61f0cf18674fba4aa873adee0a2->enter($__internal_f406ab1737c38d830f9223ef035c3deefbd1f61f0cf18674fba4aa873adee0a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         
-        $__internal_5cb6885f2a61441954138a98cbdbc2d7e9982730108a6ad3db157a23d8830a62->leave($__internal_5cb6885f2a61441954138a98cbdbc2d7e9982730108a6ad3db157a23d8830a62_prof);
+        $__internal_f406ab1737c38d830f9223ef035c3deefbd1f61f0cf18674fba4aa873adee0a2->leave($__internal_f406ab1737c38d830f9223ef035c3deefbd1f61f0cf18674fba4aa873adee0a2_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_5c540f821d6cf84e8e8b7e6bf05372b716bc0fa21d273f38ffb2e17d3c1869a6 = $this->env->getExtension("native_profiler");
-        $__internal_5c540f821d6cf84e8e8b7e6bf05372b716bc0fa21d273f38ffb2e17d3c1869a6->enter($__internal_5c540f821d6cf84e8e8b7e6bf05372b716bc0fa21d273f38ffb2e17d3c1869a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e92dbfdfa84f3b86ed00776eb01ae53a54d525ad6759ffa1ded6dbc5017cf9ab = $this->env->getExtension("native_profiler");
+        $__internal_e92dbfdfa84f3b86ed00776eb01ae53a54d525ad6759ffa1ded6dbc5017cf9ab->enter($__internal_e92dbfdfa84f3b86ed00776eb01ae53a54d525ad6759ffa1ded6dbc5017cf9ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"banner\">
-        <img src=\"//cdn.shopify.com/s/files/1/0170/3006/t/12/assets/index-slide-01.jpg?14841551000607424170\" />
+        ";
+        // line 7
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["slides"]) ? $context["slides"] : $this->getContext($context, "slides")));
+        foreach ($context['_seq'] as $context["_key"] => $context["slide"]) {
+            // line 8
+            echo "            <div><img class=\"mySlides\" src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute($context["slide"], "image", array()))), "html", null, true);
+            echo "\" /></div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slide'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 10
+        echo "
+        <a class=\"btn-floating btn-floating-left\" onclick=\"plusDivs(1)\"><i class=\"glyphicon glyphicon-chevron-left\"></i></a>
+        <a class=\"btn-floating btn-floating-right\" onclick=\"plusDivs(-1)\"><i class=\"glyphicon glyphicon-chevron-right\"></i></a>
+
     </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName(\"mySlides\");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = \"none\";
+            }
+            x[slideIndex-1].style.display = \"block\";
+        }
+    </script>
+
     <div class=\"products-item clearfix\">
         ";
-        // line 10
+        // line 36
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 11
+            // line 37
             echo "            <div class=\"products\">
                 <div class=\"image\"><a href=\"";
-            // line 12
+            // line 38
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("storefront_product_show", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute($context["product"], "image", array()))), "html", null, true);
             echo "\" /></a></div>
                 <div class=\"details\">
                     <div class=\"title\"><a href=\"";
-            // line 14
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("storefront_product_show", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></div>
                     <div class=\"price\">";
-            // line 15
+            // line 41
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute($context["product"], "price", array()), 0, ".", ","), "html", null, true);
             echo " تومان</div>
                     <div class=\"action\">
                         <button><a href=\"";
-            // line 17
+            // line 43
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cart_add", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.add-to-cart"), "html", null, true);
@@ -94,26 +132,26 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
+        // line 48
         echo "    </div>
 ";
         
-        $__internal_5c540f821d6cf84e8e8b7e6bf05372b716bc0fa21d273f38ffb2e17d3c1869a6->leave($__internal_5c540f821d6cf84e8e8b7e6bf05372b716bc0fa21d273f38ffb2e17d3c1869a6_prof);
+        $__internal_e92dbfdfa84f3b86ed00776eb01ae53a54d525ad6759ffa1ded6dbc5017cf9ab->leave($__internal_e92dbfdfa84f3b86ed00776eb01ae53a54d525ad6759ffa1ded6dbc5017cf9ab_prof);
 
     }
 
-    // line 24
+    // line 50
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_fb6787bdb3609e4a34ed5a8e4cfd33ba6edcb7de3131846021c7c5129f0c067f = $this->env->getExtension("native_profiler");
-        $__internal_fb6787bdb3609e4a34ed5a8e4cfd33ba6edcb7de3131846021c7c5129f0c067f->enter($__internal_fb6787bdb3609e4a34ed5a8e4cfd33ba6edcb7de3131846021c7c5129f0c067f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_084a0358f4a0dfda22b6c1db688745935b75c5b2104316fe593394e9838c4a53 = $this->env->getExtension("native_profiler");
+        $__internal_084a0358f4a0dfda22b6c1db688745935b75c5b2104316fe593394e9838c4a53->enter($__internal_084a0358f4a0dfda22b6c1db688745935b75c5b2104316fe593394e9838c4a53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 25
+        // line 51
         echo "    <div class=\"footer-widgets-top\"></div>
     <div class=\"footer\"></div>
 ";
         
-        $__internal_fb6787bdb3609e4a34ed5a8e4cfd33ba6edcb7de3131846021c7c5129f0c067f->leave($__internal_fb6787bdb3609e4a34ed5a8e4cfd33ba6edcb7de3131846021c7c5129f0c067f_prof);
+        $__internal_084a0358f4a0dfda22b6c1db688745935b75c5b2104316fe593394e9838c4a53->leave($__internal_084a0358f4a0dfda22b6c1db688745935b75c5b2104316fe593394e9838c4a53_prof);
 
     }
 
@@ -129,7 +167,7 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 
     public function getDebugInfo()
     {
-        return array (  112 => 25,  106 => 24,  98 => 22,  85 => 17,  80 => 15,  74 => 14,  67 => 12,  64 => 11,  60 => 10,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  150 => 51,  144 => 50,  136 => 48,  123 => 43,  118 => 41,  112 => 40,  105 => 38,  102 => 37,  98 => 36,  70 => 10,  61 => 8,  57 => 7,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends ":Storefront:layout.html.twig" %}*/
@@ -138,8 +176,34 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 /* */
 /* {% block content %}*/
 /*     <div class="banner">*/
-/*         <img src="//cdn.shopify.com/s/files/1/0170/3006/t/12/assets/index-slide-01.jpg?14841551000607424170" />*/
+/*         {% for slide in slides %}*/
+/*             <div><img class="mySlides" src="{{ asset('uploads/' ~ slide.image) }}" /></div>*/
+/*         {% endfor %}*/
+/* */
+/*         <a class="btn-floating btn-floating-left" onclick="plusDivs(1)"><i class="glyphicon glyphicon-chevron-left"></i></a>*/
+/*         <a class="btn-floating btn-floating-right" onclick="plusDivs(-1)"><i class="glyphicon glyphicon-chevron-right"></i></a>*/
+/* */
 /*     </div>*/
+/*     <script>*/
+/*         var slideIndex = 1;*/
+/*         showDivs(slideIndex);*/
+/* */
+/*         function plusDivs(n) {*/
+/*             showDivs(slideIndex += n);*/
+/*         }*/
+/* */
+/*         function showDivs(n) {*/
+/*             var i;*/
+/*             var x = document.getElementsByClassName("mySlides");*/
+/*             if (n > x.length) {slideIndex = 1}*/
+/*             if (n < 1) {slideIndex = x.length}*/
+/*             for (i = 0; i < x.length; i++) {*/
+/*                 x[i].style.display = "none";*/
+/*             }*/
+/*             x[slideIndex-1].style.display = "block";*/
+/*         }*/
+/*     </script>*/
+/* */
 /*     <div class="products-item clearfix">*/
 /*         {% for product in products %}*/
 /*             <div class="products">*/

@@ -4,8 +4,33 @@
 
 {% block content %}
     <div class="banner">
-        <img src="//cdn.shopify.com/s/files/1/0170/3006/t/12/assets/index-slide-01.jpg?14841551000607424170" />
+        {% for slide in slides %}
+            <div><img class="mySlides" src="{{ asset('uploads/' ~ slide.image) }}" /></div>
+        {% endfor %}
+
+        <a class="btn-floating btn-floating-left" onclick="plusDivs(1)"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="btn-floating btn-floating-right" onclick="plusDivs(-1)"><i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
     <div class="products-item clearfix">
         {% for product in products %}
             <div class="products">

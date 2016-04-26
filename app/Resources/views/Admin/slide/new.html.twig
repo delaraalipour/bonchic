@@ -1,0 +1,34 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.newslide' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name">
+            <a href="{{ path('admin_slide_list') }}"><i class="glyphicon glyphicon-tags"></i>{{ 'app.slidelist' | trans }} </a>
+            <span id="slash">/</span>
+            <span> {{ 'app.newslide' | trans }}</span>
+        </div>
+    </div>
+{% endblock %}
+
+{%  block content %}
+    <div class="product-form">
+        {{ form_start(form) }}
+
+        <div class="product-description">
+            {{ form_row(form.title) }}
+        </div>
+
+        <div class="product-image">
+            {{ form_row(form.file) }}
+        </div>
+
+        {{ form_widget(form) }}
+        <div class="buttons">
+            <a href=" {{ path('admin_slide_list') }} ">{{ 'app.cancel' | trans}}</a>
+            <input type="submit" value="{{ 'app.saveslide' | trans}}" class="product-submit"/>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -428,6 +428,7 @@ table, th, td {
 }
 table img {
     height: 60px;
+    width: 175px;
 }
 table tr {
     border-bottom: 1px solid #ebeef0;
@@ -513,7 +514,7 @@ table .delete {
     background-color: #96bf48;
     border: 1px solid #96bf48;
     border-radius: 3px;
-    top: 145px;
+    top: 233px;
     margin-right: 10px;
 }
 .product-form .product-image button:hover {
@@ -527,8 +528,8 @@ table .delete {
 }
 .product-form .product-image button #product_file {
     position: absolute;
-    width: 150px;
-    height: 40px;
+    width: 110px;
+    height: 34px;
     top: 0;
     left: 0;
     opacity: 0;
@@ -618,9 +619,39 @@ table .delete {
     background-color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     margin-top: 35px;
+    position: relative;
 }
 .banner img {
     width: 1138px;
+    height: 391px;
+}
+.banner .btn-floating {
+    position: absolute;
+    top: 45%;
+    color: white;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.banner .btn-floating:hover {
+    text-decoration: none;
+    background-color: #74b6c7;
+}
+.banner .btn-floating-right {
+    right: 15px;
+}
+.banner .btn-floating-right i {
+    margin-top: 4px;
+    margin-right: 6px;
+}
+.banner .btn-floating-left {
+    left: 15px;
+}
+.banner .btn-floating-left i {
+    margin-top: 4px;
+    margin-right: 6px;
 }
 .footer-widgets-top {
     background-image: url(http://cdn.shopify.com/s/files/1/0170/3006/t/12/assets/img-seaside-bg-footer-top.png?12747159339677153153);
@@ -711,9 +742,24 @@ table .delete {
     color: #e45f87;
     text-decoration: none;
 }
+.total-price {
+    margin-top: 30px;
+    float: right;
+}
+.total-price p {
+    margin: 0;
+    float: right;
+    color: #43454d;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.total-price span {
+    color: #43454d;
+    font-size: 20px;
+}
 .continue-shopping {
+    margin-top: 30px;
     float: left;
-    margin-top: 20px;
 }
 .continue-shopping a {
     color: #74b6c7;

@@ -1,0 +1,31 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.slidelist' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name"><span><i class="glyphicon glyphicon-tags"></i>{{ 'app.slidelist' | trans }}</span></div>
+        <div class="header-link"><a href="{{ path('admin_slide_new') }}"> {{ 'app.newslide' | trans }} </a></div>
+    </div>
+{% endblock %}
+
+{%  block content %}
+    <table>
+        <tr class="table-header">
+            <td>id</td>
+            <td>{{ 'app.image' | trans }}</td>
+            <td>{{ 'app.slide.title' | trans }}</td>
+            <td>{{ 'app.operations' | trans }}</td>
+        </tr>
+        {% for slide in slides %}
+            <tr>
+                <td>{{ slide.id }}</td>
+                <td><img src="{{ asset('uploads/' ~ slide.image) }}" /></td>
+                <td><a href="{{ path('admin_slide_update', {id: slide.id}) }}" class="edit">{{ slide.title }}</a></td>
+                <td>
+                    <a href="{{ path('admin_slide_delete', {id: slide.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

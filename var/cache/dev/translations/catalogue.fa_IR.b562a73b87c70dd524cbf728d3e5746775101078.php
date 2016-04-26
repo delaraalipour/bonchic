@@ -39,6 +39,11 @@ $catalogue = new MessageCatalogue('fa_IR', array (
     'app.links' => 'لینکستان',
     'app.emptycart.message' => 'سبد خرید شما خالی است.',
     'app.continue.shopping' => 'ادامه خرید',
+    'app.total.price' => 'جمع کل',
+    'app.slide.title' => 'عنوان',
+    'app.saveslide' => 'ذخیره اسلاید',
+    'app.slidelist' => 'اسلاید',
+    'app.newslide' => 'اسلاید جدید',
   ),
 ));
 
