@@ -147,3 +147,4 @@ class Product
         $this->category = $category;
     }
 }
+?>

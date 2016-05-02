@@ -49,3 +49,4 @@ class User extends BaseUser
         $this->mobile = $mobile;
     }
 }
+?>

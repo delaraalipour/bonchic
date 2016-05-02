@@ -7570,3 +7570,5 @@ bbcf5b,127.0.0.1,GET,http://localhost:8000/login,1462167272,,200
 6793f5,127.0.0.1,POST,http://localhost:8000/login_check,1462167274,,302
 fb30ef,127.0.0.1,GET,http://localhost:8000/,1462167274,,200
 20e2ba,127.0.0.1,GET,http://localhost:8000/admin,1462167276,,200
+2cb792,127.0.0.1,GET,http://localhost:8000/bundles/app/css/bootstrap.css.map,1462167493,a91268,200
+a91268,127.0.0.1,GET,http://localhost:8000/bundles/app/css/bootstrap.css.map,1462167493,,404
