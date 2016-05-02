@@ -130,8 +130,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/cart')) {
             // cart_list
             if ($pathinfo === '/cart') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_cart_list;
+                }
+
                 return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
             }
+            not_cart_list:
 
             // cart_delete
             if (0 === strpos($pathinfo, '/cart/delete') && preg_match('#^/cart/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {

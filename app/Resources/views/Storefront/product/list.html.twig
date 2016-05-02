@@ -8,7 +8,7 @@
             <div class="title">{{ 'app.productlist' | trans }}</div>
             <div class="header-title">
                 <a href="{{ path('storefront_product_list') }}">{{ 'app.productlist' | trans }}</a>
-                <span>/</span>
+                /
                 <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
             </div>
         </div>
@@ -19,9 +19,9 @@
                 <div class="image"><a href="{{ path('storefront_product_show', {id: product.id}) }}"><img src="{{ asset('uploads/' ~ product.image) }}" /></a></div>
                 <div class="details">
                     <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
-                    <div class="price">{{ product.price | number_format(0, '.', ',') }} $</div>
+                    <div class="price">{{ product.price | number_format(0, '.', ',') }} تومان</div>
                     <div class="action">
-                        <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+                        <a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a>
                     </div>
                 </div>
             </div>

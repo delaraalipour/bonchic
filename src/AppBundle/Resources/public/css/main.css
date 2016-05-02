@@ -286,17 +286,16 @@ body {
 }
 .products {
     float: right;
-    margin-bottom: 20px;
     text-align: center;
     margin: 0 6px;
     background-color: white;
     border-bottom: 1px solid #e5e5e5;
     width: 278px;
+    height: 525px;
 }
 .products .details {
-    margin-top:10px;
     text-align: right;
-    padding: 20px;
+    padding: 21px;
 }
 .products img {
     height: 378px;
@@ -316,27 +315,20 @@ body {
     margin-top: 15px;
 }
 .products .action {
-    margin-top: 10px;
+    margin-top: 20px;
 }
-.products .action button {
+.products .action a {
     background-color: #74b6c7;
-    border-radius: 3px;
-    border: none;
-    padding: 7px 10px;
-    padding-top: 11px;
-    font-size: 11px;
-}
-.products .action button a {
     color: white;
+    font-size: 12px;
+    padding: 11px 13px;
+    border-radius: 3px;
 }
-.products .action button a:hover {
+.products .action a:hover {
+    background-color: #5da3b5;
     text-decoration: none;
 }
-.products .action button:hover {
-    background-color: #5da3b5;
-}
 .products-header {
-    /* padding-bottom: 45px; */
     border-bottom: 1px solid #e5e6e7;
     height: 100px;
     line-height: 100px;
@@ -346,16 +338,19 @@ body {
     padding-bottom: 15px;
     font-size: 20px;
 }
-.products-header .cell a {
+.products-header .cell .header-title {
+    float: left;
     color: #aaa;
     font-size: 12px;
+}
+.products-header .cell .header-title a {
+    color: #aaa;
 }
 .products-header .cell a:hover {
     color: #e45f87;
 }
 .products-header .cell span {
-    color: #aaa;
-    padding: 0 5px;
+    color: #60626b;
 }
 .products-item {
     padding-top: 50px;
@@ -389,20 +384,20 @@ body {
 .data-info .product-details .cart {
     padding: 25px 0;
 }
+.data-info .product-details .cart input {
+    width: 40px;
+}
 .data-info .product-details .cart button {
     background-color: #74b6c7;
     border: none;
     border-radius: 3px;
-    padding: 19px 15px;
+    color: white;
+    height: 25px;
+    padding-top: 3px;
+    margin-right: 10px;
 }
 .data-info .product-details .cart button:hover {
     background-color: #5da3b5;
-}
-.data-info .product-details .cart button a {
-    color: white;
-}
-.data-info .product-details .cart button a:hover {
-    text-decoration: none;
 }
 .data-info .product-details .product-description p {
     font-size: 13px;
@@ -415,9 +410,6 @@ body {
     font-size: 20px;
     float: right;
 }
-.products-header .cell .header-title {
-    float: left;
-}
 table {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -428,6 +420,8 @@ table, th, td {
 }
 table img {
     height: 60px;
+}
+table .slide-image img {
     width: 175px;
 }
 table tr {
@@ -579,7 +573,7 @@ table .delete {
     background-color: #96bf48;
     border: 1px solid #96bf48;
     border-radius: 3px;
-    top: 106px;
+    top: 233px;
     margin-right: 10px;
 }
 .category-form .category-image button:hover {
@@ -592,6 +586,51 @@ table .delete {
     color: #ffffff;
 }
 .category-form .category-image button #category_file {
+    position: absolute;
+    width: 110px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.slide-form .slide-title {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.slide-form .slide-image {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.slide-form .slide-image img {
+    width: 300px;
+    float: right;
+}
+.slide-form .slide-image button {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    background-color: #96bf48;
+    border: 1px solid #96bf48;
+    border-radius: 3px;
+    top: 69px;
+    margin-right: 10px;
+}
+.slide-form .slide-image button:hover {
+    border: 1px solid #7ba232;
+    background-color: #7ba232;
+    color: #ffffff;
+}
+.slide-form .slide-image button span {
+    font-size: 13px;
+    color: #ffffff;
+}
+.slide-form .slide-image button #slide_file {
     position: absolute;
     width: 110px;
     height: 34px;
@@ -630,8 +669,8 @@ table .delete {
     top: 45%;
     color: white;
     background-color: black;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     cursor: pointer;
 }
@@ -643,15 +682,15 @@ table .delete {
     right: 15px;
 }
 .banner .btn-floating-right i {
-    margin-top: 4px;
-    margin-right: 6px;
+    margin-top: 6px;
+    margin-right: 8px;
 }
 .banner .btn-floating-left {
     left: 15px;
 }
 .banner .btn-floating-left i {
-    margin-top: 4px;
-    margin-right: 6px;
+    margin-top: 6px;
+    margin-right: 8px;
 }
 .footer-widgets-top {
     background-image: url(http://cdn.shopify.com/s/files/1/0170/3006/t/12/assets/img-seaside-bg-footer-top.png?12747159339677153153);
@@ -731,6 +770,7 @@ table .delete {
 }
 .cart-info .details {
     float: right;
+    width: 500px;
 }
 .cart-info .details .title {
     padding-bottom: 20px;
@@ -742,6 +782,54 @@ table .delete {
     color: #e45f87;
     text-decoration: none;
 }
+.cart-info .details .price span {
+    color: #43454d;
+}
+.cart-info .details .amounts {
+    margin-bottom: 0px;
+}
+.cart-info .details .amounts span {
+    color: #9c9ea6;
+    font-size: 12px;
+}
+.cart-info .update-cart {
+    float: right;
+    width: 533px;
+}
+.cart-info .update-cart input {
+    width: 78px;
+    height: 34px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #bcc3ca;
+}
+.cart-info .update-cart input:hover {
+    border-color: #5b5d67;
+}
+.cart-info .update-cart button{
+    float: left;
+    background-color: #545a64;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 3px;
+}
+.cart-info .update-cart button:hover {
+    background-color: #45474a;
+}
+.cart-info .delete-product-cart {
+    float: right;
+}
+.cart-info .delete-product-cart a {
+    color: #8a9098;
+}
+.cart-info .delete-product-cart a:hover {
+    color: #74b6c7;
+}
+.cart-info .delete-product-cart a i {
+    margin-top: 8px;
+    margin-left: 17px;
+}
 .total-price {
     margin-top: 30px;
     float: right;
@@ -750,12 +838,12 @@ table .delete {
     margin: 0;
     float: right;
     color: #43454d;
-    font-size: 20px;
+    font-size: 19px;
     margin-left: 10px;
 }
 .total-price span {
     color: #43454d;
-    font-size: 20px;
+    font-size: 23px;
 }
 .continue-shopping {
     margin-top: 30px;

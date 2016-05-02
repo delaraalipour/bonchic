@@ -44,6 +44,7 @@ $catalogue = new MessageCatalogue('fa_IR', array (
     'app.saveslide' => 'ذخیره اسلاید',
     'app.slidelist' => 'اسلاید',
     'app.newslide' => 'اسلاید جدید',
+    'app.update.cart' => 'به روزرسانی',
   ),
 ));
 

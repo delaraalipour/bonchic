@@ -20,7 +20,7 @@
         {% for slide in slides %}
             <tr>
                 <td>{{ slide.id }}</td>
-                <td><img src="{{ asset('uploads/' ~ slide.image) }}" /></td>
+                <td class="slide-image"><img src="{{ asset('uploads/' ~ slide.image) }}" /></td>
                 <td><a href="{{ path('admin_slide_update', {id: slide.id}) }}" class="edit">{{ slide.title }}</a></td>
                 <td>
                     <a href="{{ path('admin_slide_delete', {id: slide.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>

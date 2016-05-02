@@ -17,8 +17,8 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c007be171e5265c004cd5582189f72f65408e99fc119a283c2b4c839e377ec2f = $this->env->getExtension("native_profiler");
-        $__internal_c007be171e5265c004cd5582189f72f65408e99fc119a283c2b4c839e377ec2f->enter($__internal_c007be171e5265c004cd5582189f72f65408e99fc119a283c2b4c839e377ec2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:layout.html.twig"));
+        $__internal_bfd7f6bdbf1b936ba15bad8f1ae077b517332ca4a613cadab92533ab513608e1 = $this->env->getExtension("native_profiler");
+        $__internal_bfd7f6bdbf1b936ba15bad8f1ae077b517332ca4a613cadab92533ab513608e1->enter($__internal_bfd7f6bdbf1b936ba15bad8f1ae077b517332ca4a613cadab92533ab513608e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -37,77 +37,75 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
         // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/app/css/main.css"), "html", null, true);
         echo "\" type=\"text/css\" />
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js\"></script>
-    <script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>
 </head>
 <body>
 <div class=\"storefront-header\">
     <div class=\"wrapper clearfix\">
         <div class=\"cell\">
             ";
-        // line 15
+        // line 13
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 16
+            // line 14
             echo "                ";
             if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-                // line 17
+                // line 15
                 echo "                    <a href=\"";
                 echo $this->env->getExtension('routing')->getPath("admin_index");
                 echo "\">
                         ";
-                // line 18
+                // line 16
                 echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.controlpanel"), "html", null, true);
                 echo "
                     </a>
                     <span class=\"divider\">";
-                // line 20
+                // line 18
                 echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.or"), "html", null, true);
                 echo "</span>
                 ";
             }
-            // line 22
+            // line 20
             echo "                <a href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\">
                     ";
-            // line 23
+            // line 21
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.logout"), "html", null, true);
             echo "
                 </a>
             ";
         } else {
-            // line 26
+            // line 24
             echo "                <a class=\"signup\" href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
             echo "\">
                     ";
-            // line 27
+            // line 25
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.sign up"), "html", null, true);
             echo "
                 </a>
                 <span class=\"divider\">";
-            // line 29
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.or"), "html", null, true);
             echo "</span>
                 <a href=\"";
-            // line 30
+            // line 28
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
             echo "\">
                     ";
-            // line 31
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.login"), "html", null, true);
             echo "
                 </a>
             ";
         }
-        // line 34
+        // line 32
         echo "            <span class=\"divider\">/</span>
             <a href=\"";
-        // line 35
+        // line 33
         echo $this->env->getExtension('routing')->getPath("cart_list");
         echo "\" >
                 <span>";
-        // line 36
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.cart"), "html", null, true);
         echo "</span>
                 <i class=\"glyphicon glyphicon-shopping-cart\"></i>
@@ -120,13 +118,13 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
         <div class=\"top-menu\">
             <ul class=\"clearfix\">
                 <li><a href=\"";
-        // line 46
+        // line 44
         echo $this->env->getExtension('routing')->getPath("homepage");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         echo "</a></li>
                 <li><a href=\"";
-        // line 47
+        // line 45
         echo $this->env->getExtension('routing')->getPath("storefront_product_list");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
@@ -135,7 +133,7 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
         </div>
         <div class=\"shop-logo\">
             <a href=\"";
-        // line 51
+        // line 49
         echo $this->env->getExtension('routing')->getPath("homepage");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.site_title"), "html", null, true);
@@ -147,32 +145,32 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
 <div class=\"storefront-content\">
     <div class=\"wrapper clearfix\">
         ";
-        // line 58
+        // line 56
         $this->displayBlock('content', $context, $blocks);
-        // line 60
+        // line 58
         echo "    </div>
     <div class=\"footer-widgets-top\"></div>
     <div class=\"footer\">
         <div class=\"footer-menu wrapper\">
             <span>";
-        // line 64
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.links"), "html", null, true);
         echo "</span>
             <ul class=\"clearfix\">
                 <li><a href=\"";
-        // line 66
+        // line 64
         echo $this->env->getExtension('routing')->getPath("homepage");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         echo "</a></li>
                 <li><a href=\"";
-        // line 67
+        // line 65
         echo $this->env->getExtension('routing')->getPath("storefront_product_list");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
         echo "</a></li>
                 <li><a href=\"";
-        // line 68
+        // line 66
         echo $this->env->getExtension('routing')->getPath("cart_list");
         echo "\" >";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.cart"), "html", null, true);
@@ -184,21 +182,21 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
         <div class=\"footer-menu wrapper\">
             <ul class=\"clearfix\">
                 <li><a href=\"";
-        // line 75
+        // line 73
         echo $this->env->getExtension('routing')->getPath("homepage");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         echo "</a></li>
                 <li id=\"slash\">/</li>
                 <li><a href=\"";
-        // line 77
+        // line 75
         echo $this->env->getExtension('routing')->getPath("storefront_product_list");
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
         echo "</a></li>
                 <li id=\"slash\">/</li>
                 <li><a href=\"";
-        // line 79
+        // line 77
         echo $this->env->getExtension('routing')->getPath("cart_list");
         echo "\" >";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.cart"), "html", null, true);
@@ -210,31 +208,31 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
 </body>
 </html>";
         
-        $__internal_c007be171e5265c004cd5582189f72f65408e99fc119a283c2b4c839e377ec2f->leave($__internal_c007be171e5265c004cd5582189f72f65408e99fc119a283c2b4c839e377ec2f_prof);
+        $__internal_bfd7f6bdbf1b936ba15bad8f1ae077b517332ca4a613cadab92533ab513608e1->leave($__internal_bfd7f6bdbf1b936ba15bad8f1ae077b517332ca4a613cadab92533ab513608e1_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_42719d070e88ca6113566ecc8820fb33b2fbf214125bc6a68985c7738600eef1 = $this->env->getExtension("native_profiler");
-        $__internal_42719d070e88ca6113566ecc8820fb33b2fbf214125bc6a68985c7738600eef1->enter($__internal_42719d070e88ca6113566ecc8820fb33b2fbf214125bc6a68985c7738600eef1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3d72082f42b653c3ca8d5995de595a7f5764615850c9410b888084681c28e0c4 = $this->env->getExtension("native_profiler");
+        $__internal_3d72082f42b653c3ca8d5995de595a7f5764615850c9410b888084681c28e0c4->enter($__internal_3d72082f42b653c3ca8d5995de595a7f5764615850c9410b888084681c28e0c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         
-        $__internal_42719d070e88ca6113566ecc8820fb33b2fbf214125bc6a68985c7738600eef1->leave($__internal_42719d070e88ca6113566ecc8820fb33b2fbf214125bc6a68985c7738600eef1_prof);
+        $__internal_3d72082f42b653c3ca8d5995de595a7f5764615850c9410b888084681c28e0c4->leave($__internal_3d72082f42b653c3ca8d5995de595a7f5764615850c9410b888084681c28e0c4_prof);
 
     }
 
-    // line 58
+    // line 56
     public function block_content($context, array $blocks = array())
     {
-        $__internal_5f88fe0df7cdf3c283dd17461262f598307dd73a14a6dd4396af5c6ec3474bd1 = $this->env->getExtension("native_profiler");
-        $__internal_5f88fe0df7cdf3c283dd17461262f598307dd73a14a6dd4396af5c6ec3474bd1->enter($__internal_5f88fe0df7cdf3c283dd17461262f598307dd73a14a6dd4396af5c6ec3474bd1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0fefdbdcae53f504e0d48c32e655d9a9e5f9302e983bd9fd9439f8a6d0ade519 = $this->env->getExtension("native_profiler");
+        $__internal_0fefdbdcae53f504e0d48c32e655d9a9e5f9302e983bd9fd9439f8a6d0ade519->enter($__internal_0fefdbdcae53f504e0d48c32e655d9a9e5f9302e983bd9fd9439f8a6d0ade519_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 59
+        // line 57
         echo "        ";
         
-        $__internal_5f88fe0df7cdf3c283dd17461262f598307dd73a14a6dd4396af5c6ec3474bd1->leave($__internal_5f88fe0df7cdf3c283dd17461262f598307dd73a14a6dd4396af5c6ec3474bd1_prof);
+        $__internal_0fefdbdcae53f504e0d48c32e655d9a9e5f9302e983bd9fd9439f8a6d0ade519->leave($__internal_0fefdbdcae53f504e0d48c32e655d9a9e5f9302e983bd9fd9439f8a6d0ade519_prof);
 
     }
 
@@ -250,7 +248,7 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
 
     public function getDebugInfo()
     {
-        return array (  235 => 59,  229 => 58,  218 => 5,  202 => 79,  195 => 77,  188 => 75,  176 => 68,  170 => 67,  164 => 66,  159 => 64,  153 => 60,  151 => 58,  139 => 51,  130 => 47,  124 => 46,  111 => 36,  107 => 35,  104 => 34,  98 => 31,  94 => 30,  90 => 29,  85 => 27,  80 => 26,  74 => 23,  69 => 22,  64 => 20,  59 => 18,  54 => 17,  51 => 16,  49 => 15,  38 => 7,  34 => 6,  30 => 5,  24 => 1,);
+        return array (  233 => 57,  227 => 56,  216 => 5,  200 => 77,  193 => 75,  186 => 73,  174 => 66,  168 => 65,  162 => 64,  157 => 62,  151 => 58,  149 => 56,  137 => 49,  128 => 45,  122 => 44,  109 => 34,  105 => 33,  102 => 32,  96 => 29,  92 => 28,  88 => 27,  83 => 25,  78 => 24,  72 => 21,  67 => 20,  62 => 18,  57 => 16,  52 => 15,  49 => 14,  47 => 13,  38 => 7,  34 => 6,  30 => 5,  24 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -260,8 +258,6 @@ class __TwigTemplate_977d21b97272f8f18d0cbac758d499eee0ab552ce2cae6cc857967747c7
 /*     <title>{% block title %}{% endblock %}</title>*/
 /*     <link rel="stylesheet" href="{{ asset('bundles/app/css/bootstrap.css') }}" type="text/css" />*/
 /*     <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" type="text/css" />*/
-/*     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>*/
-/*     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*/
 /* </head>*/
 /* <body>*/
 /* <div class="storefront-header">*/

@@ -11,14 +11,13 @@
         <a class="btn-floating btn-floating-left" onclick="plusDivs(1)"><i class="glyphicon glyphicon-chevron-left"></i></a>
         <a class="btn-floating btn-floating-right" onclick="plusDivs(-1)"><i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
+
     <script>
         var slideIndex = 1;
         showDivs(slideIndex);
-
         function plusDivs(n) {
             showDivs(slideIndex += n);
         }
-
         function showDivs(n) {
             var i;
             var x = document.getElementsByClassName("mySlides");
@@ -39,7 +38,7 @@
                     <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
                     <div class="price">{{ product.price | number_format(0, '.', ',') }} تومان</div>
                     <div class="action">
-                        <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+                        <a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a>
                     </div>
                 </div>
             </div>

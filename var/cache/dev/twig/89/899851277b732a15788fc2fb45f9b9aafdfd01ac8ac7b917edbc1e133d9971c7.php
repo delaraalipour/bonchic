@@ -22,32 +22,32 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d4fa85b1ed2a7cb9a3e0a0d1f2b5bf862c24312c4a9365307fd52bf58df454a5 = $this->env->getExtension("native_profiler");
-        $__internal_d4fa85b1ed2a7cb9a3e0a0d1f2b5bf862c24312c4a9365307fd52bf58df454a5->enter($__internal_d4fa85b1ed2a7cb9a3e0a0d1f2b5bf862c24312c4a9365307fd52bf58df454a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/show.html.twig"));
+        $__internal_8f8163161fb9608bcc7a25dc86995e171a0c1a0754f95a52816dbf2232746262 = $this->env->getExtension("native_profiler");
+        $__internal_8f8163161fb9608bcc7a25dc86995e171a0c1a0754f95a52816dbf2232746262->enter($__internal_8f8163161fb9608bcc7a25dc86995e171a0c1a0754f95a52816dbf2232746262_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront/product/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d4fa85b1ed2a7cb9a3e0a0d1f2b5bf862c24312c4a9365307fd52bf58df454a5->leave($__internal_d4fa85b1ed2a7cb9a3e0a0d1f2b5bf862c24312c4a9365307fd52bf58df454a5_prof);
+        $__internal_8f8163161fb9608bcc7a25dc86995e171a0c1a0754f95a52816dbf2232746262->leave($__internal_8f8163161fb9608bcc7a25dc86995e171a0c1a0754f95a52816dbf2232746262_prof);
 
     }
 
     // line 3
     public function block_header($context, array $blocks = array())
     {
-        $__internal_42a2e1433ee426fb841f5ef982de12c59a1c5c1aed6f210eef00c7b5ce4db899 = $this->env->getExtension("native_profiler");
-        $__internal_42a2e1433ee426fb841f5ef982de12c59a1c5c1aed6f210eef00c7b5ce4db899->enter($__internal_42a2e1433ee426fb841f5ef982de12c59a1c5c1aed6f210eef00c7b5ce4db899_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_f1f4df1e0dbeae4caafd87ac19ff18f4d9a931b28a978c2ef41cbbfb3a1511e2 = $this->env->getExtension("native_profiler");
+        $__internal_f1f4df1e0dbeae4caafd87ac19ff18f4d9a931b28a978c2ef41cbbfb3a1511e2->enter($__internal_f1f4df1e0dbeae4caafd87ac19ff18f4d9a931b28a978c2ef41cbbfb3a1511e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product"), "html", null, true);
         
-        $__internal_42a2e1433ee426fb841f5ef982de12c59a1c5c1aed6f210eef00c7b5ce4db899->leave($__internal_42a2e1433ee426fb841f5ef982de12c59a1c5c1aed6f210eef00c7b5ce4db899_prof);
+        $__internal_f1f4df1e0dbeae4caafd87ac19ff18f4d9a931b28a978c2ef41cbbfb3a1511e2->leave($__internal_f1f4df1e0dbeae4caafd87ac19ff18f4d9a931b28a978c2ef41cbbfb3a1511e2_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e017080bee6cbf6a4fad83cae820a1b90b0cb742beaed801c46d143a2bf2ad9b = $this->env->getExtension("native_profiler");
-        $__internal_e017080bee6cbf6a4fad83cae820a1b90b0cb742beaed801c46d143a2bf2ad9b->enter($__internal_e017080bee6cbf6a4fad83cae820a1b90b0cb742beaed801c46d143a2bf2ad9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_84fdc42c29896a6924e5c69193b018417ad73ef399b3a0aeae4bdc4326fdff78 = $this->env->getExtension("native_profiler");
+        $__internal_84fdc42c29896a6924e5c69193b018417ad73ef399b3a0aeae4bdc4326fdff78->enter($__internal_84fdc42c29896a6924e5c69193b018417ad73ef399b3a0aeae4bdc4326fdff78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"products-header\">
@@ -88,12 +88,12 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
         echo " تومان</span>
             </div>
             <div class=\"cart\">
-                <button><a href=\"";
+                <a href=\"";
         // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cart_add", array("id" => $this->getAttribute((isset($context["product"]) ? $context["product"] : $this->getContext($context, "product")), "id", array()))), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.add-to-cart"), "html", null, true);
-        echo "</a></button>
+        echo "</a>
             </div>
             <div class=\"product-description\">
                 <p>";
@@ -105,7 +105,7 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
     </div>
 ";
         
-        $__internal_e017080bee6cbf6a4fad83cae820a1b90b0cb742beaed801c46d143a2bf2ad9b->leave($__internal_e017080bee6cbf6a4fad83cae820a1b90b0cb742beaed801c46d143a2bf2ad9b_prof);
+        $__internal_84fdc42c29896a6924e5c69193b018417ad73ef399b3a0aeae4bdc4326fdff78->leave($__internal_84fdc42c29896a6924e5c69193b018417ad73ef399b3a0aeae4bdc4326fdff78_prof);
 
     }
 
@@ -148,7 +148,7 @@ class __TwigTemplate_83e7700416243f5d76ebbe788b1a7637e7ecdf93a39ef2b129c25a95ce9
 /*                 <span>{{ product.price | number_format(0, '.', ',') }} تومان</span>*/
 /*             </div>*/
 /*             <div class="cart">*/
-/*                 <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>*/
+/*                 <a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a>*/
 /*             </div>*/
 /*             <div class="product-description">*/
 /*                 <p>{{ product.description }}</p>*/

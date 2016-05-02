@@ -70,7 +70,7 @@ class AdminSlideController extends Controller
             return $this->redirectToRoute('admin_slide_list');
         }
 
-        return $this->render(':Admin/slide:new.html.twig', [
+        return $this->render(':Admin/slide:update.html.twig', [
             'form' => $form->createView()
         ]);
     }

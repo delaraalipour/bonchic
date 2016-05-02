@@ -19,6 +19,7 @@ cart_add:
 
 cart_list:
      path:      /cart
+     methods:   [GET, POST]
      defaults:  { _controller: AppBundle:Cart:list }
 
 cart_delete:
@@ -54,8 +55,8 @@ admin_category_new:
      defaults:  { _controller: AppBundle:AdminCategory:new }
 
 admin_category_update:
-      path:      /admin/category/update
-      defaults:  { _controller: AppBundle:AdminCategory:update }
+     path:     /admin/category/update
+     defaults: { _controller: AppBundle:AdminCategory:update }
 
 admin_category_delete:
      path:      /admin/category/delete/{id}
@@ -70,8 +71,8 @@ admin_slide_new:
      defaults:  { _controller: AppBundle:AdminSlide:new }
 
 admin_slide_update:
-      path:      /admin/slide/update
-      defaults:  { _controller: AppBundle:AdminSlide:update }
+     path:     /admin/slide/update
+     defaults: { _controller: AppBundle:AdminSlide:update }
 
 admin_slide_delete:
      path:      /admin/slide/delete/{id}
@@ -81,9 +82,8 @@ admin_slide_list:
      path:      /admin/slide/list
      defaults:  { _controller: AppBundle:AdminSlide:list }
 
-
 #
 # 3rd-party
 #
 fos_user:
-     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+     resource:  "@FOSUserBundle/Resources/config/routing/all.xml"

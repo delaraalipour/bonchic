@@ -12,14 +12,29 @@ class CartController extends Controller
 {
     /**
      * @param Request $request
+     *
      * @return Response
      */
     public function addAction(Request $request)
     {
         $session = $this->get('session');
-
         $cart = $session->get('cart');
-        $cart[] = $request->get('id');
+
+        $id = $request->get('id');
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Product');
+        $newQuantity = intval($request->get('q'));
+
+        if ($newQuantity <= 0) {
+            $newQuantity = 1;
+        }
+        $product = $repository->find($id);
+
+        if ($product == null) {
+            $this->addFlash('success', 'not Exist.');
+            return $this->redirectToRoute('cart_list');
+        }
+
+        $cart[$id] = $newQuantity;
 
         $session->set('cart', $cart);
 
@@ -28,21 +43,24 @@ class CartController extends Controller
 
     /**
      * @param Request $request
+     *
      * @return Response
      */
     public function deleteAction(Request $request)
     {
         $session = $this->get('session');
-
         $cart = $session->get('cart');
-        $cart[] = $request->get('id');
+        $id = $request->get('id');
 
+        unset($cart[$id]);
+        $session->set('cart', $cart);
 
         return $this->redirectToRoute('cart_list');
     }
 
     /**
      * @param Request $request
+     *
      * @return Response
      */
     public function listAction(Request $request)
@@ -55,16 +73,17 @@ class CartController extends Controller
         $total = 0;
 
         if ($cart != null) {
-            foreach ($cart as $id) {
-                $products[] = $repository->find($id);
+            foreach ($cart as $id => $quantity) {
                 $product = $repository->find($id);
-                $total = $total + $product->getPrice();
+                $products[] = $product;
+                $total += ($product->getPrice() * $quantity);
             }
         }
 
         return $this->render(':Cart:list.html.twig', [
             'products' => $products,
             'total' => $total,
+            'cart' => $cart,
         ]);
     }
 }

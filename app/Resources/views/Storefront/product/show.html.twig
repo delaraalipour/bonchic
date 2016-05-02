@@ -22,7 +22,7 @@
                 <span>{{ product.price | number_format(0, '.', ',') }} تومان</span>
             </div>
             <div class="cart">
-                <button><a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a></button>
+                <a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a>
             </div>
             <div class="product-description">
                 <p>{{ product.description }}</p>
