@@ -99,7 +99,7 @@ class AdminProductController extends Controller
     /**
      * @param Product $product
      */
-        protected function persistProduct(Product $product)
+    protected function persistProduct(Product $product)
     {
         $file = $product->getFile();
 

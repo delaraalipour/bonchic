@@ -80,7 +80,7 @@ class CartController extends Controller
             }
         }
 
-        return $this->render(':Cart:list.html.twig', [
+        return $this->render('Storefront/cart/list.html.twig', [
             'products' => $products,
             'total' => $total,
             'cart' => $cart,

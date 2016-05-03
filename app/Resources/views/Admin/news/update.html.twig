@@ -1,0 +1,39 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.edit' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name">
+            <a href="{{ path('admin_news_list') }}"><i class="glyphicon glyphicon-tags"></i>{{ 'app.newslist' | trans }} </a>
+            <span id="slash">/</span>
+            <span> {{ 'app.edit' | trans }}</span>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="news-form">
+        {{ form_start(form) }}
+        <div class="news-title">
+            {{ form_row(form.title) }}
+            {{ form_row(form.brief) }}
+        </div>
+
+        <div class="news-image clearfix">
+            <img src="{{ asset('uploads/' ~ form.vars.data.image) }}" />
+            <button><span>{{ 'app.add.image' | trans}}</span>{{ form_widget(form.file) }}</button>
+        </div>
+
+        <div class="news-description">
+            {{ form_row(form.description) }}
+        </div>
+        {{ form_widget(form) }}
+
+        <div class="buttons">
+            <a href=" {{ path('admin_news_list') }} ">{{ 'app.cancel' | trans}}</a>
+            <input type="submit" value="{{ 'app.savenews' | trans}}" class="product-submit" />
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

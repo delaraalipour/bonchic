@@ -23,107 +23,111 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0fbe22e79247797c9d4c84fae680d55ff8032e35de6ca801057b265ad75141c2 = $this->env->getExtension("native_profiler");
-        $__internal_0fbe22e79247797c9d4c84fae680d55ff8032e35de6ca801057b265ad75141c2->enter($__internal_0fbe22e79247797c9d4c84fae680d55ff8032e35de6ca801057b265ad75141c2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/product/list.html.twig"));
+        $__internal_c474c84ad2e79ecf05ac8e73a1384efc2bb6ded17fe0ed3acfb690a61218ebd6 = $this->env->getExtension("native_profiler");
+        $__internal_c474c84ad2e79ecf05ac8e73a1384efc2bb6ded17fe0ed3acfb690a61218ebd6->enter($__internal_c474c84ad2e79ecf05ac8e73a1384efc2bb6ded17fe0ed3acfb690a61218ebd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/product/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0fbe22e79247797c9d4c84fae680d55ff8032e35de6ca801057b265ad75141c2->leave($__internal_0fbe22e79247797c9d4c84fae680d55ff8032e35de6ca801057b265ad75141c2_prof);
+        $__internal_c474c84ad2e79ecf05ac8e73a1384efc2bb6ded17fe0ed3acfb690a61218ebd6->leave($__internal_c474c84ad2e79ecf05ac8e73a1384efc2bb6ded17fe0ed3acfb690a61218ebd6_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_72be3074a37e80401736f2bc099975fb1ea3f590d5548fc7be4d64e9dec5e9bb = $this->env->getExtension("native_profiler");
-        $__internal_72be3074a37e80401736f2bc099975fb1ea3f590d5548fc7be4d64e9dec5e9bb->enter($__internal_72be3074a37e80401736f2bc099975fb1ea3f590d5548fc7be4d64e9dec5e9bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3728737781a57867551a740012c2b97a5a6352036b6fe56ee7d7824e3cfa7053 = $this->env->getExtension("native_profiler");
+        $__internal_3728737781a57867551a740012c2b97a5a6352036b6fe56ee7d7824e3cfa7053->enter($__internal_3728737781a57867551a740012c2b97a5a6352036b6fe56ee7d7824e3cfa7053_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
         
-        $__internal_72be3074a37e80401736f2bc099975fb1ea3f590d5548fc7be4d64e9dec5e9bb->leave($__internal_72be3074a37e80401736f2bc099975fb1ea3f590d5548fc7be4d64e9dec5e9bb_prof);
+        $__internal_3728737781a57867551a740012c2b97a5a6352036b6fe56ee7d7824e3cfa7053->leave($__internal_3728737781a57867551a740012c2b97a5a6352036b6fe56ee7d7824e3cfa7053_prof);
 
     }
 
     // line 5
     public function block_header($context, array $blocks = array())
     {
-        $__internal_8f83aab8549e699ca4d65e69f1ab02bfeef72fbf8a08d46b8425a693f9bd63ef = $this->env->getExtension("native_profiler");
-        $__internal_8f83aab8549e699ca4d65e69f1ab02bfeef72fbf8a08d46b8425a693f9bd63ef->enter($__internal_8f83aab8549e699ca4d65e69f1ab02bfeef72fbf8a08d46b8425a693f9bd63ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_5af402566c22e0b6a880d02947b95eece8f7b5ebdd5158e952e39c3232513e7d = $this->env->getExtension("native_profiler");
+        $__internal_5af402566c22e0b6a880d02947b95eece8f7b5ebdd5158e952e39c3232513e7d->enter($__internal_5af402566c22e0b6a880d02947b95eece8f7b5ebdd5158e952e39c3232513e7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 6
         echo "    <div class=\"top-header\">
-        <div class=\"header-name\"><span><i class=\"glyphicon glyphicon-tags\"></i>";
-        // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
-        echo "</span></div>
-        <div class=\"header-link\"><a href=\"";
+        <div class=\"header-name\">
+            <span><i class=\"glyphicon glyphicon-tags\"></i>";
         // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.productlist"), "html", null, true);
+        echo "</span>
+        </div>
+        <div class=\"header-link\">
+            <a href=\"";
+        // line 11
         echo $this->env->getExtension('routing')->getPath("admin_product_new");
         echo "\"> ";
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.newproduct"), "html", null, true);
-        echo " </a></div>
+        echo " </a>
+        </div>
     </div>
 ";
         
-        $__internal_8f83aab8549e699ca4d65e69f1ab02bfeef72fbf8a08d46b8425a693f9bd63ef->leave($__internal_8f83aab8549e699ca4d65e69f1ab02bfeef72fbf8a08d46b8425a693f9bd63ef_prof);
+        $__internal_5af402566c22e0b6a880d02947b95eece8f7b5ebdd5158e952e39c3232513e7d->leave($__internal_5af402566c22e0b6a880d02947b95eece8f7b5ebdd5158e952e39c3232513e7d_prof);
 
     }
 
-    // line 12
+    // line 16
     public function block_content($context, array $blocks = array())
     {
-        $__internal_73900038896f736aa1933fc911bbf1dd74d313b7f2570b103c9c2a59141f5969 = $this->env->getExtension("native_profiler");
-        $__internal_73900038896f736aa1933fc911bbf1dd74d313b7f2570b103c9c2a59141f5969->enter($__internal_73900038896f736aa1933fc911bbf1dd74d313b7f2570b103c9c2a59141f5969_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_ddb5d6ba2947d90f53e0cd8ea7ee2872867c1552488612033318e6c30f00d0fa = $this->env->getExtension("native_profiler");
+        $__internal_ddb5d6ba2947d90f53e0cd8ea7ee2872867c1552488612033318e6c30f00d0fa->enter($__internal_ddb5d6ba2947d90f53e0cd8ea7ee2872867c1552488612033318e6c30f00d0fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 13
+        // line 17
         echo "    <table>
         <tr class=\"table-header\">
             <td>id</td>
             <td>";
-        // line 16
+        // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.image"), "html", null, true);
         echo "</td>
             <td>";
-        // line 17
+        // line 21
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product.name"), "html", null, true);
         echo "</td>
             <td>";
-        // line 18
+        // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product.price"), "html", null, true);
         echo "</td>
             <td>";
-        // line 19
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.operations"), "html", null, true);
         echo "</td>
         </tr>
         ";
-        // line 21
+        // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 22
+            // line 26
             echo "            <tr>
                 <td>";
-            // line 23
+            // line 27
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "</td>
                 <td><img src=\"";
-            // line 24
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute($context["product"], "image", array()))), "html", null, true);
             echo "\" /></td>
                 <td><a href=\"";
-            // line 25
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_product_update", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\" class=\"edit\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 26
+            // line 30
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute($context["product"], "price", array()), 0, ".", ","), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 28
+            // line 32
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_product_delete", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
             echo "\" class=\"delete\"> ";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.delete"), "html", null, true);
@@ -135,11 +139,11 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 36
         echo "    </table>
 ";
         
-        $__internal_73900038896f736aa1933fc911bbf1dd74d313b7f2570b103c9c2a59141f5969->leave($__internal_73900038896f736aa1933fc911bbf1dd74d313b7f2570b103c9c2a59141f5969_prof);
+        $__internal_ddb5d6ba2947d90f53e0cd8ea7ee2872867c1552488612033318e6c30f00d0fa->leave($__internal_ddb5d6ba2947d90f53e0cd8ea7ee2872867c1552488612033318e6c30f00d0fa_prof);
 
     }
 
@@ -155,7 +159,7 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
 
     public function getDebugInfo()
     {
-        return array (  139 => 32,  127 => 28,  122 => 26,  116 => 25,  112 => 24,  108 => 23,  105 => 22,  101 => 21,  96 => 19,  92 => 18,  88 => 17,  84 => 16,  79 => 13,  73 => 12,  61 => 8,  57 => 7,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  143 => 36,  131 => 32,  126 => 30,  120 => 29,  116 => 28,  112 => 27,  109 => 26,  105 => 25,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  83 => 17,  77 => 16,  64 => 11,  58 => 8,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends ":Admin:layout.html.twig" %}*/
@@ -164,8 +168,12 @@ class __TwigTemplate_50de6e145907f1a1d0b432d31c5ba6abef76aa75a5e141a00fb5126e0bf
 /* */
 /* {% block header %}*/
 /*     <div class="top-header">*/
-/*         <div class="header-name"><span><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }}</span></div>*/
-/*         <div class="header-link"><a href="{{ path('admin_product_new') }}"> {{ 'app.newproduct' | trans }} </a></div>*/
+/*         <div class="header-name">*/
+/*             <span><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }}</span>*/
+/*         </div>*/
+/*         <div class="header-link">*/
+/*             <a href="{{ path('admin_product_new') }}"> {{ 'app.newproduct' | trans }} </a>*/
+/*         </div>*/
 /*     </div>*/
 /* {% endblock %}*/
 /* */

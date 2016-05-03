@@ -14,16 +14,14 @@
 
 {% block content %}
     <div class="product-form">
-
         {{ form_start(form) }}
-    <div class="product-category">
-        {{ form_row(form.title) }}
-    </div>
-    <div class="product-category-image">
-        {{ form_row(form.file) }}
-    </div>
-
-        {{ form_widget(form) }}
+        <div class="product-category">
+            {{ form_row(form.title) }}
+        </div>
+        <div class="product-category-image">
+            {{ form_row(form.file) }}
+        </div>
+            {{ form_widget(form) }}
         <div class="buttons">
             <a href=" {{ path('admin_category_list') }} ">{{ 'app.cancel' | trans}}</a>
             <input type="submit" value="{{ 'app.savecategory' | trans}}" class="product-submit" />

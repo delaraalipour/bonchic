@@ -45,6 +45,14 @@ $catalogue = new MessageCatalogue('fa_IR', array (
     'app.slidelist' => 'اسلاید',
     'app.newslide' => 'اسلاید جدید',
     'app.update.cart' => 'به روزرسانی',
+    'app.newslist' => 'اخبار',
+    'app.news.title' => 'عنوان',
+    'app.news.brief' => 'خلاصه خبر',
+    'app.news.description' => 'توضیحات',
+    'app.newnews' => 'خبر جدید',
+    'app.savenews' => 'ذخیره اخبار',
+    'app.readmore' => 'ادامه مطلب...',
+    'app.news' => 'خبر',
   ),
 ));
 

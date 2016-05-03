@@ -4,8 +4,12 @@
 
 {% block header %}
     <div class="top-header">
-        <div class="header-name"><span><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }}</span></div>
-        <div class="header-link"><a href="{{ path('admin_product_new') }}"> {{ 'app.newproduct' | trans }} </a></div>
+        <div class="header-name">
+            <span><i class="glyphicon glyphicon-tags"></i>{{ 'app.productlist' | trans }}</span>
+        </div>
+        <div class="header-link">
+            <a href="{{ path('admin_product_new') }}"> {{ 'app.newproduct' | trans }} </a>
+        </div>
     </div>
 {% endblock %}
 

@@ -109,15 +109,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::HomePageAction',  '_route' => 'homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/storefront/product')) {
-            // storefront_product_list
-            if ($pathinfo === '/storefront/product/list') {
-                return array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::listAction',  '_route' => 'storefront_product_list',);
+        if (0 === strpos($pathinfo, '/storefront')) {
+            if (0 === strpos($pathinfo, '/storefront/product')) {
+                // storefront_product_list
+                if ($pathinfo === '/storefront/product/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::listAction',  '_route' => 'storefront_product_list',);
+                }
+
+                // storefront_product_show
+                if (preg_match('#^/storefront/product/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_product_show')), array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::showAction',));
+                }
+
             }
 
-            // storefront_product_show
-            if (preg_match('#^/storefront/product/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_product_show')), array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::showAction',));
+            // storefront_news_show
+            if (0 === strpos($pathinfo, '/storefront/news') && preg_match('#^/storefront/news/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_news_show')), array (  '_controller' => 'AppBundle:StorefrontNews:show',));
             }
 
         }
@@ -223,6 +231,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 // admin_slide_list
                 if ($pathinfo === '/admin/slide/list') {
                     return array (  '_controller' => 'AppBundle\\Controller\\AdminSlideController::listAction',  '_route' => 'admin_slide_list',);
+                }
+
+            }
+
+            if (0 === strpos($pathinfo, '/admin/news')) {
+                // admin_news_new
+                if ($pathinfo === '/admin/news/new') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminNewsController::newAction',  '_route' => 'admin_news_new',);
+                }
+
+                // admin_news_update
+                if ($pathinfo === '/admin/news/update') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminNewsController::updateAction',  '_route' => 'admin_news_update',);
+                }
+
+                // admin_news_delete
+                if (0 === strpos($pathinfo, '/admin/news/delete') && preg_match('#^/admin/news/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_news_delete')), array (  '_controller' => 'AppBundle\\Controller\\AdminNewsController::deleteAction',));
+                }
+
+                // admin_news_list
+                if ($pathinfo === '/admin/news/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\AdminNewsController::listAction',  '_route' => 'admin_news_list',);
                 }
 
             }

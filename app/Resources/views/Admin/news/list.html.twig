@@ -1,0 +1,38 @@
+{% extends ":Admin:layout.html.twig" %}
+
+{% block title %}{{ 'app.newslist' | trans }}{% endblock %}
+
+{% block header %}
+    <div class="top-header">
+        <div class="header-name">
+            <span><i class="glyphicon glyphicon-edit"></i>{{ 'app.newslist' | trans }}</span>
+        </div>
+        <div class="header-link">
+            <a href="{{ path('admin_news_new') }}"> {{ 'app.newnews' | trans }} </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr class="table-header news-header">
+            <td>id</td>
+            <td>{{ 'app.image' | trans }}</td>
+            <td>{{ 'app.news.title' | trans }}</td>
+            <td>{{ 'app.news.brief' | trans }}</td>
+            <td>{{ 'app.operations' | trans }}</td>
+        </tr>
+
+        {% for news in news %}
+        <tr class="news-table">
+            <td>{{ news.id }}</td>
+            <td><img src="{{ asset('uploads/' ~ news.image) }}" /></td>
+            <td class="news-title"><a href="{{ path('admin_news_update', {id: news.id}) }}" class="edit">{{ news.title }}</a></td>
+            <td>{{ news.brief }}</td>
+            <td>
+                <a href="{{ path('admin_news_delete', {id: news.id}) }}" class="delete"> {{ 'app.delete' | trans }} </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

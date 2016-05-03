@@ -13,17 +13,17 @@ class NewsType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'lable' => 'app.news.title',
+                'label' => 'app.news.title',
             ])
             ->add('brief', TextType::class, [
-                'lable' => 'app.news.brief',
+                'label' => 'app.news.brief',
             ])
             ->add('file', FileType::class, [
-                'lable' => 'app.image',
+                'label' => 'app.image',
                 'required' => false,
             ])
             ->add('description', TextType::class, [
-                'lable' => 'app.news.description',
+                'label' => 'app.news.description',
             ])
         ;
     }

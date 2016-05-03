@@ -1,0 +1,44 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block title %}{{ 'app.cart' | trans }}{% endblock %}
+
+{% block content %}
+    <div class="products-header">
+        <div class="cell">
+            <div class="title">{{ 'app.cart' | trans }}</div>
+            <div class="header-title">
+                <span>{{ 'app.cart' | trans }}</span>
+                /
+                <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+            </div>
+        </div>
+    </div>
+    {% if products|length == 0 %}
+        <div class="empty-cart-message">{{ 'app.emptycart.message' | trans }}</div>
+    {% else %}
+        {% for product in products %}
+            <div class="cart-info clearfix">
+                <div class="image">
+                    <img src="{{ asset('uploads/' ~ product.image) }}" />
+                </div>
+                <div class="details">
+                    <div class="title"><a href="{{ path('storefront_product_show', {id: product.id}) }}">{{ product.name }}</a></div>
+                    <div class="amounts"><span>{{ product.price }}x{{ cart[product.id] }}</span></div>
+                    <div class="price"><span>{{ product.price | number_format(0, '.', ',') }}  تومان</span></div>
+                </div>
+                <div class="delete-product-cart"><a href="{{ path('cart_delete', {id: product.id}) }}"><i class="glyphicon glyphicon-trash"></i></a></div>
+                <form action="{{ path('cart_add', {id: product.id}) }}" method="post" class="update-cart">
+                    <input type="number" name="q" value="{{ cart[product.id] }}">
+                    <button type="submit" value="Submit">{{ 'app.update.cart' | trans }}</button>
+                </form>
+            </div>
+        {% endfor %}
+            <div class="total-price">
+                <span>{{ total | number_format(0, '.', ',') }}  تومان </span>
+                <p>{{ 'app.total.price' | trans }}</p>
+            </div>
+            <div class=continue-shopping>
+                <a href="{{ path('homepage') }}">{{ 'app.continue.shopping' | trans }}</a>
+            </div>
+    {% endif %}
+{% endblock %}

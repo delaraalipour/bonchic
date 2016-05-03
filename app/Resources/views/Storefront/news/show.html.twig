@@ -1,0 +1,22 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block title %}{{ 'app.news' | trans }}{% endblock %}
+
+{% block content %}
+    <div class="news-header clearfix">
+        <div class="cell">
+            <span>{{ news.title }}</span>
+        </div>
+        <div class="news-links">
+            <span>{{ 'app.newslist' | trans }}</span>
+            <span>/</span>
+            <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+        </div>
+    </div>
+    <div class="news-info">
+        <div class="image"><img src="{{ asset('uploads/' ~ news.image) }}" /></div>
+        <div class="description">
+            <span>{{ news.description }}</span>
+        </div>
+    </div>
+{% endblock %}

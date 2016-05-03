@@ -20,9 +20,13 @@ class StorefrontProductController extends Controller
         $slideRepository = $this->getDoctrine()->getRepository('AppBundle:Slide');
         $slides = $slideRepository->findAll();
 
+        $newsRepository = $this->getDoctrine()->getRepository('AppBundle:News');
+        $news = $newsRepository->findAll();
+
         return $this->render(':Storefront:HomePage.html.twig', [
             'products' => $products,
-            'slides' => $slides
+            'slides' => $slides,
+            'news' => $news,
         ]);
     }
 

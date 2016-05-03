@@ -23,32 +23,32 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_158725cfd4ec6262c3cf3020c218b7624ec881135a05a566a1131bd5961b6b7a = $this->env->getExtension("native_profiler");
-        $__internal_158725cfd4ec6262c3cf3020c218b7624ec881135a05a566a1131bd5961b6b7a->enter($__internal_158725cfd4ec6262c3cf3020c218b7624ec881135a05a566a1131bd5961b6b7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:HomePage.html.twig"));
+        $__internal_4a713d0837019addf5caf0c3f90032e5db663a30df83e2630551ab61b33c0fbe = $this->env->getExtension("native_profiler");
+        $__internal_4a713d0837019addf5caf0c3f90032e5db663a30df83e2630551ab61b33c0fbe->enter($__internal_4a713d0837019addf5caf0c3f90032e5db663a30df83e2630551ab61b33c0fbe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Storefront:HomePage.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_158725cfd4ec6262c3cf3020c218b7624ec881135a05a566a1131bd5961b6b7a->leave($__internal_158725cfd4ec6262c3cf3020c218b7624ec881135a05a566a1131bd5961b6b7a_prof);
+        $__internal_4a713d0837019addf5caf0c3f90032e5db663a30df83e2630551ab61b33c0fbe->leave($__internal_4a713d0837019addf5caf0c3f90032e5db663a30df83e2630551ab61b33c0fbe_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_18c6b891f770deba250fc9316b5e5aa91f52420dc0d3964244f3fb74610c9610 = $this->env->getExtension("native_profiler");
-        $__internal_18c6b891f770deba250fc9316b5e5aa91f52420dc0d3964244f3fb74610c9610->enter($__internal_18c6b891f770deba250fc9316b5e5aa91f52420dc0d3964244f3fb74610c9610_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_19ee593428a2f83973c86ad0d3727e7c6a83c7965eee9c767a6c6a3b7684d3f6 = $this->env->getExtension("native_profiler");
+        $__internal_19ee593428a2f83973c86ad0d3727e7c6a83c7965eee9c767a6c6a3b7684d3f6->enter($__internal_19ee593428a2f83973c86ad0d3727e7c6a83c7965eee9c767a6c6a3b7684d3f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.homepage"), "html", null, true);
         
-        $__internal_18c6b891f770deba250fc9316b5e5aa91f52420dc0d3964244f3fb74610c9610->leave($__internal_18c6b891f770deba250fc9316b5e5aa91f52420dc0d3964244f3fb74610c9610_prof);
+        $__internal_19ee593428a2f83973c86ad0d3727e7c6a83c7965eee9c767a6c6a3b7684d3f6->leave($__internal_19ee593428a2f83973c86ad0d3727e7c6a83c7965eee9c767a6c6a3b7684d3f6_prof);
 
     }
 
     // line 5
     public function block_content($context, array $blocks = array())
     {
-        $__internal_6475564e9588f269f7c0aa9fc08630de57f14d5ecc810085b44c579e16625d5d = $this->env->getExtension("native_profiler");
-        $__internal_6475564e9588f269f7c0aa9fc08630de57f14d5ecc810085b44c579e16625d5d->enter($__internal_6475564e9588f269f7c0aa9fc08630de57f14d5ecc810085b44c579e16625d5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_48037a4a276f9c8a9833802ca9282701a9abd7d500b517a67ec37c82ea5bf89a = $this->env->getExtension("native_profiler");
+        $__internal_48037a4a276f9c8a9833802ca9282701a9abd7d500b517a67ec37c82ea5bf89a->enter($__internal_48037a4a276f9c8a9833802ca9282701a9abd7d500b517a67ec37c82ea5bf89a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
         echo "    <div class=\"banner\">
@@ -132,24 +132,66 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 46
         echo "    </div>
+    <div class=\"news-item clearfix\">
+        <div class=\"news-header\"><span>";
+        // line 48
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.newslist"), "html", null, true);
+        echo "</span></div>
+        ";
+        // line 49
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($context["news"]);
+        foreach ($context['_seq'] as $context["_key"] => $context["news"]) {
+            // line 50
+            echo "            <div class=\"news\">
+                <div class=\"image\"><a href=\"";
+            // line 51
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("storefront_news_show", array("id" => $this->getAttribute($context["news"], "id", array()))), "html", null, true);
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("uploads/" . $this->getAttribute($context["news"], "image", array()))), "html", null, true);
+            echo "\" /></a></div>
+                <div class=\"title\"><a href=\"";
+            // line 52
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("storefront_news_show", array("id" => $this->getAttribute($context["news"], "id", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["news"], "title", array()), "html", null, true);
+            echo "</a></div>
+                <div class=\"brief\"><span>";
+            // line 53
+            echo twig_escape_filter($this->env, $this->getAttribute($context["news"], "brief", array()), "html", null, true);
+            echo "</span></div>
+                <div class=\"action\"><a href=\"";
+            // line 54
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("storefront_news_show", array("id" => $this->getAttribute($context["news"], "id", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.readmore"), "html", null, true);
+            echo "</a></div>
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['news'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
+        echo "    </div>
 ";
         
-        $__internal_6475564e9588f269f7c0aa9fc08630de57f14d5ecc810085b44c579e16625d5d->leave($__internal_6475564e9588f269f7c0aa9fc08630de57f14d5ecc810085b44c579e16625d5d_prof);
+        $__internal_48037a4a276f9c8a9833802ca9282701a9abd7d500b517a67ec37c82ea5bf89a->leave($__internal_48037a4a276f9c8a9833802ca9282701a9abd7d500b517a67ec37c82ea5bf89a_prof);
 
     }
 
-    // line 48
+    // line 59
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_166929df2243c727e26ee4b26ab7dbfec0cabe27600f1648783f05bbc1613895 = $this->env->getExtension("native_profiler");
-        $__internal_166929df2243c727e26ee4b26ab7dbfec0cabe27600f1648783f05bbc1613895->enter($__internal_166929df2243c727e26ee4b26ab7dbfec0cabe27600f1648783f05bbc1613895_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_e57640762f826df83a4ae49620a331dba73862bb9a64d19f0bcad423ad80929d = $this->env->getExtension("native_profiler");
+        $__internal_e57640762f826df83a4ae49620a331dba73862bb9a64d19f0bcad423ad80929d->enter($__internal_e57640762f826df83a4ae49620a331dba73862bb9a64d19f0bcad423ad80929d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 49
+        // line 60
         echo "    <div class=\"footer-widgets-top\"></div>
     <div class=\"footer\"></div>
 ";
         
-        $__internal_166929df2243c727e26ee4b26ab7dbfec0cabe27600f1648783f05bbc1613895->leave($__internal_166929df2243c727e26ee4b26ab7dbfec0cabe27600f1648783f05bbc1613895_prof);
+        $__internal_e57640762f826df83a4ae49620a331dba73862bb9a64d19f0bcad423ad80929d->leave($__internal_e57640762f826df83a4ae49620a331dba73862bb9a64d19f0bcad423ad80929d_prof);
 
     }
 
@@ -165,7 +207,7 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 
     public function getDebugInfo()
     {
-        return array (  148 => 49,  142 => 48,  134 => 46,  121 => 41,  116 => 39,  110 => 38,  103 => 36,  100 => 35,  96 => 34,  70 => 10,  61 => 8,  57 => 7,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  190 => 60,  184 => 59,  176 => 57,  165 => 54,  161 => 53,  155 => 52,  149 => 51,  146 => 50,  142 => 49,  138 => 48,  134 => 46,  121 => 41,  116 => 39,  110 => 38,  103 => 36,  100 => 35,  96 => 34,  70 => 10,  61 => 8,  57 => 7,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends ":Storefront:layout.html.twig" %}*/
@@ -211,6 +253,17 @@ class __TwigTemplate_8631ff8236a8cbbe5f17a97e72b2efe9c92d19ddf92f13988ae54fd68f2
 /*                         <a href="{{ path('cart_add', {id: product.id}) }}">{{ 'app.add-to-cart' | trans }}</a>*/
 /*                     </div>*/
 /*                 </div>*/
+/*             </div>*/
+/*         {% endfor %}*/
+/*     </div>*/
+/*     <div class="news-item clearfix">*/
+/*         <div class="news-header"><span>{{ 'app.newslist' | trans }}</span></div>*/
+/*         {% for news in news %}*/
+/*             <div class="news">*/
+/*                 <div class="image"><a href="{{ path('storefront_news_show', {id: news.id}) }}"><img src="{{ asset('uploads/' ~ news.image) }}" /></a></div>*/
+/*                 <div class="title"><a href="{{ path('storefront_news_show', {id: news.id}) }}">{{ news.title }}</a></div>*/
+/*                 <div class="brief"><span>{{ news.brief }}</span></div>*/
+/*                 <div class="action"><a href="{{ path('storefront_news_show', {id: news.id}) }}">{{ 'app.readmore' | trans }}</a></div>*/
 /*             </div>*/
 /*         {% endfor %}*/
 /*     </div>*/

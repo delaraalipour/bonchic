@@ -38,3 +38,11 @@ app.saveslide: Save Slide
 app.slidelist: Slides
 app.newslide: New Slide
 app.update.cart: update
+app.newslist: News
+app.news.title: title
+app.news.brief: news brief
+app.news.description: description
+app.newnews: New News
+app.savenews: Save News
+app.readmore: Read More...
+app.news: News
