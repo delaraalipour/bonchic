@@ -13,6 +13,10 @@ storefront_product_show:
       path:      /storefront/product/{id}
       defaults:  { _controller: AppBundle:StorefrontProduct:show }
 
+storefront_news_list:
+      path:      /storefront/news/list
+      defaults:  { _controller: AppBundle:StorefrontNews:list }
+
 storefront_news_show:
       path:      /storefront/news/{id}
       defaults:  { _controller: AppBundle:StorefrontNews:show }

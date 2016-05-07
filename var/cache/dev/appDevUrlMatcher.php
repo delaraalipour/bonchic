@@ -123,9 +123,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            // storefront_news_show
-            if (0 === strpos($pathinfo, '/storefront/news') && preg_match('#^/storefront/news/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_news_show')), array (  '_controller' => 'AppBundle:StorefrontNews:show',));
+            if (0 === strpos($pathinfo, '/storefront/news')) {
+                // storefront_news_list
+                if ($pathinfo === '/storefront/news/list') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\StorefrontNewsController::listAction',  '_route' => 'storefront_news_list',);
+                }
+
+                // storefront_news_show
+                if (preg_match('#^/storefront/news/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'storefront_news_show')), array (  '_controller' => 'AppBundle\\Controller\\StorefrontNewsController::showAction',));
+                }
+
             }
 
         }

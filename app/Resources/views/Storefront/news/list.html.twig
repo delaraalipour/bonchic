@@ -1,0 +1,26 @@
+{% extends ":Storefront:layout.html.twig" %}
+
+{% block title %}{{ 'app.newslist' | trans }}{% endblock %}
+
+{% block content %}
+    <div class="products-header">
+        <div class="cell">
+            <div class="title">{{ 'app.newslist' | trans }}</div>
+            <div class="header-title">
+                <a href="{{ path('storefront_news_list') }}">{{ 'app.newslist' | trans }}</a>
+                /
+                <a href="{{ path('homepage') }}">{{ 'app.homepage' | trans }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="news-item clearfix">
+        {% for news in news %}
+            <div class="news">
+                <div class="image"><a href="{{ path('storefront_news_show', {id: news.id}) }}"><img src="{{ asset('uploads/' ~ news.image) }}" /></a></div>
+                <div class="title"><a href="{{ path('storefront_news_show', {id: news.id}) }}">{{ news.title }}</a></div>
+                <div class="brief"><span>{{ news.brief }}</span></div>
+                <div class="action"><a href="{{ path('storefront_news_show', {id: news.id}) }}">{{ 'app.readmore' | trans }}</a></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
