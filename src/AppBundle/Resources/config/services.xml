@@ -7,8 +7,7 @@
 
     <services>
         <service id="app.registration_type_extension"
-                 class="AppBundle\Form\Extension\RegistrationTypeExtension"
-        >
+                 class="AppBundle\Form\Extension\RegistrationTypeExtension">
             <tag name="form.type_extension" extended-type="FOS\UserBundle\Form\Type\RegistrationFormType" />
         </service>
     </services>

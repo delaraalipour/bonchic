@@ -10,6 +10,11 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class RegistrationTypeExtension extends AbstractTypeExtension
 {
+    /**
+     * @param FormBuilderInterface $builder
+     *
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder

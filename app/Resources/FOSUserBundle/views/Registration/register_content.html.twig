@@ -1,5 +1,6 @@
+{% block title %}{{ 'app.register' | trans }}{% endblock %}
+
 {% extends ":Storefront:layout.html.twig" %}
-{% trans_default_domain 'FOSUserBundle' %}
 
 {%  block content %}
     {% form_theme form 'bootstrap_3_layout.html.twig' %}
@@ -7,7 +8,7 @@
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
         {{ form_widget(form) }}
         <div class="submit">
-            <input type="submit" value="{{ 'registration.submit'|trans }}" class="register-submit" />
+            <input type="submit" value="{{ 'app.registration.submit'|trans }}" class="register-submit" />
         </div>
     {{ form_end(form) }}
 {% endblock %}

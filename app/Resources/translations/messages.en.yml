@@ -1,7 +1,10 @@
 app.site_title: Foojan
 app.homepage: Home
 app.welcome.message: Welcome to Foojan Shop
+app.register: register
+app.registration.submit: Register
 app.form.registration.gender: gender
+app.form.registration.mobile: mobile
 security.login.username: user
 app.image: image
 app.product.name: name
@@ -28,6 +31,8 @@ app.cart: Cart
 app.add-to-cart: Add to Cart
 app.logout: Logout
 app.login: Login
+security.login.submit: Log in
+security.login.remember_me: Remember me
 app.or: or
 app.links: links
 app.emptycart.message: Your shopping cart is empty.
