@@ -83,6 +83,7 @@ body {
 .storefront-header .cell a {
     color: #cdd1d6;
     text-decoration: none;
+    float: right;
 }
 .storefront-header .cell a:hover {
     color: white;
@@ -93,6 +94,9 @@ body {
 .storefront-header .cell .divider {
     color: #8a9098;
     padding: 0 5px;
+}
+.storefront-header .cell span {
+    float: right;
 }
 .storefront-site-header {
     background-color: white;
@@ -160,26 +164,34 @@ body {
 }
 .top-header .header-name span {
     font-size: 17px;
+    float: right;
 }
 .top-header .header-name a {
     font-size: 17px;
     color: #798c9c;
+    float: right;
 }
 .top-header .header-name #slash {
     color: #798c9c;
-    margin-left: 5px;
+    margin: 0 5px;
+    float: right;
 }
 .top-header .header-link {
     float: left;
+    margin-top: 10px;
 }
 .top-header .header-link a {
     background-color: #479ccf;
     color: white;
     border: 1px solid #479ccf;
-    padding: 7px 19px;
     border-radius: 4px;
+    padding-top: 4px;
     text-decoration: none;
-    padding-top: 11px;
+    display: flex;
+    height: 36px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
 }
 .top-header .header-link a:hover {
     background-color: #4293c2;
@@ -245,20 +257,30 @@ body {
     background-color: #479ccf;
     color: white;
     border: 1px solid #479ccf;
-    padding: 5px 19px;
     border-radius: 4px;
     font-size:13px;
-    padding-top: 11px;
+    padding-top: 6px;
+    float: right;
+    display: flex;
+    height: 37px;
+    width: 118px;
+    justify-content: center;
+    margin-right: 5px;
 }
 .buttons a {
-    padding: 5px 19px;
     border-radius: 4px;
     background-color: #ffffff;
     color: #479ccf;
     border: 1px solid #d3dbe2;
     font-size: 13px;
-    padding-top: 11px;
+    padding-top: 5px;
     text-decoration: none;
+    display: flex;
+    float: right;
+    height: 37px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
 }
 .buttons .product-submit:hover {
     border: 1px solid #4293c2;
@@ -319,13 +341,13 @@ body {
 .products .action a {
     background-color: #74b6c7;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 3px;
     display: flex;
     width: 128px;
     height: 39px;
     align-items: center;
-    text-indent: 14px;
+    justify-content: center;
 }
 .products .action a:hover {
     background-color: #5da3b5;
@@ -456,10 +478,14 @@ table .edit {
 table .delete {
     text-decoration: none;
     background-color: #36b7ff;
-    padding: 4px 12px;
     border-radius: 5px;
     color: white;
-    padding-top: 9px;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 30px;
 }
 #FlashMessageBox {
     padding: 20px;
@@ -494,8 +520,6 @@ table .delete {
     padding-right: 270px;
     padding-left: 18px;
     padding-bottom: 20px;
-}
-.product-form {
 }
 .product-form .product-description {
     background-color: white;

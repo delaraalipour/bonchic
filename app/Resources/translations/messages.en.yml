@@ -29,8 +29,8 @@ app.sign up: sign up
 app.add.image: Add image
 app.cart: Cart
 app.add-to-cart: Add to Cart
-app.logout: Logout
-app.login: Login
+app.logout: Log out
+app.login: Log in
 security.login.submit: Log in
 security.login.remember_me: Remember me
 app.or: or
@@ -49,5 +49,6 @@ app.news.brief: news brief
 app.news.description: description
 app.newnews: New News
 app.savenews: Save News
-app.readmore: Read More...
+app.readmore: ...Read More
 app.news: News
+app.tag: tag

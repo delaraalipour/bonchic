@@ -58,6 +58,7 @@ $catalogue = new MessageCatalogue('fa_IR', array (
     'app.savenews' => 'ذخیره اخبار',
     'app.readmore' => 'ادامه مطلب...',
     'app.news' => 'خبر',
+    'app.tag' => 'برچسب',
   ),
 ));
 

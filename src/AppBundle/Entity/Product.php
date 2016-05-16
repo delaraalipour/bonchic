@@ -39,6 +39,10 @@ class Product
     protected $image;
 
     /**
+     * @var string
+     */
+    protected $tag;
+    /**
      * @var Category
      */
     protected $category;
@@ -73,6 +77,22 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
+
+    /**
+     * @param string $tag
+     */
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
     }
 
     /**

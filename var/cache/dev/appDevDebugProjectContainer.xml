@@ -34,14 +34,14 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">3dca1526f33634b61d0067c7dd1f3e4b26466626</parameter>
-    <parameter key="locale">fa_IR</parameter>
+    <parameter key="locale">en</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">3dca1526f33634b61d0067c7dd1f3e4b26466626</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
     <parameter key="kernel.trusted_proxies" type="collection"/>
-    <parameter key="kernel.default_locale">fa_IR</parameter>
+    <parameter key="kernel.default_locale">en</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cookie_httponly">true</parameter>
@@ -437,7 +437,7 @@
     <service id="locale_listener" class="Symfony\Component\HttpKernel\EventListener\LocaleListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="request_stack"/>
-      <argument>fa_IR</argument>
+      <argument>en</argument>
       <argument type="service" id="router" on-invalid="ignore"/>
     </service>
     <service id="translator_listener" class="Symfony\Component\HttpKernel\EventListener\TranslatorListener">
@@ -966,7 +966,7 @@
       </call>
       <call method="setFallbackLocales">
         <argument type="collection">
-          <argument>fa_IR</argument>
+          <argument>en</argument>
         </argument>
       </call>
       <autowiring-type>Symfony\Component\Translation\TranslatorInterface</autowiring-type>
@@ -1905,7 +1905,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5736c7f95cd3c5.53747209</argument>
+            <argument>573850bb1e6032.80242787</argument>
           </service>
         </argument>
       </argument>
@@ -2194,7 +2194,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5736c7f95cd3c5.53747209</argument>
+            <argument>573850bb1e6032.80242787</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
