@@ -32,9 +32,6 @@ class ProductType extends AbstractType
                 'label' => 'app.image',
                 'required' => false
             ])
-            ->add('tag', TextType::class, [
-                'label' => 'app.tag',
-            ])
             ->add('category', EntityType::class, [
                 'label' => 'app.product.category',
                 'class' => 'AppBundle\Entity\Category',

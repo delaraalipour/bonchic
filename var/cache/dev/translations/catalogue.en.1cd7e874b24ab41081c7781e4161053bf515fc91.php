@@ -222,7 +222,7 @@ the Team.
     'security.login.remember_me' => 'Remember me',
     'app.or' => 'or',
     'app.links' => 'links',
-    'app.emptycart.message' => 'Your shopping cart is empty.',
+    'app.emptycart.message' => '.Your shopping cart is empty',
     'app.continue.shopping' => 'continue shopping',
     'app.total.price' => 'Total price',
     'app.slide.title' => 'title',
