@@ -78,7 +78,7 @@ body {
 }
 .storefront-header .cell {
     float: right;
-    font-size: 11px;
+    font-size: 13px;
 }
 .storefront-header .cell a {
     color: #cdd1d6;
@@ -313,6 +313,7 @@ body {
     border-bottom: 1px solid #e5e5e5;
     width: 278px;
     height: 520px;
+    margin-top: 40px;
 }
 .products .details {
     text-align: right;
@@ -367,7 +368,7 @@ body {
 .products-header .cell .header-title {
     float: left;
     color: #aaa;
-    font-size: 12px;
+    font-size: 13px;
 }
 .products-header .cell .header-title a {
     color: #aaa;
@@ -379,7 +380,6 @@ body {
     color: #60626b;
 }
 .products-item {
-    padding-top: 50px;
     margin-bottom: 30px;
 }
 .category li {
@@ -488,15 +488,8 @@ table .delete {
     height: 30px;
 }
 #FlashMessageBox {
-    padding: 20px;
-    background-color: #96bf48;
-    border-top: #DBFF8E;
-    border-right: 1px solid #65A32E;
-    border-bottom: 1px solid #6B9A20;
-    border-left: 1px solid #65A32E;
-    color: black;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #fd5d5f;
 }
 .welcome-logo {
     background-image: url(//cdn.shopify.com/s/assets/admin/home/headers/home-header-2x-b41f115c6492b56e70ef5f1e124825b3857a794d12a5a70176a570019f6f8cd4.png);
@@ -809,7 +802,7 @@ table .delete {
 
 }
 .footer .footer-menu ul li a {
-    font-size: 12px;
+    font-size: 13px;
     color: #93979d;
     height: 30px;
     line-height: 30px;
@@ -832,7 +825,7 @@ table .delete {
     float: right;
 }
 .site-footer .footer-menu ul li a {
-    font-size: 12px;
+    font-size: 13px;
     color: #93979d;
     padding: 0 15px;
 }
@@ -951,7 +944,6 @@ table .delete {
 .news-header {
     padding: 9px;
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 23px;
 }
 .news-header span {
     color: #43454d;
@@ -961,6 +953,8 @@ table .delete {
     float: right;
     width: 260px;
     margin: 0 15px;
+    margin-top: 25px;
+    border-bottom: 1px solid #e5e5e5;
 }
 .news-item .news .title {
     padding: 15px 10px;

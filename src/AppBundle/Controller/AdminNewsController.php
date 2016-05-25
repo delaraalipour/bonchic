@@ -24,7 +24,7 @@ class AdminNewsController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistNews($news);
-            $this->addFlash('success', 'News Created');
+            $this->addFlash('success', '.News Created');
 
             return $this->redirectToRoute('admin_news_list');
         }
@@ -67,6 +67,7 @@ class AdminNewsController extends Controller
             $em = $this->getDoctrine()->getManager();
             $this->persistNews($news);
             $em->flush();
+            $this->addFlash('success', '.News Saved');
 
             return $this->redirectToRoute('admin_news_list');
         }
@@ -90,6 +91,7 @@ class AdminNewsController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($news);
         $em->flush();
+        $this->addFlash('success', '.News Deleted');
 
         return $this->redirectToRoute('admin_news_list');
     }

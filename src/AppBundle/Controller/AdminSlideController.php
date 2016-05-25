@@ -24,6 +24,7 @@ class AdminSlideController extends Controller
 
         if($form->isSubmitted() && $form->isValid()) {
             $this->persistSlide($slide);
+            $this->addFlash('success', '.Slide Created');
 
             return $this->redirectToRoute('admin_slide_list');
         }
@@ -66,6 +67,7 @@ class AdminSlideController extends Controller
             $em = $this->getDoctrine()->getManager();
             $this->persistSlide($slide);
             $em->flush();
+            $this->addFlash('success', '.Slide Saved');
 
             return $this->redirectToRoute('admin_slide_list');
         }
@@ -87,6 +89,9 @@ class AdminSlideController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($slide);
         $em->flush();
+        $this->addFlash('success', '.Slide Deleted');
+
+        return $this->redirectToRoute('admin_slide_list');
     }
 
     /**

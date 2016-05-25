@@ -30,18 +30,6 @@
         </div>
 
         <div class="product-category">
-            {{ form_row(form.tag) }}
-            <button>{{ 'app.add' }}</button>
-            <div id="messages"></div>
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('button').click(function() {
-                        var toAdd = $("input[name=product[tag]]").val();
-                        $('#messages').append("<p>" + toAdd + "</p>");
-                    });
-                });
-            </script>
             {{ form_row(form.category) }}
         </div>
             {{ form_widget(form) }}

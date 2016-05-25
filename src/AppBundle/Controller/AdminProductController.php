@@ -24,7 +24,7 @@ class AdminProductController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistProduct($product);
-            $this->addFlash('success', 'Product Created');
+            $this->addFlash('success', '.Product Created');
 
             return $this->redirectToRoute('admin_product_list');
         }
@@ -67,6 +67,7 @@ class AdminProductController extends Controller
             $em = $this->getDoctrine()->getManager();
             $this->persistProduct($product);
             $em->flush();
+            $this->addFlash('success', '.Product Saved');
 
             return $this->redirectToRoute('admin_product_list');
         }
@@ -91,7 +92,7 @@ class AdminProductController extends Controller
         $em->remove($product);
         $em->flush();
 
-        $this->addFlash('success', 'Product Deleted');
+        $this->addFlash('success', '.Product Deleted');
 
         return $this->redirectToRoute('admin_product_list');
     }

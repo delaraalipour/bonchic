@@ -24,7 +24,7 @@ class AdminCategoryController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistCategory($category);
-            $this->addFlash('success', 'Category Created');
+            $this->addFlash('success', '.Category Created');
 
             return $this->redirectToRoute('admin_category_list');
         }
@@ -65,7 +65,7 @@ class AdminCategoryController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistCategory($category);
-            $this->addFlash('success', 'category Saved');
+            $this->addFlash('success', '.category Saved');
 
             return $this->redirectToRoute('admin_category_list');
         }
@@ -90,7 +90,7 @@ class AdminCategoryController extends Controller
         $em->remove($product);
         $em->flush();
 
-        $this->addFlash('success', 'Category Deleted');
+        $this->addFlash('success', '.Category Deleted');
 
         return $this->redirectToRoute('admin_category_list');
     }
