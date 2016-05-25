@@ -12,7 +12,7 @@ class StorefrontProductController extends Controller
     /**
      * @return Response
      */
-    public function HomePageAction()
+    public function homepageAction()
     {
         $productRepository = $this->getDoctrine()->getRepository('AppBundle:Product');
         $products = $productRepository->findAll();

@@ -106,7 +106,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'homepage');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::HomePageAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\StorefrontProductController::homepageAction',  '_route' => 'homepage',);
         }
 
         if (0 === strpos($pathinfo, '/storefront')) {

@@ -23,7 +23,7 @@ class AdminCategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->persistProduct($category);
+            $this->persistCategory($category);
             $this->addFlash('success', 'Category Created');
 
             return $this->redirectToRoute('admin_category_list');

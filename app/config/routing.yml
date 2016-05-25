@@ -3,7 +3,7 @@
 #
 homepage:
       path:      /
-      defaults:  { _controller: AppBundle:StorefrontProduct:HomePage }
+      defaults:  { _controller: AppBundle:StorefrontProduct:homepage }
 
 storefront_product_list:
       path:      /storefront/product/list
