@@ -17,7 +17,7 @@
     display: block;
 }
 body {
-    font-family: IranianSans ,Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    /* font-family: IranianSans ,Helvetica Neue, Helvetica, Arial, sans-serif !important; */
     background-color: #ebeef0;
     direction: rtl;
 }
@@ -154,7 +154,7 @@ body {
     padding: 0 20px;
     box-shadow: 0 1px 0 rgba(0,0,0,0.07);
     top: 0;
-    z-index: 10;
+    z-index: 0;
 }
 #top-header {
     z-index: 1;
@@ -185,7 +185,6 @@ body {
     color: white;
     border: 1px solid #479ccf;
     border-radius: 4px;
-    padding-top: 4px;
     text-decoration: none;
     display: flex;
     height: 36px;
@@ -473,14 +472,13 @@ table .edit {
     padding: 5px 10px;
     border-radius: 5px;
     color: #479ccf;
-    font-size: 13px;
+    font-size: 15px;
 }
 table .delete {
     text-decoration: none;
     background-color: #36b7ff;
     border-radius: 5px;
     color: white;
-    padding-top: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -510,8 +508,7 @@ table .delete {
     border-bottom: 1px solid #d3dbe2;
     margin-bottom: 20px;
     padding-top: 78px;
-    padding-right: 270px;
-    padding-left: 18px;
+    padding-right: 250px;
     padding-bottom: 20px;
 }
 .product-form .product-description {
@@ -747,6 +744,7 @@ table .delete {
 .banner img {
     width: 1138px;
     height: 391px;
+    z-index: 100;
 }
 .banner .btn-floating {
     position: absolute;
@@ -1018,4 +1016,72 @@ table .delete {
 }
 .fos_user_registration_register {
     margin-top: 25px;
+}
+.quick-access {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1;
+    left: 10px;
+}
+.quick-access__opener {
+    cursor: pointer;
+    background: #E45969;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: fantasy;
+    transition: width, height;
+}
+.quick-access__opener:hover {
+    font-weight: bold;
+}
+.quick-access__menu {
+    display: none;
+    list-style: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    bottom: 54px;
+    text-align: left;
+    left: 10px;
+    width: 110px;
+}
+.quick-access__menu i {
+    text-indent: 10px;
+}
+.quick-access__menu li {
+    height: 40px;
+}
+.quick-access__menu a {
+    padding: 3px 0;
+    color: #555555;
+    background-color: white;
+    box-shadow: 0 2px 4px #7D7676;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quick-access__menu a:hover {
+    text-decoration: none;
+}
+.quick-access.quick-access--open .quick-access__menu {
+    display: block;
+}
+.quick-access__overlay {
+    background: rgba(232, 230, 230, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+.quick-access__overlay--active {
+    display: block;
 }
