@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+@delaraalipour
+Unwatch 1
+Star 0
+Fork 0 delaraalipour/bonchic
+Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathbonchic/src/AppBundle/Resources/public/css/main.css
+a06fca8  an hour ago
+@delaraalipour delaraalipour Initialized commit
+1 contributor
+RawBlameHistory    1087 lines (1086 sloc)  21.2 KB
 @font-face {
     font-family: IranianSans;
     src: url('../fonts/IranianSans.eot');
@@ -1048,7 +1064,7 @@ table .delete {
     position: absolute;
     bottom: 54px;
     text-align: left;
-    left: 10px;
+    left: 0;
     width: 110px;
 }
 .quick-access__menu i {
