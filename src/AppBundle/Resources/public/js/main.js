@@ -8,7 +8,7 @@ $(document).ready(function() {
     overlayEl.click(toggleElements);
 
     function toggleElements() {
-        menuEl.toggle( "clip" );
+        menuEl.toggleClass('quick-access__menu--active');
         overlayEl.toggleClass('quick-access__overlay--active');
     }
 });

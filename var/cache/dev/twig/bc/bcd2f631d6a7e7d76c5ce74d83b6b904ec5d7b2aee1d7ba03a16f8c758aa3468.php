@@ -19,8 +19,8 @@ class __TwigTemplate_016a68cd6c00744177976899c54bb6e70ecda6e832b4caeb9adc3d3bdc9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3348fbfd08ae1cf3d75d5e5e58d636afbdbad69c663666ad5c2ae208971c8498 = $this->env->getExtension("native_profiler");
-        $__internal_3348fbfd08ae1cf3d75d5e5e58d636afbdbad69c663666ad5c2ae208971c8498->enter($__internal_3348fbfd08ae1cf3d75d5e5e58d636afbdbad69c663666ad5c2ae208971c8498_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin:layout.html.twig"));
+        $__internal_5fe6a412671a34de626a8c6fa9984c7dc684fd216aecc1e44c56ffec3952d5cb = $this->env->getExtension("native_profiler");
+        $__internal_5fe6a412671a34de626a8c6fa9984c7dc684fd216aecc1e44c56ffec3952d5cb->enter($__internal_5fe6a412671a34de626a8c6fa9984c7dc684fd216aecc1e44c56ffec3952d5cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin:layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -173,19 +173,27 @@ class __TwigTemplate_016a68cd6c00744177976899c54bb6e70ecda6e832b4caeb9adc3d3bdc9
                     <li><a href=\"";
         // line 54
         echo $this->env->getExtension('routing')->getPath("admin_product_new");
-        echo "\">Product<i class=\"glyphicon glyphicon-tags\"></i></a></li>
+        echo "\"><span>";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product"), "html", null, true);
+        echo "</span><i class=\"glyphicon glyphicon-tags\"></i></a></li>
                     <li><a href=\"";
         // line 55
         echo $this->env->getExtension('routing')->getPath("admin_category_new");
-        echo "\">Category<i class=\"glyphicon glyphicon-pencil\"></i></a></li>
+        echo "\"><span>";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.product.category"), "html", null, true);
+        echo "</span><i class=\"glyphicon glyphicon-pencil\"></i></a></li>
                     <li><a href=\"";
         // line 56
         echo $this->env->getExtension('routing')->getPath("admin_news_new");
-        echo "\">News<i class=\"glyphicon glyphicon-edit\"></i></a></li>
+        echo "\"><span>";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.newslist"), "html", null, true);
+        echo "</span><i class=\"glyphicon glyphicon-edit\"></i></a></li>
                     <li><a href=\"";
         // line 57
         echo $this->env->getExtension('routing')->getPath("admin_slide_new");
-        echo "\">Slide<i class=\"glyphicon glyphicon-tags\"></i></a></li>
+        echo "\"><span>";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.slidelist"), "html", null, true);
+        echo "</span><i class=\"glyphicon glyphicon-tags\"></i></a></li>
                 </ul>
                 <div class=\"quick-access__opener\">+</div>
             </div>
@@ -200,51 +208,51 @@ class __TwigTemplate_016a68cd6c00744177976899c54bb6e70ecda6e832b4caeb9adc3d3bdc9
 </body>
 </html>";
         
-        $__internal_3348fbfd08ae1cf3d75d5e5e58d636afbdbad69c663666ad5c2ae208971c8498->leave($__internal_3348fbfd08ae1cf3d75d5e5e58d636afbdbad69c663666ad5c2ae208971c8498_prof);
+        $__internal_5fe6a412671a34de626a8c6fa9984c7dc684fd216aecc1e44c56ffec3952d5cb->leave($__internal_5fe6a412671a34de626a8c6fa9984c7dc684fd216aecc1e44c56ffec3952d5cb_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3d93938bad7216f175d5a6968063ba804d3800c26ff50e0643ff8d5add439d81 = $this->env->getExtension("native_profiler");
-        $__internal_3d93938bad7216f175d5a6968063ba804d3800c26ff50e0643ff8d5add439d81->enter($__internal_3d93938bad7216f175d5a6968063ba804d3800c26ff50e0643ff8d5add439d81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_192f45b0d754bfa2389ea84a61334686edf91439550e87273242f6ea7bd3760c = $this->env->getExtension("native_profiler");
+        $__internal_192f45b0d754bfa2389ea84a61334686edf91439550e87273242f6ea7bd3760c->enter($__internal_192f45b0d754bfa2389ea84a61334686edf91439550e87273242f6ea7bd3760c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         
-        $__internal_3d93938bad7216f175d5a6968063ba804d3800c26ff50e0643ff8d5add439d81->leave($__internal_3d93938bad7216f175d5a6968063ba804d3800c26ff50e0643ff8d5add439d81_prof);
+        $__internal_192f45b0d754bfa2389ea84a61334686edf91439550e87273242f6ea7bd3760c->leave($__internal_192f45b0d754bfa2389ea84a61334686edf91439550e87273242f6ea7bd3760c_prof);
 
     }
 
     // line 34
     public function block_header($context, array $blocks = array())
     {
-        $__internal_cf52926e3debdc3021f86a195a25657ab70667f2525786d8529e8c660bdddaf7 = $this->env->getExtension("native_profiler");
-        $__internal_cf52926e3debdc3021f86a195a25657ab70667f2525786d8529e8c660bdddaf7->enter($__internal_cf52926e3debdc3021f86a195a25657ab70667f2525786d8529e8c660bdddaf7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_126a838e7cf23b8532b2c6017277082cc2f1c2e5322a1b5d16077659bf17d40a = $this->env->getExtension("native_profiler");
+        $__internal_126a838e7cf23b8532b2c6017277082cc2f1c2e5322a1b5d16077659bf17d40a->enter($__internal_126a838e7cf23b8532b2c6017277082cc2f1c2e5322a1b5d16077659bf17d40a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         
-        $__internal_cf52926e3debdc3021f86a195a25657ab70667f2525786d8529e8c660bdddaf7->leave($__internal_cf52926e3debdc3021f86a195a25657ab70667f2525786d8529e8c660bdddaf7_prof);
+        $__internal_126a838e7cf23b8532b2c6017277082cc2f1c2e5322a1b5d16077659bf17d40a->leave($__internal_126a838e7cf23b8532b2c6017277082cc2f1c2e5322a1b5d16077659bf17d40a_prof);
 
     }
 
     // line 49
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e8b4fee529e757ddefdd7028528f71b6c8e8391165ca441a5eae84ce39579895 = $this->env->getExtension("native_profiler");
-        $__internal_e8b4fee529e757ddefdd7028528f71b6c8e8391165ca441a5eae84ce39579895->enter($__internal_e8b4fee529e757ddefdd7028528f71b6c8e8391165ca441a5eae84ce39579895_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0411f2c63b3657b10024b6b30a540bf33c09cd2fc45cd7bfc2281cb40e6e271c = $this->env->getExtension("native_profiler");
+        $__internal_0411f2c63b3657b10024b6b30a540bf33c09cd2fc45cd7bfc2281cb40e6e271c->enter($__internal_0411f2c63b3657b10024b6b30a540bf33c09cd2fc45cd7bfc2281cb40e6e271c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         
-        $__internal_e8b4fee529e757ddefdd7028528f71b6c8e8391165ca441a5eae84ce39579895->leave($__internal_e8b4fee529e757ddefdd7028528f71b6c8e8391165ca441a5eae84ce39579895_prof);
+        $__internal_0411f2c63b3657b10024b6b30a540bf33c09cd2fc45cd7bfc2281cb40e6e271c->leave($__internal_0411f2c63b3657b10024b6b30a540bf33c09cd2fc45cd7bfc2281cb40e6e271c_prof);
 
     }
 
     // line 64
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_39c16941a302d135de3286dc83a5a8b2bbaed970681b74f253b959e034269830 = $this->env->getExtension("native_profiler");
-        $__internal_39c16941a302d135de3286dc83a5a8b2bbaed970681b74f253b959e034269830->enter($__internal_39c16941a302d135de3286dc83a5a8b2bbaed970681b74f253b959e034269830_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_2d6ff0964b4e218e35c198b5945a7b453b65893b72d2ad575164d26493ada294 = $this->env->getExtension("native_profiler");
+        $__internal_2d6ff0964b4e218e35c198b5945a7b453b65893b72d2ad575164d26493ada294->enter($__internal_2d6ff0964b4e218e35c198b5945a7b453b65893b72d2ad575164d26493ada294_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_39c16941a302d135de3286dc83a5a8b2bbaed970681b74f253b959e034269830->leave($__internal_39c16941a302d135de3286dc83a5a8b2bbaed970681b74f253b959e034269830_prof);
+        $__internal_2d6ff0964b4e218e35c198b5945a7b453b65893b72d2ad575164d26493ada294->leave($__internal_2d6ff0964b4e218e35c198b5945a7b453b65893b72d2ad575164d26493ada294_prof);
 
     }
 
@@ -260,7 +268,7 @@ class __TwigTemplate_016a68cd6c00744177976899c54bb6e70ecda6e832b4caeb9adc3d3bdc9
 
     public function getDebugInfo()
     {
-        return array (  241 => 64,  230 => 49,  219 => 34,  208 => 5,  199 => 65,  197 => 64,  187 => 57,  183 => 56,  179 => 55,  175 => 54,  169 => 50,  167 => 49,  164 => 48,  158 => 47,  145 => 40,  140 => 38,  137 => 37,  132 => 36,  127 => 35,  125 => 34,  119 => 30,  111 => 28,  105 => 25,  101 => 24,  96 => 23,  94 => 22,  86 => 19,  80 => 18,  74 => 17,  68 => 16,  62 => 15,  55 => 13,  48 => 9,  44 => 8,  40 => 7,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  249 => 64,  238 => 49,  227 => 34,  216 => 5,  207 => 65,  205 => 64,  193 => 57,  187 => 56,  181 => 55,  175 => 54,  169 => 50,  167 => 49,  164 => 48,  158 => 47,  145 => 40,  140 => 38,  137 => 37,  132 => 36,  127 => 35,  125 => 34,  119 => 30,  111 => 28,  105 => 25,  101 => 24,  96 => 23,  94 => 22,  86 => 19,  80 => 18,  74 => 17,  68 => 16,  62 => 15,  55 => 13,  48 => 9,  44 => 8,  40 => 7,  36 => 6,  32 => 5,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -316,10 +324,10 @@ class __TwigTemplate_016a68cd6c00744177976899c54bb6e70ecda6e832b4caeb9adc3d3bdc9
 /*             <div class="quick-access__overlay"></div>*/
 /*             <div class="quick-access">*/
 /*                 <ul class="quick-access__menu">*/
-/*                     <li><a href="{{ path('admin_product_new') }}">Product<i class="glyphicon glyphicon-tags"></i></a></li>*/
-/*                     <li><a href="{{ path('admin_category_new') }}">Category<i class="glyphicon glyphicon-pencil"></i></a></li>*/
-/*                     <li><a href="{{ path('admin_news_new') }}">News<i class="glyphicon glyphicon-edit"></i></a></li>*/
-/*                     <li><a href="{{ path('admin_slide_new') }}">Slide<i class="glyphicon glyphicon-tags"></i></a></li>*/
+/*                     <li><a href="{{ path('admin_product_new') }}"><span>{{ 'app.product' | trans }}</span><i class="glyphicon glyphicon-tags"></i></a></li>*/
+/*                     <li><a href="{{ path('admin_category_new') }}"><span>{{ 'app.product.category' | trans }}</span><i class="glyphicon glyphicon-pencil"></i></a></li>*/
+/*                     <li><a href="{{ path('admin_news_new') }}"><span>{{ 'app.newslist' | trans }}</span><i class="glyphicon glyphicon-edit"></i></a></li>*/
+/*                     <li><a href="{{ path('admin_slide_new') }}"><span>{{ 'app.slidelist' | trans }}</span><i class="glyphicon glyphicon-tags"></i></a></li>*/
 /*                 </ul>*/
 /*                 <div class="quick-access__opener">+</div>*/
 /*             </div>*/

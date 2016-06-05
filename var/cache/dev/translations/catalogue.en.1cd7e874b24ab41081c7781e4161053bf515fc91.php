@@ -227,7 +227,7 @@ the Team.
     'app.total.price' => 'Total price',
     'app.slide.title' => 'title',
     'app.saveslide' => 'Save Slide',
-    'app.slidelist' => 'Slides',
+    'app.slidelist' => 'Slide',
     'app.newslide' => 'New Slide',
     'app.update.cart' => 'update',
     'app.newslist' => 'News',
