@@ -7,10 +7,10 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <div class="username"><span>{{ 'app.site_title' | trans ({}, 'messages') }}</span></div>
+    <div class="shop-name"><span>{{ 'app.site_title' | trans ({}, 'messages') }}</span></div>
 
 <div class="login-input">
-    <form action="{{ path("fos_user_security_check") }}" method="post">
+    <form action="{{ path("fos_user_security_check") }}" method="post" autocomplete="off">
         <div>
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
         </div>
