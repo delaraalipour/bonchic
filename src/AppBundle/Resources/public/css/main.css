@@ -1023,6 +1023,10 @@ table .delete {
     left: 20px;
 }
 .quick-access__opener {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
     cursor: pointer;
     background: #5FAB78;
     width: 48px;
@@ -1034,6 +1038,11 @@ table .delete {
     justify-content: center;
     font-size: 32px;
     font-family: fantasy;
+}
+.quick-access__opener:active {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
 }
 .quick-access__opener:hover {
     background-color: #449664;
