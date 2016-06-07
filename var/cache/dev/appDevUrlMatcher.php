@@ -138,33 +138,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // cart_add
-        if (0 === strpos($pathinfo, '/add-to-cart') && preg_match('#^/add\\-to\\-cart/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_add')), array (  '_controller' => 'AppBundle\\Controller\\CartController::addAction',));
-        }
-
-        if (0 === strpos($pathinfo, '/cart')) {
-            // cart_list
-            if ($pathinfo === '/cart') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_cart_list;
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
-            }
-            not_cart_list:
-
-            // cart_delete
-            if (0 === strpos($pathinfo, '/cart/delete') && preg_match('#^/cart/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_delete')), array (  '_controller' => 'AppBundle\\Controller\\CartController::deleteAction',));
-            }
-
-        }
-
         if (0 === strpos($pathinfo, '/admin')) {
             // admin_index
-            if ($pathinfo === '/admin') {
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'admin_index');
+                }
+
                 return array (  '_controller' => 'AppBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin_index',);
             }
 
@@ -264,6 +244,34 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'AppBundle\\Controller\\AdminNewsController::listAction',  '_route' => 'admin_news_list',);
                 }
 
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/cart')) {
+            // cart_add
+            if (0 === strpos($pathinfo, '/cart/add-to-cart') && preg_match('#^/cart/add\\-to\\-cart/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_add')), array (  '_controller' => 'AppBundle\\Controller\\CartController::addAction',));
+            }
+
+            // cart_list
+            if (rtrim($pathinfo, '/') === '/cart') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_cart_list;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'cart_list');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\CartController::listAction',  '_route' => 'cart_list',);
+            }
+            not_cart_list:
+
+            // cart_delete
+            if (0 === strpos($pathinfo, '/cart/delete') && preg_match('#^/cart/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cart_delete')), array (  '_controller' => 'AppBundle\\Controller\\CartController::deleteAction',));
             }
 
         }

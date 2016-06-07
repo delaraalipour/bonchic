@@ -1,0 +1,12 @@
+cart_add:
+  path:      /add-to-cart/{id}
+  defaults:  { _controller: AppBundle:Cart:add }
+
+cart_list:
+  path:      /
+  methods:   [GET, POST]
+  defaults:  { _controller: AppBundle:Cart:list }
+
+cart_delete:
+  path:      /delete/{id}
+  defaults:  { _controller: AppBundle:Cart:delete }

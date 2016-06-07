@@ -1,0 +1,15 @@
+storefront_product_list:
+  path:      /product/list
+  defaults:  { _controller: AppBundle:StorefrontProduct:list }
+
+storefront_product_show:
+  path:      /product/{id}
+  defaults:  { _controller: AppBundle:StorefrontProduct:show }
+
+storefront_news_list:
+  path:      /news/list
+  defaults:  { _controller: AppBundle:StorefrontNews:list }
+
+storefront_news_show:
+  path:      /news/{id}
+  defaults:  { _controller: AppBundle:StorefrontNews:show }
