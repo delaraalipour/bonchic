@@ -45,6 +45,7 @@ body {
 .admin-header .admin-menu {
     padding: 0;
     margin: 0;
+    height: 585px;
     padding-right: 15px;
     list-style: none;
 }
@@ -297,7 +298,6 @@ body {
 .form-group label {
     color: #31373d;
     font-weight: normal;
-    font-size: 13px;
 }
 .form-control:focus {
     border: 1px solid #ddd !important;
@@ -1060,9 +1060,13 @@ table .delete {
     bottom: 54px;
     text-align: left;
     left: 10px;
-    width: 140px;
+    width: 175px;
     transform: scale(0);
     transform-origin: bottom left;
+}
+.quick-access__menu--active {
+    opacity: 1;
+    transform: scale(1);
 }
 .quick-access__menu li span {
     color: #555555;
@@ -1098,10 +1102,6 @@ table .delete {
 }
 .quick-access__menu a:hover {
     text-decoration: none;
-}
-.quick-access__menu--active {
-    opacity: 1;
-    transform: scale(1);
 }
 .quick-access__overlay {
     opacity: 0;
