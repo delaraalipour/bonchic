@@ -1094,7 +1094,9 @@ table .delete {
 .quick-access__menu .glyphicon-edit{
     background-color: blue;
 }
-.quick-access__menu li {margin-bottom: 20px;}
+.quick-access__menu li {
+    margin-bottom: 20px;
+}
 .quick-access__menu a {
     display: flex;
     justify-content: flex-end;

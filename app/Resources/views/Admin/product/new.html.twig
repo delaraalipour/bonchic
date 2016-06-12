@@ -30,7 +30,7 @@
             <div id="messages"></div>
             {{ form_row(form.category) }}
         </div>
-            {{ form_widget(form) }}
+            {{ form_rest(form) }}
         <div class="buttons clearfix">
             <a href=" {{ path('admin_product_list') }} ">{{ 'app.cancel' | trans}}</a>
             <input type="submit" value="{{ 'app.saveproduct' | trans}}" class="product-submit"/>

@@ -21,7 +21,7 @@
         <div class="product-category-image">
             {{ form_row(form.file) }}
         </div>
-            {{ form_widget(form) }}
+            {{ form_rest(form) }}
         <div class="buttons">
             <a href=" {{ path('admin_category_list') }} ">{{ 'app.cancel' | trans}}</a>
             <input type="submit" value="{{ 'app.savecategory' | trans}}" class="product-submit" />

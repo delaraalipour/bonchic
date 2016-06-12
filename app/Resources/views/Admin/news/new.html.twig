@@ -25,7 +25,7 @@
         <div class="product-description">
             {{ form_row(form.description) }}
         </div>
-            {{ form_widget(form) }}
+            {{ form_rest(form) }}
         <div class="buttons">
             <a href=" {{ path('admin_news_list') }} ">{{ 'app.cancel' | trans}}</a>
             <input type="submit" value="{{ 'app.savenews' | trans}}" class="product-submit"/>

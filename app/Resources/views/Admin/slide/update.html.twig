@@ -24,10 +24,10 @@
             <img src="{{ asset('uploads/' ~ form.vars.data.image) }}" />
             <button><span>{{ 'app.add.image' | trans}}</span>{{ form_widget(form.file) }}</button>
         </div>
-        {{ form_widget(form) }}
+        {{ form_rest(form) }}
 
         <div class="buttons">
-            <a href=" {{ path('admin_slide_list') }} ">{{ 'app.cancel' | trans}}</a>
+            <a href="{{ path('admin_slide_list') }}">{{ 'app.cancel' | trans}}</a>
             <input type="submit" value="{{ 'app.saveslide' | trans}}" class="product-submit" />
         </div>
         {{ form_end(form) }}

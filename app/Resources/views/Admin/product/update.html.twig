@@ -32,7 +32,7 @@
         <div class="product-category">
             {{ form_row(form.category) }}
         </div>
-            {{ form_widget(form) }}
+            {{ form_rest(form) }}
 
         <div class="buttons">
             <a href=" {{ path('admin_product_list') }} ">{{ 'app.cancel' | trans}}</a>

@@ -24,7 +24,7 @@
             <img src="{{ asset('uploads/' ~ form.vars.data.image) }}" />
             <button><span>{{ 'app.add.image' | trans}}</span>{{ form_widget(form.file) }}</button>
         </div>
-        {{ form_widget(form) }}
+        {{ form_rest(form) }}
 
         <div class="buttons">
             <a href=" {{ path('admin_category_list') }} ">{{ 'app.cancel' | trans}}</a>
