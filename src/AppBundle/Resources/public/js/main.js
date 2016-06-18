@@ -10,5 +10,6 @@ $(document).ready(function() {
     function toggleElements() {
         menuEl.toggleClass('quick-access__menu--active');
         overlayEl.toggleClass('quick-access__overlay--active');
+        openerEl.toggleClass('quick-access__opener-active');
     }
 });

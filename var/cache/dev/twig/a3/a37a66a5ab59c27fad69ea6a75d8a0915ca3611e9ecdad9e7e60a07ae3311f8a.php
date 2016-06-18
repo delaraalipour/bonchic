@@ -23,32 +23,32 @@ class __TwigTemplate_8356d777a17972da532ef6d9ded980ebd640961fc1177c5d2d769124833
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d4b02867aa8a632ae93e74b6ffc2d32bc1a56274106bf7c7ca236e4423aaa4f0 = $this->env->getExtension("native_profiler");
-        $__internal_d4b02867aa8a632ae93e74b6ffc2d32bc1a56274106bf7c7ca236e4423aaa4f0->enter($__internal_d4b02867aa8a632ae93e74b6ffc2d32bc1a56274106bf7c7ca236e4423aaa4f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/category/update.html.twig"));
+        $__internal_478967e2a80e7079607aa4590b2e270290537d1c3f06dfe0e768e3842fb0d977 = $this->env->getExtension("native_profiler");
+        $__internal_478967e2a80e7079607aa4590b2e270290537d1c3f06dfe0e768e3842fb0d977->enter($__internal_478967e2a80e7079607aa4590b2e270290537d1c3f06dfe0e768e3842fb0d977_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Admin/category/update.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d4b02867aa8a632ae93e74b6ffc2d32bc1a56274106bf7c7ca236e4423aaa4f0->leave($__internal_d4b02867aa8a632ae93e74b6ffc2d32bc1a56274106bf7c7ca236e4423aaa4f0_prof);
+        $__internal_478967e2a80e7079607aa4590b2e270290537d1c3f06dfe0e768e3842fb0d977->leave($__internal_478967e2a80e7079607aa4590b2e270290537d1c3f06dfe0e768e3842fb0d977_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_518de9fcb10507bdd313f2a016a1cff92af6c8c833a9fc9e191d2161a15daf78 = $this->env->getExtension("native_profiler");
-        $__internal_518de9fcb10507bdd313f2a016a1cff92af6c8c833a9fc9e191d2161a15daf78->enter($__internal_518de9fcb10507bdd313f2a016a1cff92af6c8c833a9fc9e191d2161a15daf78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b32575b6dd7613b8149c52cdaf2b93d5cd2842752a584f372ac567b5115c5d5d = $this->env->getExtension("native_profiler");
+        $__internal_b32575b6dd7613b8149c52cdaf2b93d5cd2842752a584f372ac567b5115c5d5d->enter($__internal_b32575b6dd7613b8149c52cdaf2b93d5cd2842752a584f372ac567b5115c5d5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("app.edit"), "html", null, true);
         
-        $__internal_518de9fcb10507bdd313f2a016a1cff92af6c8c833a9fc9e191d2161a15daf78->leave($__internal_518de9fcb10507bdd313f2a016a1cff92af6c8c833a9fc9e191d2161a15daf78_prof);
+        $__internal_b32575b6dd7613b8149c52cdaf2b93d5cd2842752a584f372ac567b5115c5d5d->leave($__internal_b32575b6dd7613b8149c52cdaf2b93d5cd2842752a584f372ac567b5115c5d5d_prof);
 
     }
 
     // line 5
     public function block_header($context, array $blocks = array())
     {
-        $__internal_557dfcf3d0fc9575a11fb893b7c2cd6fef0779e75ec20cb59637aba03de9bc11 = $this->env->getExtension("native_profiler");
-        $__internal_557dfcf3d0fc9575a11fb893b7c2cd6fef0779e75ec20cb59637aba03de9bc11->enter($__internal_557dfcf3d0fc9575a11fb893b7c2cd6fef0779e75ec20cb59637aba03de9bc11_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_80138fab8033f522711095a3f59c42ce9ebeea2085ff7ebdb41e3a50ea64ee66 = $this->env->getExtension("native_profiler");
+        $__internal_80138fab8033f522711095a3f59c42ce9ebeea2085ff7ebdb41e3a50ea64ee66->enter($__internal_80138fab8033f522711095a3f59c42ce9ebeea2085ff7ebdb41e3a50ea64ee66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 6
         echo "    <div class=\"top-header\">
@@ -68,15 +68,15 @@ class __TwigTemplate_8356d777a17972da532ef6d9ded980ebd640961fc1177c5d2d769124833
     </div>
 ";
         
-        $__internal_557dfcf3d0fc9575a11fb893b7c2cd6fef0779e75ec20cb59637aba03de9bc11->leave($__internal_557dfcf3d0fc9575a11fb893b7c2cd6fef0779e75ec20cb59637aba03de9bc11_prof);
+        $__internal_80138fab8033f522711095a3f59c42ce9ebeea2085ff7ebdb41e3a50ea64ee66->leave($__internal_80138fab8033f522711095a3f59c42ce9ebeea2085ff7ebdb41e3a50ea64ee66_prof);
 
     }
 
     // line 15
     public function block_content($context, array $blocks = array())
     {
-        $__internal_307417adea2b4b1c10bf1f7fef01f43759e12ee592b2a6267bef5fe213975dee = $this->env->getExtension("native_profiler");
-        $__internal_307417adea2b4b1c10bf1f7fef01f43759e12ee592b2a6267bef5fe213975dee->enter($__internal_307417adea2b4b1c10bf1f7fef01f43759e12ee592b2a6267bef5fe213975dee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_5c29cfa7bffb43be01c045ff182274e9d534093aac94b31a914db5ecdd64d181 = $this->env->getExtension("native_profiler");
+        $__internal_5c29cfa7bffb43be01c045ff182274e9d534093aac94b31a914db5ecdd64d181->enter($__internal_5c29cfa7bffb43be01c045ff182274e9d534093aac94b31a914db5ecdd64d181_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 16
         echo "    <div class=\"category-form\">
@@ -106,7 +106,7 @@ class __TwigTemplate_8356d777a17972da532ef6d9ded980ebd640961fc1177c5d2d769124833
         </div>
         ";
         // line 27
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
         <div class=\"buttons\">
@@ -128,7 +128,7 @@ class __TwigTemplate_8356d777a17972da532ef6d9ded980ebd640961fc1177c5d2d769124833
     </div>
 ";
         
-        $__internal_307417adea2b4b1c10bf1f7fef01f43759e12ee592b2a6267bef5fe213975dee->leave($__internal_307417adea2b4b1c10bf1f7fef01f43759e12ee592b2a6267bef5fe213975dee_prof);
+        $__internal_5c29cfa7bffb43be01c045ff182274e9d534093aac94b31a914db5ecdd64d181->leave($__internal_5c29cfa7bffb43be01c045ff182274e9d534093aac94b31a914db5ecdd64d181_prof);
 
     }
 
@@ -173,7 +173,7 @@ class __TwigTemplate_8356d777a17972da532ef6d9ded980ebd640961fc1177c5d2d769124833
 /*             <img src="{{ asset('uploads/' ~ form.vars.data.image) }}" />*/
 /*             <button><span>{{ 'app.add.image' | trans}}</span>{{ form_widget(form.file) }}</button>*/
 /*         </div>*/
-/*         {{ form_widget(form) }}*/
+/*         {{ form_rest(form) }}*/
 /* */
 /*         <div class="buttons">*/
 /*             <a href=" {{ path('admin_category_list') }} ">{{ 'app.cancel' | trans}}</a>*/
